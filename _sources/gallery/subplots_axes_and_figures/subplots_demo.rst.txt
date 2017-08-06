@@ -16,49 +16,6 @@ directly on a new figure.
 
 
 
-
-.. rst-class:: sphx-glr-horizontal
-
-
-    *
-
-      .. image:: /gallery/subplots_axes_and_figures/images/sphx_glr_subplots_demo_001.png
-            :scale: 47
-
-    *
-
-      .. image:: /gallery/subplots_axes_and_figures/images/sphx_glr_subplots_demo_002.png
-            :scale: 47
-
-    *
-
-      .. image:: /gallery/subplots_axes_and_figures/images/sphx_glr_subplots_demo_003.png
-            :scale: 47
-
-    *
-
-      .. image:: /gallery/subplots_axes_and_figures/images/sphx_glr_subplots_demo_004.png
-            :scale: 47
-
-    *
-
-      .. image:: /gallery/subplots_axes_and_figures/images/sphx_glr_subplots_demo_005.png
-            :scale: 47
-
-    *
-
-      .. image:: /gallery/subplots_axes_and_figures/images/sphx_glr_subplots_demo_006.png
-            :scale: 47
-
-    *
-
-      .. image:: /gallery/subplots_axes_and_figures/images/sphx_glr_subplots_demo_007.png
-            :scale: 47
-
-
-
-
-
 .. code-block:: python
 
 
@@ -71,24 +28,81 @@ directly on a new figure.
 
     plt.close('all')
 
-    # Just a figure and one subplot
+
+
+
+
+
+
+Just a figure and one subplot
+
+
+
+.. code-block:: python
+
+
     f, ax = plt.subplots()
     ax.plot(x, y)
     ax.set_title('Simple plot')
 
-    # Two subplots, the axes array is 1-d
+
+
+
+.. image:: /gallery/subplots_axes_and_figures/images/sphx_glr_subplots_demo_001.png
+    :align: center
+
+
+
+
+Two subplots, the axes array is 1-d
+
+
+
+.. code-block:: python
+
+
     f, axarr = plt.subplots(2, sharex=True)
     f.suptitle('Sharing X axis')
     axarr[0].plot(x, y)
     axarr[1].scatter(x, y)
 
-    # Two subplots, unpack the axes array immediately
+
+
+
+.. image:: /gallery/subplots_axes_and_figures/images/sphx_glr_subplots_demo_002.png
+    :align: center
+
+
+
+
+Two subplots, unpack the axes array immediately
+
+
+
+.. code-block:: python
+
+
     f, (ax1, ax2) = plt.subplots(1, 2, sharey=True)
     f.suptitle('Sharing Y axis')
     ax1.plot(x, y)
     ax2.scatter(x, y)
 
-    # Three subplots sharing both x/y axes
+
+
+
+.. image:: /gallery/subplots_axes_and_figures/images/sphx_glr_subplots_demo_003.png
+    :align: center
+
+
+
+
+Three subplots sharing both x/y axes
+
+
+
+.. code-block:: python
+
+
     f, axarr = plt.subplots(3, sharex=True, sharey=True)
     f.suptitle('Sharing both axes')
     axarr[0].plot(x, y)
@@ -100,7 +114,22 @@ directly on a new figure.
     for ax in axarr:
         ax.label_outer()
 
-    # row and column sharing
+
+
+
+.. image:: /gallery/subplots_axes_and_figures/images/sphx_glr_subplots_demo_004.png
+    :align: center
+
+
+
+
+Row and column sharing
+
+
+
+.. code-block:: python
+
+
     f, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, sharex='col', sharey='row')
     f.suptitle('Sharing x per column, y per row')
     ax1.plot(x, y)
@@ -108,7 +137,22 @@ directly on a new figure.
     ax3.scatter(x, 2 * y ** 2 - 1, color='r')
     ax4.plot(x, 2 * y ** 2 - 1, color='r')
 
-    # Four axes, returned as a 2-d array
+
+
+
+.. image:: /gallery/subplots_axes_and_figures/images/sphx_glr_subplots_demo_005.png
+    :align: center
+
+
+
+
+Four axes, returned as a 2-d array
+
+
+
+.. code-block:: python
+
+
     f, axarr = plt.subplots(2, 2)
     axarr[0, 0].plot(x, y)
     axarr[0, 0].set_title('Axis [0,0]')
@@ -124,7 +168,22 @@ directly on a new figure.
     for ax in axarr.flat:
         ax.label_outer()
 
-    # Four polar axes
+
+
+
+.. image:: /gallery/subplots_axes_and_figures/images/sphx_glr_subplots_demo_006.png
+    :align: center
+
+
+
+
+Four polar axes
+
+
+
+.. code-block:: python
+
+
     f, axarr = plt.subplots(2, 2, subplot_kw=dict(projection='polar'))
     axarr[0, 0].plot(x, y)
     axarr[0, 0].set_title('Axis [0,0]')
@@ -139,7 +198,15 @@ directly on a new figure.
 
     plt.show()
 
-**Total running time of the script:** ( 0 minutes  0.532 seconds)
+
+
+.. image:: /gallery/subplots_axes_and_figures/images/sphx_glr_subplots_demo_007.png
+    :align: center
+
+
+
+
+**Total running time of the script:** ( 0 minutes  0.687 seconds)
 
 
 

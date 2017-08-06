@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>triangular grids &mdash; Matplotlib 2.0.2.post4416.dev0+g1df513f documentation</title>
+    <title>triangular grids &mdash; Matplotlib 2.0.2.post4545+ga1937d4 documentation</title>
     
     <link rel="stylesheet" href="../_static/mpl.css"
 type="text/css" />
@@ -17,7 +17,7 @@ type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.0.2.post4416.dev0+g1df513f',
+        VERSION:     '2.0.2.post4545+ga1937d4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -28,14 +28,14 @@ type="text/css" />
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Matplotlib 2.0.2.post4416.dev0+g1df513f documentation"
+          title="Search within Matplotlib 2.0.2.post4545+ga1937d4 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html"
 />
     <link rel="search" title="Search" href="../search.html"
 />
-    <link rel="top" title="Matplotlib 2.0.2.post4416.dev0+g1df513f documentation" href="../index.html" />
+    <link rel="top" title="Matplotlib 2.0.2.post4545+ga1937d4 documentation" href="../index.html" />
     <link rel="up" title="The Matplotlib API" href="index.html" />
     <link rel="next" title="type1font" href="type1font.html" />
     <link rel="prev" title="Working with transformations" href="transformations.html" /> 
@@ -46,14 +46,11 @@ type="text/css" />
 
 
 
-<!-- The "Fork me on github" ribbon -->
-<img style="float: right; margin-bottom: -40px; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" usemap="#ribbonmap"/>
-<map name="ribbonmap">
-    <area shape="poly" coords="15,0,148,-1,148,135" href="https://github.com/matplotlib/matplotlib" title="Fork me on GitHub" />
-</map>
-
-<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px; position: relative;">
 <a href="../index.html"><img src="../_static/logo2.svg" width="540px" border="0" alt="matplotlib"/></a>
+
+<!-- The "Fork me on github" ribbon -->
+<div id="forkongithub"><a href="https://github.com/matplotlib/matplotlib">Fork me on GitHub</a></div>
 </div>
 
 
@@ -183,17 +180,17 @@ triangles formed from colinear points, or overlapping triangles.</p>
 <p class="rubric">Attributes</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="9%" />
-<col width="91%" />
+<col width="11%" />
+<col width="89%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#matplotlib.tri.Triangulation.edges" title="matplotlib.tri.Triangulation.edges"><code class="xref py py-obj docutils literal"><span class="pre">edges</span></code></a></td>
+<tr class="row-odd"><td><strong>`edges`</strong></td>
 <td>&#160;</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#matplotlib.tri.Triangulation.neighbors" title="matplotlib.tri.Triangulation.neighbors"><code class="xref py py-obj docutils literal"><span class="pre">neighbors</span></code></a></td>
+<tr class="row-even"><td><strong>`neighbors`</strong></td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td>is_delaunay</td>
+<tr class="row-odd"><td><strong>is_delaunay</strong></td>
 <td>(bool) Whether the Triangulation is a calculated Delaunay triangulation (where <code class="xref py py-obj docutils literal"><span class="pre">triangles</span></code> was not specified) or not.</td>
 </tr>
 </tbody>
@@ -356,14 +353,14 @@ be used by calling
 <p class="rubric">Methods</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="26%" />
-<col width="74%" />
+<col width="30%" />
+<col width="70%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#matplotlib.tri.LinearTriInterpolator.__call__" title="matplotlib.tri.LinearTriInterpolator.__call__"><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code></a> (x, y)</td>
+<tr class="row-odd"><td><strong>`__call__` (x, y)</strong></td>
 <td>( Returns interpolated values at x,y points)</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#matplotlib.tri.LinearTriInterpolator.gradient" title="matplotlib.tri.LinearTriInterpolator.gradient"><code class="xref py py-obj docutils literal"><span class="pre">gradient</span></code></a> (x, y)</td>
+<tr class="row-even"><td><strong>`gradient` (x, y)</strong></td>
 <td>(Returns interpolated derivatives at x,y points)</td>
 </tr>
 </tbody>
@@ -431,7 +428,7 @@ The first returned array contains the values of
 
 <dl class="class">
 <dt id="matplotlib.tri.CubicTriInterpolator">
-<em class="property">class </em><code class="descclassname">matplotlib.tri.</code><code class="descname">CubicTriInterpolator</code><span class="sig-paren">(</span><em>triangulation</em>, <em>z</em>, <em>kind=’min_E’</em>, <em>trifinder=None</em>, <em>dz=None</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.tri.CubicTriInterpolator" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.tri.</code><code class="descname">CubicTriInterpolator</code><span class="sig-paren">(</span><em>triangulation</em>, <em>z</em>, <em>kind='min_E'</em>, <em>trifinder=None</em>, <em>dz=None</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.tri.CubicTriInterpolator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">matplotlib.tri.triinterpolate.TriInterpolator</span></code></p>
 <p>A CubicTriInterpolator performs cubic interpolation on triangular grids.</p>
 <p>In one-dimension - on a segment - a cubic interpolating function is
@@ -499,7 +496,7 @@ grid will be divided in 3 child-triangles, and on each child triangle
 the interpolated function is a cubic polynomial of the 2 coordinates).
 This technique originates from FEM (Finite Element Method) analysis;
 the element used is a reduced Hsieh-Clough-Tocher (HCT)
-element. Its shape functions are described in <a class="reference internal" href="#r2" id="id1">[R2]</a>.
+element. Its shape functions are described in <a class="reference internal" href="#r45" id="id1">[R45]</a>.
 The assembled function is guaranteed to be C1-smooth, i.e. it is
 continuous and its first derivatives are also continuous (this
 is easy to show inside the triangles but is also true when crossing the
@@ -508,7 +505,7 @@ edges).</p>
 curvature energy on the functional space generated by the HCT element
 shape functions - with imposed values but arbitrary derivatives at each
 node. The minimized functional is the integral of the so-called total
-curvature (implementation based on an algorithm from <a class="reference internal" href="#r3" id="id2">[R3]</a> - PCG sparse
+curvature (implementation based on an algorithm from <a class="reference internal" href="#r55" id="id2">[R55]</a> - PCG sparse
 solver):</p>
 <blockquote>
 <div><img src="../_images/mathmpl/math-4d96f7ca18.png" class="center" /></div></blockquote>
@@ -516,32 +513,32 @@ solver):</p>
 approximation is used (weighted average of the triangle normal
 vectors), which could improve speed on very large grids.</p>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r2" rules="none">
+<table class="docutils citation" frame="void" id="r45" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[R2]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id3">2</a>)</em> Michel Bernadou, Kamal Hassan, “Basis functions for general
+<tr><td class="label">[R45]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id3">2</a>)</em> Michel Bernadou, Kamal Hassan, “Basis functions for general
 Hsieh-Clough-Tocher triangles, complete or reduced.”,
 International Journal for Numerical Methods in Engineering,
 17(5):784 - 789. 2.01.</td></tr>
 </tbody>
 </table>
-<table class="docutils citation" frame="void" id="r3" rules="none">
+<table class="docutils citation" frame="void" id="r55" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[R3]</td><td><em>(<a class="fn-backref" href="#id2">1</a>, <a class="fn-backref" href="#id4">2</a>)</em> C.T. Kelley, “Iterative Methods for Optimization”.</td></tr>
+<tr><td class="label">[R55]</td><td><em>(<a class="fn-backref" href="#id2">1</a>, <a class="fn-backref" href="#id4">2</a>)</em> C.T. Kelley, “Iterative Methods for Optimization”.</td></tr>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="26%" />
-<col width="74%" />
+<col width="30%" />
+<col width="70%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#matplotlib.tri.CubicTriInterpolator.__call__" title="matplotlib.tri.CubicTriInterpolator.__call__"><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code></a> (x, y)</td>
+<tr class="row-odd"><td><strong>`__call__` (x, y)</strong></td>
 <td>( Returns interpolated values at x,y points)</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#matplotlib.tri.CubicTriInterpolator.gradient" title="matplotlib.tri.CubicTriInterpolator.gradient"><code class="xref py py-obj docutils literal"><span class="pre">gradient</span></code></a> (x, y)</td>
+<tr class="row-even"><td><strong>`gradient` (x, y)</strong></td>
 <td>(Returns interpolated derivatives at x,y points)</td>
 </tr>
 </tbody>
@@ -774,11 +771,11 @@ object and provides basic tools for mesh analysis and mesh improvement.</p>
 <p class="rubric">Attributes</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="60%" />
-<col width="40%" />
+<col width="66%" />
+<col width="34%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#matplotlib.tri.TriAnalyzer.scale_factors" title="matplotlib.tri.TriAnalyzer.scale_factors"><code class="xref py py-obj docutils literal"><span class="pre">scale_factors</span></code></a></td>
+<tr class="row-odd"><td><strong>`scale_factors`</strong></td>
 <td>&#160;</td>
 </tr>
 </tbody>
@@ -910,9 +907,9 @@ fits exactly inside a unit square.</p>
     </div>
     <div class="footer">
         &copy; Copyright 2002 - 2012 John Hunter, Darren Dale, Eric Firing, Michael Droettboom and the Matplotlib development team; 2012 - 2017 The Matplotlib development team.
-      Last updated on Jul 16, 2017.
+      Last updated on Aug 06, 2017.
       Created using <a
-href="http://sphinx-doc.org/">Sphinx</a> 1.6.2.
+href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
     </div>
 
 <script>

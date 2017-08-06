@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Typesetting With XeLaTeX/LuaLaTeX &mdash; Matplotlib 2.0.2.post4416.dev0+g1df513f documentation</title>
+    <title>Typesetting With XeLaTeX/LuaLaTeX &mdash; Matplotlib 2.0.2.post4545+ga1937d4 documentation</title>
     
     <link rel="stylesheet" href="../../_static/mpl.css"
 type="text/css" />
@@ -17,7 +17,7 @@ type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.0.2.post4416.dev0+g1df513f',
+        VERSION:     '2.0.2.post4545+ga1937d4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -28,14 +28,14 @@ type="text/css" />
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Matplotlib 2.0.2.post4416.dev0+g1df513f documentation"
+          title="Search within Matplotlib 2.0.2.post4545+ga1937d4 documentation"
           href="../../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html"
 />
     <link rel="search" title="Search" href="../../search.html"
 />
-    <link rel="top" title="Matplotlib 2.0.2.post4416.dev0+g1df513f documentation" href="../../index.html" /> 
+    <link rel="top" title="Matplotlib 2.0.2.post4545+ga1937d4 documentation" href="../../index.html" /> 
 
 
   </head>
@@ -43,14 +43,11 @@ type="text/css" />
 
 
 
-<!-- The "Fork me on github" ribbon -->
-<img style="float: right; margin-bottom: -40px; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" usemap="#ribbonmap"/>
-<map name="ribbonmap">
-    <area shape="poly" coords="15,0,148,-1,148,135" href="https://github.com/matplotlib/matplotlib" title="Fork me on GitHub" />
-</map>
-
-<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px; position: relative;">
 <a href="../../index.html"><img src="../../_static/logo2.svg" width="540px" border="0" alt="matplotlib"/></a>
+
+<!-- The "Fork me on github" ribbon -->
+<div id="forkongithub"><a href="https://github.com/matplotlib/matplotlib">Fork me on GitHub</a></div>
 </div>
 
 
@@ -230,7 +227,7 @@ layout of the figure is included in the header of the text file.</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="s2">&quot;monospace&quot;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s2">&quot;monospace&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="s2">&quot;sans-serif&quot;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s2">&quot;sans-serif&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="s2">&quot;comic sans&quot;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s2">&quot;Comic Sans MS&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">u&quot;µ is not $</span><span class="se">\\</span><span class="s2">mu$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">u</span><span class="s2">&quot;µ is not $</span><span class="se">\\</span><span class="s2">mu$&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="p">)</span>
 
 </pre></div>
@@ -265,8 +262,8 @@ specified in the rc parameters, make sure to disable <code class="docutils liter
          <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">usepackage</span><span class="si">{units}</span><span class="s2">&quot;</span><span class="p">,</span>          <span class="c1"># load additional packages</span>
          <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">usepackage</span><span class="si">{metalogo}</span><span class="s2">&quot;</span><span class="p">,</span>
          <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">usepackage{unicode-math}&quot;</span><span class="p">,</span>   <span class="c1"># unicode math setup</span>
-         <span class="s2">r&quot;\setmathfont{xits-math.otf}&quot;</span><span class="p">,</span>
-         <span class="s2">r&quot;\setmainfont{DejaVu Serif}&quot;</span><span class="p">,</span>  <span class="c1"># serif font via preamble</span>
+         <span class="sa">r</span><span class="s2">&quot;\setmathfont{xits-math.otf}&quot;</span><span class="p">,</span>
+         <span class="sa">r</span><span class="s2">&quot;\setmainfont{DejaVu Serif}&quot;</span><span class="p">,</span>  <span class="c1"># serif font via preamble</span>
          <span class="p">]</span>
 <span class="p">}</span>
 <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">pgf_with_custom_preamble</span><span class="p">)</span>
@@ -301,9 +298,9 @@ unicode handling must be configured in the preamble.</p>
 <span class="n">pgf_with_pdflatex</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;pgf.texsystem&quot;</span><span class="p">:</span> <span class="s2">&quot;pdflatex&quot;</span><span class="p">,</span>
     <span class="s2">&quot;pgf.preamble&quot;</span><span class="p">:</span> <span class="p">[</span>
-         <span class="s2">r&quot;\usepackage[utf8x]</span><span class="si">{inputenc}</span><span class="s2">&quot;</span><span class="p">,</span>
-         <span class="s2">r&quot;\usepackage[T1]</span><span class="si">{fontenc}</span><span class="s2">&quot;</span><span class="p">,</span>
-         <span class="s2">r&quot;\usepackage</span><span class="si">{cmbright}</span><span class="s2">&quot;</span><span class="p">,</span>
+         <span class="sa">r</span><span class="s2">&quot;\usepackage[utf8x]</span><span class="si">{inputenc}</span><span class="s2">&quot;</span><span class="p">,</span>
+         <span class="sa">r</span><span class="s2">&quot;\usepackage[T1]</span><span class="si">{fontenc}</span><span class="s2">&quot;</span><span class="p">,</span>
+         <span class="sa">r</span><span class="s2">&quot;\usepackage</span><span class="si">{cmbright}</span><span class="s2">&quot;</span><span class="p">,</span>
          <span class="p">]</span>
 <span class="p">}</span>
 <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">pgf_with_pdflatex</span><span class="p">)</span>
@@ -314,7 +311,7 @@ unicode handling must be configured in the preamble.</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">3.</span><span class="p">,</span> <span class="s2">&quot;serif&quot;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s2">&quot;serif&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="s2">&quot;monospace&quot;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s2">&quot;monospace&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="s2">&quot;sans-serif&quot;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s2">&quot;sans-serif&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">u&quot;µ is not $</span><span class="se">\\</span><span class="s2">mu$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">u</span><span class="s2">&quot;µ is not $</span><span class="se">\\</span><span class="s2">mu$&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="p">)</span>
 
 </pre></div>
@@ -367,10 +364,10 @@ using either the <code class="docutils literal"><span class="pre">rasterized=Tru
 <li>If you still need help, please see <a class="reference internal" href="../../faq/troubleshooting_faq.html#reporting-problems"><span class="std std-ref">Getting help</span></a></li>
 </ul>
 <p><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
-<div class="sphx-glr-footer container">
-<div class="sphx-glr-download container">
+<div class="sphx-glr-footer docutils container">
+<div class="sphx-glr-download docutils container">
 <a class="reference download internal" href="../../_downloads/pgf.py" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">pgf.py</span></code></a></div>
-<div class="sphx-glr-download container">
+<div class="sphx-glr-download docutils container">
 <a class="reference download internal" href="../../_downloads/pgf.ipynb" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">pgf.ipynb</span></code></a></div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Generated by Sphinx-Gallery</a></p>
@@ -386,9 +383,9 @@ using either the <code class="docutils literal"><span class="pre">rasterized=Tru
     </div>
     <div class="footer">
         &copy; Copyright 2002 - 2012 John Hunter, Darren Dale, Eric Firing, Michael Droettboom and the Matplotlib development team; 2012 - 2017 The Matplotlib development team.
-      Last updated on Jul 16, 2017.
+      Last updated on Aug 06, 2017.
       Created using <a
-href="http://sphinx-doc.org/">Sphinx</a> 1.6.2.
+href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
     </div>
 
 <script>

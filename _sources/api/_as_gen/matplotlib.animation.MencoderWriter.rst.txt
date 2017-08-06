@@ -9,6 +9,19 @@ matplotlib\.animation\.MencoderWriter
    .. automethod:: __init__
 
    
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~MencoderWriter.__init__
+      ~MencoderWriter.bin_path
+      ~MencoderWriter.cleanup
+      ~MencoderWriter.finish
+      ~MencoderWriter.grab_frame
+      ~MencoderWriter.isAvailable
+      ~MencoderWriter.saving
+      ~MencoderWriter.setup
+   
    
 
    

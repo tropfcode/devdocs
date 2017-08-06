@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>matplotlib.backend_tools &mdash; Matplotlib 2.0.2.post4416.dev0+g1df513f documentation</title>
+    <title>matplotlib.backend_tools &mdash; Matplotlib 2.0.2.post4545+ga1937d4 documentation</title>
     
     <link rel="stylesheet" href="../_static/mpl.css"
 type="text/css" />
@@ -17,7 +17,7 @@ type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.0.2.post4416.dev0+g1df513f',
+        VERSION:     '2.0.2.post4545+ga1937d4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -28,14 +28,14 @@ type="text/css" />
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Matplotlib 2.0.2.post4416.dev0+g1df513f documentation"
+          title="Search within Matplotlib 2.0.2.post4545+ga1937d4 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html"
 />
     <link rel="search" title="Search" href="../search.html"
 />
-    <link rel="top" title="Matplotlib 2.0.2.post4416.dev0+g1df513f documentation" href="../index.html" />
+    <link rel="top" title="Matplotlib 2.0.2.post4545+ga1937d4 documentation" href="../index.html" />
     <link rel="up" title="backends" href="index_backend_api.html" />
     <link rel="next" title="matplotlib.backends.backend_gtkagg" href="backend_gtkagg_api.html" />
     <link rel="prev" title="matplotlib.backends.backend_mixed" href="backend_mixed_api.html" /> 
@@ -46,14 +46,11 @@ type="text/css" />
 
 
 
-<!-- The "Fork me on github" ribbon -->
-<img style="float: right; margin-bottom: -40px; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" usemap="#ribbonmap"/>
-<map name="ribbonmap">
-    <area shape="poly" coords="15,0,148,-1,148,135" href="https://github.com/matplotlib/matplotlib" title="Fork me on GitHub" />
-</map>
-
-<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px; position: relative;">
 <a href="../index.html"><img src="../_static/logo2.svg" width="540px" border="0" alt="matplotlib"/></a>
+
+<!-- The "Fork me on github" ribbon -->
+<div id="forkongithub"><a href="https://github.com/matplotlib/matplotlib">Fork me on GitHub</a></div>
 </div>
 
 
@@ -180,12 +177,12 @@ active at any given time for the same
 <p>Base tool for the configuration of subplots</p>
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ConfigureSubplotsBase.description">
-<code class="descname">description</code><em class="property"> = ‘Configure subplots’</em><a class="headerlink" href="#matplotlib.backend_tools.ConfigureSubplotsBase.description" title="Permalink to this definition">¶</a></dt>
+<code class="descname">description</code><em class="property"> = 'Configure subplots'</em><a class="headerlink" href="#matplotlib.backend_tools.ConfigureSubplotsBase.description" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ConfigureSubplotsBase.image">
-<code class="descname">image</code><em class="property"> = ‘subplots.png’</em><a class="headerlink" href="#matplotlib.backend_tools.ConfigureSubplotsBase.image" title="Permalink to this definition">¶</a></dt>
+<code class="descname">image</code><em class="property"> = 'subplots.png'</em><a class="headerlink" href="#matplotlib.backend_tools.ConfigureSubplotsBase.image" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -251,17 +248,17 @@ active at any given time for the same
 <p>Base tool for figure saving</p>
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.SaveFigureBase.default_keymap">
-<code class="descname">default_keymap</code><em class="property"> = [‘s’, ‘ctrl+s’]</em><a class="headerlink" href="#matplotlib.backend_tools.SaveFigureBase.default_keymap" title="Permalink to this definition">¶</a></dt>
+<code class="descname">default_keymap</code><em class="property"> = ['s', 'ctrl+s']</em><a class="headerlink" href="#matplotlib.backend_tools.SaveFigureBase.default_keymap" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.SaveFigureBase.description">
-<code class="descname">description</code><em class="property"> = ‘Save the figure’</em><a class="headerlink" href="#matplotlib.backend_tools.SaveFigureBase.description" title="Permalink to this definition">¶</a></dt>
+<code class="descname">description</code><em class="property"> = 'Save the figure'</em><a class="headerlink" href="#matplotlib.backend_tools.SaveFigureBase.description" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.SaveFigureBase.image">
-<code class="descname">image</code><em class="property"> = ‘filesave.png’</em><a class="headerlink" href="#matplotlib.backend_tools.SaveFigureBase.image" title="Permalink to this definition">¶</a></dt>
+<code class="descname">image</code><em class="property"> = 'filesave.png'</em><a class="headerlink" href="#matplotlib.backend_tools.SaveFigureBase.image" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -294,17 +291,17 @@ set_cursor when a tool gets triggered</p>
 <p>Move back up the view lim stack</p>
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolBack.default_keymap">
-<code class="descname">default_keymap</code><em class="property"> = [‘left’, ‘c’, ‘backspace’]</em><a class="headerlink" href="#matplotlib.backend_tools.ToolBack.default_keymap" title="Permalink to this definition">¶</a></dt>
+<code class="descname">default_keymap</code><em class="property"> = ['left', 'c', 'backspace']</em><a class="headerlink" href="#matplotlib.backend_tools.ToolBack.default_keymap" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolBack.description">
-<code class="descname">description</code><em class="property"> = ‘Back to  previous view’</em><a class="headerlink" href="#matplotlib.backend_tools.ToolBack.description" title="Permalink to this definition">¶</a></dt>
+<code class="descname">description</code><em class="property"> = 'Back to  previous view'</em><a class="headerlink" href="#matplotlib.backend_tools.ToolBack.description" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolBack.image">
-<code class="descname">image</code><em class="property"> = ‘back.png’</em><a class="headerlink" href="#matplotlib.backend_tools.ToolBack.image" title="Permalink to this definition">¶</a></dt>
+<code class="descname">image</code><em class="property"> = 'back.png'</em><a class="headerlink" href="#matplotlib.backend_tools.ToolBack.image" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -319,17 +316,17 @@ The tool is instantiated by <a class="reference internal" href="backend_managers
 <p class="rubric">Attributes</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="40%" />
-<col width="60%" />
+<col width="42%" />
+<col width="58%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td>toolmanager: <a class="reference internal" href="backend_managers_api.html#matplotlib.backend_managers.ToolManager" title="matplotlib.backend_managers.ToolManager"><code class="xref py py-obj docutils literal"><span class="pre">matplotlib.backend_managers.ToolManager</span></code></a></td>
+<tr class="row-odd"><td><strong>toolmanager: `matplotlib.backend_managers.ToolManager`</strong></td>
 <td>ToolManager that controls this Tool</td>
 </tr>
-<tr class="row-even"><td>figure: <code class="xref py py-obj docutils literal"><span class="pre">FigureCanvas</span></code></td>
+<tr class="row-even"><td><strong>figure: `FigureCanvas`</strong></td>
 <td>Figure instance that is affected by this Tool</td>
 </tr>
-<tr class="row-odd"><td>name: String</td>
+<tr class="row-odd"><td><strong>name: String</strong></td>
 <td>Used as <strong>Id</strong> of the tool, has to be unique among tools of the same ToolManager</td>
 </tr>
 </tbody>
@@ -457,12 +454,12 @@ as a Tooltip</p>
 <p>Tool to enable all axes for toolmanager interaction</p>
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolEnableAllNavigation.default_keymap">
-<code class="descname">default_keymap</code><em class="property"> = [‘a’]</em><a class="headerlink" href="#matplotlib.backend_tools.ToolEnableAllNavigation.default_keymap" title="Permalink to this definition">¶</a></dt>
+<code class="descname">default_keymap</code><em class="property"> = ['a']</em><a class="headerlink" href="#matplotlib.backend_tools.ToolEnableAllNavigation.default_keymap" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolEnableAllNavigation.description">
-<code class="descname">description</code><em class="property"> = ‘Enables all axes toolmanager’</em><a class="headerlink" href="#matplotlib.backend_tools.ToolEnableAllNavigation.description" title="Permalink to this definition">¶</a></dt>
+<code class="descname">description</code><em class="property"> = 'Enables all axes toolmanager'</em><a class="headerlink" href="#matplotlib.backend_tools.ToolEnableAllNavigation.description" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -484,7 +481,7 @@ as a Tooltip</p>
 
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolEnableNavigation.description">
-<code class="descname">description</code><em class="property"> = ‘Enables one axes toolmanager’</em><a class="headerlink" href="#matplotlib.backend_tools.ToolEnableNavigation.description" title="Permalink to this definition">¶</a></dt>
+<code class="descname">description</code><em class="property"> = 'Enables one axes toolmanager'</em><a class="headerlink" href="#matplotlib.backend_tools.ToolEnableNavigation.description" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -501,17 +498,17 @@ as a Tooltip</p>
 <p>Move forward in the view lim stack</p>
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolForward.default_keymap">
-<code class="descname">default_keymap</code><em class="property"> = [‘right’, ‘v’]</em><a class="headerlink" href="#matplotlib.backend_tools.ToolForward.default_keymap" title="Permalink to this definition">¶</a></dt>
+<code class="descname">default_keymap</code><em class="property"> = ['right', 'v']</em><a class="headerlink" href="#matplotlib.backend_tools.ToolForward.default_keymap" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolForward.description">
-<code class="descname">description</code><em class="property"> = ‘Forward to next view’</em><a class="headerlink" href="#matplotlib.backend_tools.ToolForward.description" title="Permalink to this definition">¶</a></dt>
+<code class="descname">description</code><em class="property"> = 'Forward to next view'</em><a class="headerlink" href="#matplotlib.backend_tools.ToolForward.description" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolForward.image">
-<code class="descname">image</code><em class="property"> = ‘forward.png’</em><a class="headerlink" href="#matplotlib.backend_tools.ToolForward.image" title="Permalink to this definition">¶</a></dt>
+<code class="descname">image</code><em class="property"> = 'forward.png'</em><a class="headerlink" href="#matplotlib.backend_tools.ToolForward.image" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -523,12 +520,12 @@ as a Tooltip</p>
 <p>Tool to toggle full screen</p>
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolFullScreen.default_keymap">
-<code class="descname">default_keymap</code><em class="property"> = [‘f’, ‘ctrl+f’]</em><a class="headerlink" href="#matplotlib.backend_tools.ToolFullScreen.default_keymap" title="Permalink to this definition">¶</a></dt>
+<code class="descname">default_keymap</code><em class="property"> = ['f', 'ctrl+f']</em><a class="headerlink" href="#matplotlib.backend_tools.ToolFullScreen.default_keymap" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolFullScreen.description">
-<code class="descname">description</code><em class="property"> = ‘Toogle Fullscreen mode’</em><a class="headerlink" href="#matplotlib.backend_tools.ToolFullScreen.description" title="Permalink to this definition">¶</a></dt>
+<code class="descname">description</code><em class="property"> = 'Toogle Fullscreen mode'</em><a class="headerlink" href="#matplotlib.backend_tools.ToolFullScreen.description" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -550,12 +547,12 @@ as a Tooltip</p>
 <p>Tool to toggle the major grids of the figure</p>
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolGrid.default_keymap">
-<code class="descname">default_keymap</code><em class="property"> = [‘g’]</em><a class="headerlink" href="#matplotlib.backend_tools.ToolGrid.default_keymap" title="Permalink to this definition">¶</a></dt>
+<code class="descname">default_keymap</code><em class="property"> = ['g']</em><a class="headerlink" href="#matplotlib.backend_tools.ToolGrid.default_keymap" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolGrid.description">
-<code class="descname">description</code><em class="property"> = ‘Toogle major grids’</em><a class="headerlink" href="#matplotlib.backend_tools.ToolGrid.description" title="Permalink to this definition">¶</a></dt>
+<code class="descname">description</code><em class="property"> = 'Toogle major grids'</em><a class="headerlink" href="#matplotlib.backend_tools.ToolGrid.description" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -567,17 +564,17 @@ as a Tooltip</p>
 <p>Restore the original view lim</p>
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolHome.default_keymap">
-<code class="descname">default_keymap</code><em class="property"> = [‘h’, ‘r’, ‘home’]</em><a class="headerlink" href="#matplotlib.backend_tools.ToolHome.default_keymap" title="Permalink to this definition">¶</a></dt>
+<code class="descname">default_keymap</code><em class="property"> = ['h', 'r', 'home']</em><a class="headerlink" href="#matplotlib.backend_tools.ToolHome.default_keymap" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolHome.description">
-<code class="descname">description</code><em class="property"> = ‘Reset original view’</em><a class="headerlink" href="#matplotlib.backend_tools.ToolHome.description" title="Permalink to this definition">¶</a></dt>
+<code class="descname">description</code><em class="property"> = 'Reset original view'</em><a class="headerlink" href="#matplotlib.backend_tools.ToolHome.description" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolHome.image">
-<code class="descname">image</code><em class="property"> = ‘home.png’</em><a class="headerlink" href="#matplotlib.backend_tools.ToolHome.image" title="Permalink to this definition">¶</a></dt>
+<code class="descname">image</code><em class="property"> = 'home.png'</em><a class="headerlink" href="#matplotlib.backend_tools.ToolHome.image" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -589,12 +586,12 @@ as a Tooltip</p>
 <p>Tool to toggle the major and minor grids of the figure</p>
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolMinorGrid.default_keymap">
-<code class="descname">default_keymap</code><em class="property"> = [‘G’]</em><a class="headerlink" href="#matplotlib.backend_tools.ToolMinorGrid.default_keymap" title="Permalink to this definition">¶</a></dt>
+<code class="descname">default_keymap</code><em class="property"> = ['G']</em><a class="headerlink" href="#matplotlib.backend_tools.ToolMinorGrid.default_keymap" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolMinorGrid.description">
-<code class="descname">description</code><em class="property"> = ‘Toogle major and minor grids’</em><a class="headerlink" href="#matplotlib.backend_tools.ToolMinorGrid.description" title="Permalink to this definition">¶</a></dt>
+<code class="descname">description</code><em class="property"> = 'Toogle major and minor grids'</em><a class="headerlink" href="#matplotlib.backend_tools.ToolMinorGrid.description" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -611,22 +608,22 @@ as a Tooltip</p>
 
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolPan.default_keymap">
-<code class="descname">default_keymap</code><em class="property"> = [‘p’]</em><a class="headerlink" href="#matplotlib.backend_tools.ToolPan.default_keymap" title="Permalink to this definition">¶</a></dt>
+<code class="descname">default_keymap</code><em class="property"> = ['p']</em><a class="headerlink" href="#matplotlib.backend_tools.ToolPan.default_keymap" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolPan.description">
-<code class="descname">description</code><em class="property"> = ‘Pan axes with left mouse, zoom with right’</em><a class="headerlink" href="#matplotlib.backend_tools.ToolPan.description" title="Permalink to this definition">¶</a></dt>
+<code class="descname">description</code><em class="property"> = 'Pan axes with left mouse, zoom with right'</em><a class="headerlink" href="#matplotlib.backend_tools.ToolPan.description" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolPan.image">
-<code class="descname">image</code><em class="property"> = ‘move.png’</em><a class="headerlink" href="#matplotlib.backend_tools.ToolPan.image" title="Permalink to this definition">¶</a></dt>
+<code class="descname">image</code><em class="property"> = 'move.png'</em><a class="headerlink" href="#matplotlib.backend_tools.ToolPan.image" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolPan.radio_group">
-<code class="descname">radio_group</code><em class="property"> = ‘default’</em><a class="headerlink" href="#matplotlib.backend_tools.ToolPan.radio_group" title="Permalink to this definition">¶</a></dt>
+<code class="descname">radio_group</code><em class="property"> = 'default'</em><a class="headerlink" href="#matplotlib.backend_tools.ToolPan.radio_group" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -638,12 +635,12 @@ as a Tooltip</p>
 <p>Tool to call the figure manager destroy method</p>
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolQuit.default_keymap">
-<code class="descname">default_keymap</code><em class="property"> = [‘ctrl+w’, ‘cmd+w’, ‘q’]</em><a class="headerlink" href="#matplotlib.backend_tools.ToolQuit.default_keymap" title="Permalink to this definition">¶</a></dt>
+<code class="descname">default_keymap</code><em class="property"> = ['ctrl+w', 'cmd+w', 'q']</em><a class="headerlink" href="#matplotlib.backend_tools.ToolQuit.default_keymap" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolQuit.description">
-<code class="descname">description</code><em class="property"> = ‘Quit the figure’</em><a class="headerlink" href="#matplotlib.backend_tools.ToolQuit.description" title="Permalink to this definition">¶</a></dt>
+<code class="descname">description</code><em class="property"> = 'Quit the figure'</em><a class="headerlink" href="#matplotlib.backend_tools.ToolQuit.description" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -660,12 +657,12 @@ as a Tooltip</p>
 <p>Tool to call the figure manager destroy method</p>
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolQuitAll.default_keymap">
-<code class="descname">default_keymap</code><em class="property"> = [‘W’, ‘cmd+W’, ‘Q’]</em><a class="headerlink" href="#matplotlib.backend_tools.ToolQuitAll.default_keymap" title="Permalink to this definition">¶</a></dt>
+<code class="descname">default_keymap</code><em class="property"> = ['W', 'cmd+W', 'Q']</em><a class="headerlink" href="#matplotlib.backend_tools.ToolQuitAll.default_keymap" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolQuitAll.description">
-<code class="descname">description</code><em class="property"> = ‘Quit all figures’</em><a class="headerlink" href="#matplotlib.backend_tools.ToolQuitAll.description" title="Permalink to this definition">¶</a></dt>
+<code class="descname">description</code><em class="property"> = 'Quit all figures'</em><a class="headerlink" href="#matplotlib.backend_tools.ToolQuitAll.description" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -685,11 +682,11 @@ as a Tooltip</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>“*args“</strong></p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>``*args``</strong></p>
 <blockquote>
 <div><p>Variable length argument to be used by the Tool</p>
 </div></blockquote>
-<p><strong>“**kwargs“</strong></p>
+<p><strong>``**kwargs``</strong></p>
 <blockquote class="last">
 <div><p><a class="reference internal" href="#matplotlib.backend_tools.ToolToggleBase.toggled" title="matplotlib.backend_tools.ToolToggleBase.toggled"><code class="xref py py-obj docutils literal"><span class="pre">toggled</span></code></a> if present and True, sets the initial state ot the Tool
 Arbitrary keyword arguments to be consumed by the Tool</p>
@@ -839,12 +836,12 @@ don’t update <em>any</em> positions.</p>
 <p>Tool to toggle between linear and logarithmic scales on the X axis</p>
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolXScale.default_keymap">
-<code class="descname">default_keymap</code><em class="property"> = [‘k’, ‘L’]</em><a class="headerlink" href="#matplotlib.backend_tools.ToolXScale.default_keymap" title="Permalink to this definition">¶</a></dt>
+<code class="descname">default_keymap</code><em class="property"> = ['k', 'L']</em><a class="headerlink" href="#matplotlib.backend_tools.ToolXScale.default_keymap" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolXScale.description">
-<code class="descname">description</code><em class="property"> = ‘Toogle Scale X axis’</em><a class="headerlink" href="#matplotlib.backend_tools.ToolXScale.description" title="Permalink to this definition">¶</a></dt>
+<code class="descname">description</code><em class="property"> = 'Toogle Scale X axis'</em><a class="headerlink" href="#matplotlib.backend_tools.ToolXScale.description" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -861,12 +858,12 @@ don’t update <em>any</em> positions.</p>
 <p>Tool to toggle between linear and logarithmic scales on the Y axis</p>
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolYScale.default_keymap">
-<code class="descname">default_keymap</code><em class="property"> = [‘l’]</em><a class="headerlink" href="#matplotlib.backend_tools.ToolYScale.default_keymap" title="Permalink to this definition">¶</a></dt>
+<code class="descname">default_keymap</code><em class="property"> = ['l']</em><a class="headerlink" href="#matplotlib.backend_tools.ToolYScale.default_keymap" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolYScale.description">
-<code class="descname">description</code><em class="property"> = ‘Toogle Scale Y axis’</em><a class="headerlink" href="#matplotlib.backend_tools.ToolYScale.description" title="Permalink to this definition">¶</a></dt>
+<code class="descname">description</code><em class="property"> = 'Toogle Scale Y axis'</em><a class="headerlink" href="#matplotlib.backend_tools.ToolYScale.description" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -888,22 +885,22 @@ don’t update <em>any</em> positions.</p>
 
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolZoom.default_keymap">
-<code class="descname">default_keymap</code><em class="property"> = [‘o’]</em><a class="headerlink" href="#matplotlib.backend_tools.ToolZoom.default_keymap" title="Permalink to this definition">¶</a></dt>
+<code class="descname">default_keymap</code><em class="property"> = ['o']</em><a class="headerlink" href="#matplotlib.backend_tools.ToolZoom.default_keymap" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolZoom.description">
-<code class="descname">description</code><em class="property"> = ‘Zoom to rectangle’</em><a class="headerlink" href="#matplotlib.backend_tools.ToolZoom.description" title="Permalink to this definition">¶</a></dt>
+<code class="descname">description</code><em class="property"> = 'Zoom to rectangle'</em><a class="headerlink" href="#matplotlib.backend_tools.ToolZoom.description" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolZoom.image">
-<code class="descname">image</code><em class="property"> = ‘zoom_to_rect.png’</em><a class="headerlink" href="#matplotlib.backend_tools.ToolZoom.image" title="Permalink to this definition">¶</a></dt>
+<code class="descname">image</code><em class="property"> = 'zoom_to_rect.png'</em><a class="headerlink" href="#matplotlib.backend_tools.ToolZoom.image" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="matplotlib.backend_tools.ToolZoom.radio_group">
-<code class="descname">radio_group</code><em class="property"> = ‘default’</em><a class="headerlink" href="#matplotlib.backend_tools.ToolZoom.radio_group" title="Permalink to this definition">¶</a></dt>
+<code class="descname">radio_group</code><em class="property"> = 'default'</em><a class="headerlink" href="#matplotlib.backend_tools.ToolZoom.radio_group" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -951,7 +948,7 @@ don’t update <em>any</em> positions.</p>
 
 <dl class="function">
 <dt id="matplotlib.backend_tools.add_tools_to_container">
-<code class="descclassname">matplotlib.backend_tools.</code><code class="descname">add_tools_to_container</code><span class="sig-paren">(</span><em>container, tools=[[‘navigation’, [‘home’, ‘back’, ‘forward’]], [‘zoompan’, [‘pan’, ‘zoom’, ‘subplots’]], [‘io’, [‘save’]]]</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.backend_tools.add_tools_to_container" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">matplotlib.backend_tools.</code><code class="descname">add_tools_to_container</code><span class="sig-paren">(</span><em>container, tools=[['navigation', ['home', 'back', 'forward']], ['zoompan', ['pan', 'zoom', 'subplots']], ['io', ['save']]]</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.backend_tools.add_tools_to_container" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add multiple tools to the container.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -976,7 +973,7 @@ See <code class="xref py py-obj docutils literal"><span class="pre">add_tool</sp
 
 <dl class="function">
 <dt id="matplotlib.backend_tools.add_tools_to_manager">
-<code class="descclassname">matplotlib.backend_tools.</code><code class="descname">add_tools_to_manager</code><span class="sig-paren">(</span><em>toolmanager</em>, <em>tools={‘xscale’: &lt;class ‘matplotlib.backend_tools.ToolXScale’&gt;</em>, <em>’position’: &lt;class ‘matplotlib.backend_tools.ToolCursorPosition’&gt;</em>, <em>’yscale’: &lt;class ‘matplotlib.backend_tools.ToolYScale’&gt;</em>, <em>’nav’: &lt;class ‘matplotlib.backend_tools.ToolEnableNavigation’&gt;</em>, <em>’home’: &lt;class ‘matplotlib.backend_tools.ToolHome’&gt;</em>, <em>’zoom’: &lt;class ‘matplotlib.backend_tools.ToolZoom’&gt;</em>, <em>’viewpos’: &lt;class ‘matplotlib.backend_tools.ToolViewsPositions’&gt;</em>, <em>’fullscreen’: &lt;class ‘matplotlib.backend_tools.ToolFullScreen’&gt;</em>, <em>’quit’: &lt;class ‘matplotlib.backend_tools.ToolQuit’&gt;</em>, <em>’save’: ‘ToolSaveFigure’</em>, <em>’rubberband’: ‘ToolRubberband’</em>, <em>’cursor’: ‘ToolSetCursor’</em>, <em>’forward’: &lt;class ‘matplotlib.backend_tools.ToolForward’&gt;</em>, <em>’subplots’: ‘ToolConfigureSubplots’</em>, <em>’quit_all’: &lt;class ‘matplotlib.backend_tools.ToolQuitAll’&gt;</em>, <em>’allnav’: &lt;class ‘matplotlib.backend_tools.ToolEnableAllNavigation’&gt;</em>, <em>’grid’: &lt;class ‘matplotlib.backend_tools.ToolGrid’&gt;</em>, <em>’grid_minor’: &lt;class ‘matplotlib.backend_tools.ToolMinorGrid’&gt;</em>, <em>’back’: &lt;class ‘matplotlib.backend_tools.ToolBack’&gt;</em>, <em>’pan’: &lt;class ‘matplotlib.backend_tools.ToolPan’&gt;}</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.backend_tools.add_tools_to_manager" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">matplotlib.backend_tools.</code><code class="descname">add_tools_to_manager</code><span class="sig-paren">(</span><em>toolmanager</em>, <em>tools={'nav': &lt;class 'matplotlib.backend_tools.ToolEnableNavigation'&gt;</em>, <em>'subplots': 'ToolConfigureSubplots'</em>, <em>'fullscreen': &lt;class 'matplotlib.backend_tools.ToolFullScreen'&gt;</em>, <em>'viewpos': &lt;class 'matplotlib.backend_tools.ToolViewsPositions'&gt;</em>, <em>'allnav': &lt;class 'matplotlib.backend_tools.ToolEnableAllNavigation'&gt;</em>, <em>'zoom': &lt;class 'matplotlib.backend_tools.ToolZoom'&gt;</em>, <em>'save': 'ToolSaveFigure'</em>, <em>'quit': &lt;class 'matplotlib.backend_tools.ToolQuit'&gt;</em>, <em>'yscale': &lt;class 'matplotlib.backend_tools.ToolYScale'&gt;</em>, <em>'quit_all': &lt;class 'matplotlib.backend_tools.ToolQuitAll'&gt;</em>, <em>'grid': &lt;class 'matplotlib.backend_tools.ToolGrid'&gt;</em>, <em>'back': &lt;class 'matplotlib.backend_tools.ToolBack'&gt;</em>, <em>'xscale': &lt;class 'matplotlib.backend_tools.ToolXScale'&gt;</em>, <em>'grid_minor': &lt;class 'matplotlib.backend_tools.ToolMinorGrid'&gt;</em>, <em>'pan': &lt;class 'matplotlib.backend_tools.ToolPan'&gt;</em>, <em>'cursor': 'ToolSetCursor'</em>, <em>'rubberband': 'ToolRubberband'</em>, <em>'forward': &lt;class 'matplotlib.backend_tools.ToolForward'&gt;</em>, <em>'position': &lt;class 'matplotlib.backend_tools.ToolCursorPosition'&gt;</em>, <em>'home': &lt;class 'matplotlib.backend_tools.ToolHome'&gt;}</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.backend_tools.add_tools_to_manager" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add multiple tools to <code class="xref py py-obj docutils literal"><span class="pre">ToolManager</span></code></p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -999,13 +996,13 @@ info.</p>
 
 <dl class="data">
 <dt id="matplotlib.backend_tools.default_toolbar_tools">
-<code class="descclassname">matplotlib.backend_tools.</code><code class="descname">default_toolbar_tools</code><em class="property"> = [[‘navigation’, [‘home’, ‘back’, ‘forward’]], [‘zoompan’, [‘pan’, ‘zoom’, ‘subplots’]], [‘io’, [‘save’]]]</em><a class="headerlink" href="#matplotlib.backend_tools.default_toolbar_tools" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">matplotlib.backend_tools.</code><code class="descname">default_toolbar_tools</code><em class="property"> = [['navigation', ['home', 'back', 'forward']], ['zoompan', ['pan', 'zoom', 'subplots']], ['io', ['save']]]</em><a class="headerlink" href="#matplotlib.backend_tools.default_toolbar_tools" title="Permalink to this definition">¶</a></dt>
 <dd><p>Default tools in the toolbar</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="matplotlib.backend_tools.default_tools">
-<code class="descclassname">matplotlib.backend_tools.</code><code class="descname">default_tools</code><em class="property"> = {‘xscale’: &lt;class ‘matplotlib.backend_tools.ToolXScale’&gt;, ‘position’: &lt;class ‘matplotlib.backend_tools.ToolCursorPosition’&gt;, ‘yscale’: &lt;class ‘matplotlib.backend_tools.ToolYScale’&gt;, ‘nav’: &lt;class ‘matplotlib.backend_tools.ToolEnableNavigation’&gt;, ‘home’: &lt;class ‘matplotlib.backend_tools.ToolHome’&gt;, ‘zoom’: &lt;class ‘matplotlib.backend_tools.ToolZoom’&gt;, ‘viewpos’: &lt;class ‘matplotlib.backend_tools.ToolViewsPositions’&gt;, ‘fullscreen’: &lt;class ‘matplotlib.backend_tools.ToolFullScreen’&gt;, ‘quit’: &lt;class ‘matplotlib.backend_tools.ToolQuit’&gt;, ‘save’: ‘ToolSaveFigure’, ‘rubberband’: ‘ToolRubberband’, ‘cursor’: ‘ToolSetCursor’, ‘forward’: &lt;class ‘matplotlib.backend_tools.ToolForward’&gt;, ‘subplots’: ‘ToolConfigureSubplots’, ‘quit_all’: &lt;class ‘matplotlib.backend_tools.ToolQuitAll’&gt;, ‘allnav’: &lt;class ‘matplotlib.backend_tools.ToolEnableAllNavigation’&gt;, ‘grid’: &lt;class ‘matplotlib.backend_tools.ToolGrid’&gt;, ‘grid_minor’: &lt;class ‘matplotlib.backend_tools.ToolMinorGrid’&gt;, ‘back’: &lt;class ‘matplotlib.backend_tools.ToolBack’&gt;, ‘pan’: &lt;class ‘matplotlib.backend_tools.ToolPan’&gt;}</em><a class="headerlink" href="#matplotlib.backend_tools.default_tools" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">matplotlib.backend_tools.</code><code class="descname">default_tools</code><em class="property"> = {'nav': &lt;class 'matplotlib.backend_tools.ToolEnableNavigation'&gt;, 'subplots': 'ToolConfigureSubplots', 'fullscreen': &lt;class 'matplotlib.backend_tools.ToolFullScreen'&gt;, 'viewpos': &lt;class 'matplotlib.backend_tools.ToolViewsPositions'&gt;, 'allnav': &lt;class 'matplotlib.backend_tools.ToolEnableAllNavigation'&gt;, 'zoom': &lt;class 'matplotlib.backend_tools.ToolZoom'&gt;, 'save': 'ToolSaveFigure', 'quit': &lt;class 'matplotlib.backend_tools.ToolQuit'&gt;, 'yscale': &lt;class 'matplotlib.backend_tools.ToolYScale'&gt;, 'quit_all': &lt;class 'matplotlib.backend_tools.ToolQuitAll'&gt;, 'grid': &lt;class 'matplotlib.backend_tools.ToolGrid'&gt;, 'back': &lt;class 'matplotlib.backend_tools.ToolBack'&gt;, 'xscale': &lt;class 'matplotlib.backend_tools.ToolXScale'&gt;, 'grid_minor': &lt;class 'matplotlib.backend_tools.ToolMinorGrid'&gt;, 'pan': &lt;class 'matplotlib.backend_tools.ToolPan'&gt;, 'cursor': 'ToolSetCursor', 'rubberband': 'ToolRubberband', 'forward': &lt;class 'matplotlib.backend_tools.ToolForward'&gt;, 'position': &lt;class 'matplotlib.backend_tools.ToolCursorPosition'&gt;, 'home': &lt;class 'matplotlib.backend_tools.ToolHome'&gt;}</em><a class="headerlink" href="#matplotlib.backend_tools.default_tools" title="Permalink to this definition">¶</a></dt>
 <dd><p>Default tools</p>
 </dd></dl>
 
@@ -1020,9 +1017,9 @@ info.</p>
     </div>
     <div class="footer">
         &copy; Copyright 2002 - 2012 John Hunter, Darren Dale, Eric Firing, Michael Droettboom and the Matplotlib development team; 2012 - 2017 The Matplotlib development team.
-      Last updated on Jul 16, 2017.
+      Last updated on Aug 06, 2017.
       Created using <a
-href="http://sphinx-doc.org/">Sphinx</a> 1.6.2.
+href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
     </div>
 
 <script>

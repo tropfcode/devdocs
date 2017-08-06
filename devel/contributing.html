@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Contributing &mdash; Matplotlib 2.0.2.post4416.dev0+g1df513f documentation</title>
+    <title>Contributing &mdash; Matplotlib 2.0.2.post4545+ga1937d4 documentation</title>
     
     <link rel="stylesheet" href="../_static/mpl.css"
 type="text/css" />
@@ -17,7 +17,7 @@ type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.0.2.post4416.dev0+g1df513f',
+        VERSION:     '2.0.2.post4545+ga1937d4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -28,14 +28,14 @@ type="text/css" />
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Matplotlib 2.0.2.post4416.dev0+g1df513f documentation"
+          title="Search within Matplotlib 2.0.2.post4545+ga1937d4 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html"
 />
     <link rel="search" title="Search" href="../search.html"
 />
-    <link rel="top" title="Matplotlib 2.0.2.post4416.dev0+g1df513f documentation" href="../index.html" />
+    <link rel="top" title="Matplotlib 2.0.2.post4545+ga1937d4 documentation" href="../index.html" />
     <link rel="up" title="The Matplotlib Developers’ Guide" href="index.html" />
     <link rel="next" title="Developer’s tips for testing" href="testing.html" />
     <link rel="prev" title="The Matplotlib Developers’ Guide" href="index.html" /> 
@@ -46,14 +46,11 @@ type="text/css" />
 
 
 
-<!-- The "Fork me on github" ribbon -->
-<img style="float: right; margin-bottom: -40px; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" usemap="#ribbonmap"/>
-<map name="ribbonmap">
-    <area shape="poly" coords="15,0,148,-1,148,135" href="https://github.com/matplotlib/matplotlib" title="Fork me on GitHub" />
-</map>
-
-<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px; position: relative;">
 <a href="../index.html"><img src="../_static/logo2.svg" width="540px" border="0" alt="matplotlib"/></a>
+
+<!-- The "Fork me on github" ribbon -->
+<div id="forkongithub"><a href="https://github.com/matplotlib/matplotlib">Fork me on GitHub</a></div>
 </div>
 
 
@@ -204,17 +201,23 @@ use to organize this information.</p>
 </div>
 <div class="section" id="retrieving-and-installing-the-latest-version-of-the-code">
 <h2>Retrieving and installing the latest version of the code<a class="headerlink" href="#retrieving-and-installing-the-latest-version-of-the-code" title="Permalink to this headline">¶</a></h2>
-<p>When working on the Matplotlib source, setting up a <a class="reference external" href="http://docs.python-guide.org/en/latest/dev/virtualenvs/">virtual
-environment</a> or a
-<a class="reference external" href="http://conda.pydata.org/docs/using/envs.html">conda environment</a> is
-recommended.</p>
+<p>When developing Matplotlib, sources must be downloaded, built, and installed into
+a local environment on your machine.</p>
+<p>Follow the instructions detailed <a class="reference internal" href="../users/installing.html#install-from-source"><span class="std std-ref">here</span></a> to set up your
+environment to build Matplotlib from source.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">If you already have a version of Matplotlib installed, use an
-virtual environment or uninstall using the same method you used
-to install it.  Installing multiple versions of Matplotlib via different
-methods into the same environment may not always work as expected.</p>
+<p class="last">When working on Matplotlib sources, having multiple versions installed by
+different methods into the same environment may not always work as expected.</p>
 </div>
+<p>To work on Matplotlib sources, it is strongly recommended to set up an alternative
+development environment, using the something like <a class="reference external" href="http://docs.python-guide.org/en/latest/dev/virtualenvs/">virtual environments in python</a>, or a
+<a class="reference external" href="http://conda.pydata.org/docs/using/envs.html">conda environment</a>.</p>
+<p>If you choose to use an already existing environment, and not a clean virtual or
+conda environment, uninstall the current version of Matplotlib in that enviroment
+using the same method used to install it.</p>
+<p>If working on Matplotlib documentation only, the above steps are <em>not</em> absolutely
+necessary.</p>
 <p>We use <a class="reference external" href="https://git-scm.com/">Git</a> for version control and
 <a class="reference external" href="https://github.com/">GitHub</a> for hosting our main repository.</p>
 <p>You can check out the latest sources with the command (see
@@ -498,7 +501,7 @@ illustration) just passes them on to the
 <a class="reference internal" href="../api/_as_gen/matplotlib.artist.Artist.update.html#matplotlib.artist.Artist.update" title="matplotlib.artist.Artist.update"><code class="xref py py-meth docutils literal"><span class="pre">matplotlib.artist.Artist.update()</span></code></a> method:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># in text.py</span>
 <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="n">Artist</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+    <span class="n">Artist</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -553,7 +556,7 @@ forced to use <code class="docutils literal"><span class="pre">**kwargs</span></
 <div class="section" id="developing-a-new-backend">
 <span id="custom-backend"></span><h3>Developing a new backend<a class="headerlink" href="#developing-a-new-backend" title="Permalink to this headline">¶</a></h3>
 <p>If you are working on a custom backend, the <em>backend</em> setting in
-<code class="file docutils literal"><span class="pre">matplotlibrc</span></code> (<a class="reference internal" href="../tutorials/01_introductory/customizing.html#sphx-glr-tutorials-01-introductory-customizing-py"><span class="std std-ref">Customizing matplotlib</span></a>) supports an
+<code class="file docutils literal"><span class="pre">matplotlibrc</span></code> (<a class="reference internal" href="../tutorials/introductory/customizing.html#sphx-glr-tutorials-introductory-customizing-py"><span class="std std-ref">Customizing matplotlib</span></a>) supports an
 external backend via the <code class="docutils literal"><span class="pre">module</span></code> directive.  If
 <code class="file docutils literal"><span class="pre">my_backend.py</span></code> is a Matplotlib backend in your
 <span class="target" id="index-0"></span><a class="reference internal" href="../faq/environment_variables_faq.html#envvar-PYTHONPATH"><code class="xref std std-envvar docutils literal"><span class="pre">PYTHONPATH</span></code></a>, you can set it on one of several ways</p>
@@ -603,9 +606,9 @@ example code you can load it into a file handle with:</p>
     </div>
     <div class="footer">
         &copy; Copyright 2002 - 2012 John Hunter, Darren Dale, Eric Firing, Michael Droettboom and the Matplotlib development team; 2012 - 2017 The Matplotlib development team.
-      Last updated on Jul 16, 2017.
+      Last updated on Aug 06, 2017.
       Created using <a
-href="http://sphinx-doc.org/">Sphinx</a> 1.6.2.
+href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
     </div>
 
 <script>

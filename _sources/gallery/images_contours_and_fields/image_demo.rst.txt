@@ -261,7 +261,7 @@ Finally, we'll show an image using a clip path.
 
 
 
-**Total running time of the script:** ( 0 minutes  0.585 seconds)
+**Total running time of the script:** ( 0 minutes  0.351 seconds)
 
 
 

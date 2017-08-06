@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>widgets &mdash; Matplotlib 2.0.2.post4416.dev0+g1df513f documentation</title>
+    <title>widgets &mdash; Matplotlib 2.0.2.post4545+ga1937d4 documentation</title>
     
     <link rel="stylesheet" href="../_static/mpl.css"
 type="text/css" />
@@ -17,7 +17,7 @@ type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.0.2.post4416.dev0+g1df513f',
+        VERSION:     '2.0.2.post4545+ga1937d4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -28,14 +28,14 @@ type="text/css" />
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Matplotlib 2.0.2.post4416.dev0+g1df513f documentation"
+          title="Search within Matplotlib 2.0.2.post4545+ga1937d4 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html"
 />
     <link rel="search" title="Search" href="../search.html"
 />
-    <link rel="top" title="Matplotlib 2.0.2.post4416.dev0+g1df513f documentation" href="../index.html" />
+    <link rel="top" title="Matplotlib 2.0.2.post4545+ga1937d4 documentation" href="../index.html" />
     <link rel="up" title="The Matplotlib API" href="index.html" />
     <link rel="next" title="matplotlib.pyplot" href="_as_gen/matplotlib.pyplot.html" />
     <link rel="prev" title="units" href="units_api.html" /> 
@@ -46,14 +46,11 @@ type="text/css" />
 
 
 
-<!-- The "Fork me on github" ribbon -->
-<img style="float: right; margin-bottom: -40px; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" usemap="#ribbonmap"/>
-<map name="ribbonmap">
-    <area shape="poly" coords="15,0,148,-1,148,135" href="https://github.com/matplotlib/matplotlib" title="Fork me on GitHub" />
-</map>
-
-<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px; position: relative;">
 <a href="../index.html"><img src="../_static/logo2.svg" width="540px" border="0" alt="matplotlib"/></a>
+
+<!-- The "Fork me on github" ribbon -->
+<div id="forkongithub"><a href="https://github.com/matplotlib/matplotlib">Fork me on GitHub</a></div>
 </div>
 
 
@@ -198,7 +195,7 @@ function stores callback ids for later clean up.</p>
 
 <dl class="class">
 <dt id="matplotlib.widgets.Button">
-<em class="property">class </em><code class="descclassname">matplotlib.widgets.</code><code class="descname">Button</code><span class="sig-paren">(</span><em>ax</em>, <em>label</em>, <em>image=None</em>, <em>color=‘0.85’</em>, <em>hovercolor=‘0.95’</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.widgets.Button" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.widgets.</code><code class="descname">Button</code><span class="sig-paren">(</span><em>ax</em>, <em>label</em>, <em>image=None</em>, <em>color='0.85'</em>, <em>hovercolor='0.95'</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.widgets.Button" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#matplotlib.widgets.AxesWidget" title="matplotlib.widgets.AxesWidget"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.widgets.AxesWidget</span></code></a></p>
 <p>A GUI neutral button.</p>
 <p>For the button to remain responsive you must keep a reference to it.</p>
@@ -368,7 +365,7 @@ only for now).  <em>lineprops</em> is a dictionary of line properties.</p>
 
 <dl class="class">
 <dt id="matplotlib.widgets.EllipseSelector">
-<em class="property">class </em><code class="descclassname">matplotlib.widgets.</code><code class="descname">EllipseSelector</code><span class="sig-paren">(</span><em>ax</em>, <em>onselect</em>, <em>drawtype=’box’</em>, <em>minspanx=None</em>, <em>minspany=None</em>, <em>useblit=False</em>, <em>lineprops=None</em>, <em>rectprops=None</em>, <em>spancoords=’data’</em>, <em>button=None</em>, <em>maxdist=10</em>, <em>marker_props=None</em>, <em>interactive=False</em>, <em>state_modifier_keys=None</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.widgets.EllipseSelector" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.widgets.</code><code class="descname">EllipseSelector</code><span class="sig-paren">(</span><em>ax</em>, <em>onselect</em>, <em>drawtype='box'</em>, <em>minspanx=None</em>, <em>minspany=None</em>, <em>useblit=False</em>, <em>lineprops=None</em>, <em>rectprops=None</em>, <em>spancoords='data'</em>, <em>button=None</em>, <em>maxdist=10</em>, <em>marker_props=None</em>, <em>interactive=False</em>, <em>state_modifier_keys=None</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.widgets.EllipseSelector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#matplotlib.widgets.RectangleSelector" title="matplotlib.widgets.RectangleSelector"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.widgets.RectangleSelector</span></code></a></p>
 <p>Select an elliptical region of an axes.</p>
 <p>For the cursor to remain responsive you must keep a reference to
@@ -711,7 +708,7 @@ vertex. The default radius is 15 pixels.</p>
 
 <dl class="class">
 <dt id="matplotlib.widgets.RadioButtons">
-<em class="property">class </em><code class="descclassname">matplotlib.widgets.</code><code class="descname">RadioButtons</code><span class="sig-paren">(</span><em>ax</em>, <em>labels</em>, <em>active=0</em>, <em>activecolor=’blue’</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.widgets.RadioButtons" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.widgets.</code><code class="descname">RadioButtons</code><span class="sig-paren">(</span><em>ax</em>, <em>labels</em>, <em>active=0</em>, <em>activecolor='blue'</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.widgets.RadioButtons" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#matplotlib.widgets.AxesWidget" title="matplotlib.widgets.AxesWidget"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.widgets.AxesWidget</span></code></a></p>
 <p>A GUI neutral radio button.</p>
 <p>For the buttons to remain responsive
@@ -770,7 +767,7 @@ Raise ValueError if the index is invalid.</dd>
 
 <dl class="class">
 <dt id="matplotlib.widgets.RectangleSelector">
-<em class="property">class </em><code class="descclassname">matplotlib.widgets.</code><code class="descname">RectangleSelector</code><span class="sig-paren">(</span><em>ax</em>, <em>onselect</em>, <em>drawtype=’box’</em>, <em>minspanx=None</em>, <em>minspany=None</em>, <em>useblit=False</em>, <em>lineprops=None</em>, <em>rectprops=None</em>, <em>spancoords=’data’</em>, <em>button=None</em>, <em>maxdist=10</em>, <em>marker_props=None</em>, <em>interactive=False</em>, <em>state_modifier_keys=None</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.widgets.RectangleSelector" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.widgets.</code><code class="descname">RectangleSelector</code><span class="sig-paren">(</span><em>ax</em>, <em>onselect</em>, <em>drawtype='box'</em>, <em>minspanx=None</em>, <em>minspany=None</em>, <em>useblit=False</em>, <em>lineprops=None</em>, <em>rectprops=None</em>, <em>spancoords='data'</em>, <em>button=None</em>, <em>maxdist=10</em>, <em>marker_props=None</em>, <em>interactive=False</em>, <em>state_modifier_keys=None</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.widgets.RectangleSelector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">matplotlib.widgets._SelectorWidget</span></code></p>
 <p>Select a rectangular region of an axes.</p>
 <p>For the cursor to remain responsive you must keep a reference to
@@ -890,7 +887,7 @@ dict(move=’ ‘, clear=’escape’, square=’shift’, center=’ctrl’)</p
 
 <dl class="class">
 <dt id="matplotlib.widgets.Slider">
-<em class="property">class </em><code class="descclassname">matplotlib.widgets.</code><code class="descname">Slider</code><span class="sig-paren">(</span><em>ax</em>, <em>label</em>, <em>valmin</em>, <em>valmax</em>, <em>valinit=0.5</em>, <em>valfmt=’%1.2f’</em>, <em>closedmin=True</em>, <em>closedmax=True</em>, <em>slidermin=None</em>, <em>slidermax=None</em>, <em>dragging=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.widgets.Slider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.widgets.</code><code class="descname">Slider</code><span class="sig-paren">(</span><em>ax</em>, <em>label</em>, <em>valmin</em>, <em>valmax</em>, <em>valinit=0.5</em>, <em>valfmt='%1.2f'</em>, <em>closedmin=True</em>, <em>closedmax=True</em>, <em>slidermin=None</em>, <em>slidermax=None</em>, <em>dragging=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.widgets.Slider" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#matplotlib.widgets.AxesWidget" title="matplotlib.widgets.AxesWidget"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.widgets.AxesWidget</span></code></a></p>
 <p>A slider representing a floating point range.</p>
 <p>Create a slider from <code class="xref py py-obj docutils literal"><span class="pre">valmin</span></code> to <code class="xref py py-obj docutils literal"><span class="pre">valmax</span></code> in axes <code class="xref py py-obj docutils literal"><span class="pre">ax</span></code>. For the slider to
@@ -1112,7 +1109,7 @@ this from the GUI</dd>
 
 <dl class="class">
 <dt id="matplotlib.widgets.TextBox">
-<em class="property">class </em><code class="descclassname">matplotlib.widgets.</code><code class="descname">TextBox</code><span class="sig-paren">(</span><em>ax</em>, <em>label</em>, <em>initial=”</em>, <em>color=’.95’</em>, <em>hovercolor=‘1’</em>, <em>label_pad=0.01</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.widgets.TextBox" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.widgets.</code><code class="descname">TextBox</code><span class="sig-paren">(</span><em>ax</em>, <em>label</em>, <em>initial=''</em>, <em>color='.95'</em>, <em>hovercolor='1'</em>, <em>label_pad=0.01</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.widgets.TextBox" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#matplotlib.widgets.AxesWidget" title="matplotlib.widgets.AxesWidget"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.widgets.AxesWidget</span></code></a></p>
 <p>A GUI neutral text input box.</p>
 <p>For the text box to remain responsive you must keep a reference to it.</p>
@@ -1210,7 +1207,7 @@ will be placed into.</p>
 
 <dl class="class">
 <dt id="matplotlib.widgets.ToolHandles">
-<em class="property">class </em><code class="descclassname">matplotlib.widgets.</code><code class="descname">ToolHandles</code><span class="sig-paren">(</span><em>ax</em>, <em>x</em>, <em>y</em>, <em>marker=’o’</em>, <em>marker_props=None</em>, <em>useblit=True</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.widgets.ToolHandles" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.widgets.</code><code class="descname">ToolHandles</code><span class="sig-paren">(</span><em>ax</em>, <em>x</em>, <em>y</em>, <em>marker='o'</em>, <em>marker_props=None</em>, <em>useblit=True</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.widgets.ToolHandles" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 <p>Control handles for canvas tools.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1327,9 +1324,9 @@ of any event callback.</p>
     </div>
     <div class="footer">
         &copy; Copyright 2002 - 2012 John Hunter, Darren Dale, Eric Firing, Michael Droettboom and the Matplotlib development team; 2012 - 2017 The Matplotlib development team.
-      Last updated on Jul 16, 2017.
+      Last updated on Aug 06, 2017.
       Created using <a
-href="http://sphinx-doc.org/">Sphinx</a> 1.6.2.
+href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
     </div>
 
 <script>

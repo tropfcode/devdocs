@@ -11,29 +11,6 @@ Pseudocolor plots of unstructured triangular grids.
 
 
 
-
-.. rst-class:: sphx-glr-horizontal
-
-
-    *
-
-      .. image:: /gallery/images_contours_and_fields/images/sphx_glr_tripcolor_demo_001.png
-            :scale: 47
-
-    *
-
-      .. image:: /gallery/images_contours_and_fields/images/sphx_glr_tripcolor_demo_002.png
-            :scale: 47
-
-    *
-
-      .. image:: /gallery/images_contours_and_fields/images/sphx_glr_tripcolor_demo_003.png
-            :scale: 47
-
-
-
-
-
 .. code-block:: python
 
     import matplotlib.pyplot as plt
@@ -41,8 +18,19 @@ Pseudocolor plots of unstructured triangular grids.
     import numpy as np
     import math
 
-    # Creating a Triangulation without specifying the triangles results in the
-    # Delaunay triangulation of the points.
+
+
+
+
+
+
+Creating a Triangulation without specifying the triangles results in the
+Delaunay triangulation of the points.
+
+
+
+.. code-block:: python
+
 
     # First create the x and y coordinates of the points.
     n_angles = 36
@@ -67,14 +55,41 @@ Pseudocolor plots of unstructured triangular grids.
     mask = np.where(xmid * xmid + ymid * ymid < min_radius * min_radius, 1, 0)
     triang.set_mask(mask)
 
-    # tripcolor plot.
+
+
+
+
+
+
+tripcolor plot.
+
+
+
+.. code-block:: python
+
+
     plt.figure()
     plt.gca().set_aspect('equal')
     plt.tripcolor(triang, z, shading='flat')
     plt.colorbar()
     plt.title('tripcolor of Delaunay triangulation, flat shading')
 
-    # Illustrate Gouraud shading.
+
+
+
+.. image:: /gallery/images_contours_and_fields/images/sphx_glr_tripcolor_demo_001.png
+    :align: center
+
+
+
+
+Illustrate Gouraud shading.
+
+
+
+.. code-block:: python
+
+
     plt.figure()
     plt.gca().set_aspect('equal')
     plt.tripcolor(triang, z, shading='gouraud')
@@ -82,10 +97,24 @@ Pseudocolor plots of unstructured triangular grids.
     plt.title('tripcolor of Delaunay triangulation, gouraud shading')
 
 
-    # You can specify your own triangulation rather than perform a Delaunay
-    # triangulation of the points, where each triangle is given by the indices of
-    # the three points that make up the triangle, ordered in either a clockwise or
-    # anticlockwise manner.
+
+
+
+.. image:: /gallery/images_contours_and_fields/images/sphx_glr_tripcolor_demo_002.png
+    :align: center
+
+
+
+
+You can specify your own triangulation rather than perform a Delaunay
+triangulation of the points, where each triangle is given by the indices of
+the three points that make up the triangle, ordered in either a clockwise or
+anticlockwise manner.
+
+
+
+.. code-block:: python
+
 
     xy = np.asarray([
         [-0.101, 0.872], [-0.080, 0.883], [-0.069, 0.888], [-0.054, 0.890],
@@ -134,12 +163,24 @@ Pseudocolor plots of unstructured triangular grids.
     zfaces = np.exp(-0.01 * ((xmid - x0) * (xmid - x0) +
                              (ymid - y0) * (ymid - y0)))
 
-    # Rather than create a Triangulation object, can simply pass x, y and triangles
-    # arrays to tripcolor directly.  It would be better to use a Triangulation
-    # object if the same triangulation was to be used more than once to save
-    # duplicated calculations.
-    # Can specify one color value per face rather than one per point by using the
-    # facecolors kwarg.
+
+
+
+
+
+
+Rather than create a Triangulation object, can simply pass x, y and triangles
+arrays to tripcolor directly.  It would be better to use a Triangulation
+object if the same triangulation was to be used more than once to save
+duplicated calculations.
+Can specify one color value per face rather than one per point by using the
+facecolors kwarg.
+
+
+
+.. code-block:: python
+
+
     plt.figure()
     plt.gca().set_aspect('equal')
     plt.tripcolor(x, y, triangles, facecolors=zfaces, edgecolors='k')
@@ -150,7 +191,15 @@ Pseudocolor plots of unstructured triangular grids.
 
     plt.show()
 
-**Total running time of the script:** ( 0 minutes  0.239 seconds)
+
+
+.. image:: /gallery/images_contours_and_fields/images/sphx_glr_tripcolor_demo_003.png
+    :align: center
+
+
+
+
+**Total running time of the script:** ( 0 minutes  0.280 seconds)
 
 
 

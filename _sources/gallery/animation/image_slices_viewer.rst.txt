@@ -7,6 +7,7 @@
 Image Slices Viewer
 ===================
 
+This example demonstrates how to scroll through 2D image slices of a 3D array.
 
 
 
@@ -62,7 +63,7 @@ Image Slices Viewer
     fig.canvas.mpl_connect('scroll_event', tracker.onscroll)
     plt.show()
 
-**Total running time of the script:** ( 0 minutes  0.084 seconds)
+**Total running time of the script:** ( 0 minutes  0.067 seconds)
 
 
 

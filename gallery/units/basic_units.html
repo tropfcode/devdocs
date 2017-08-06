@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Basic Units &mdash; Matplotlib 2.0.2.post4416.dev0+g1df513f documentation</title>
+    <title>Basic Units &mdash; Matplotlib 2.0.2.post4545+ga1937d4 documentation</title>
     
     <link rel="stylesheet" href="../../_static/mpl.css"
 type="text/css" />
@@ -17,7 +17,7 @@ type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.0.2.post4416.dev0+g1df513f',
+        VERSION:     '2.0.2.post4545+ga1937d4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -28,14 +28,14 @@ type="text/css" />
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Matplotlib 2.0.2.post4416.dev0+g1df513f documentation"
+          title="Search within Matplotlib 2.0.2.post4545+ga1937d4 documentation"
           href="../../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html"
 />
     <link rel="search" title="Search" href="../../search.html"
 />
-    <link rel="top" title="Matplotlib 2.0.2.post4416.dev0+g1df513f documentation" href="../../index.html" /> 
+    <link rel="top" title="Matplotlib 2.0.2.post4545+ga1937d4 documentation" href="../../index.html" /> 
 
 
   </head>
@@ -43,14 +43,11 @@ type="text/css" />
 
 
 
-<!-- The "Fork me on github" ribbon -->
-<img style="float: right; margin-bottom: -40px; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" usemap="#ribbonmap"/>
-<map name="ribbonmap">
-    <area shape="poly" coords="15,0,148,-1,148,135" href="https://github.com/matplotlib/matplotlib" title="Fork me on GitHub" />
-</map>
-
-<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px; position: relative;">
 <a href="../../index.html"><img src="../../_static/logo2.svg" width="540px" border="0" alt="matplotlib"/></a>
+
+<!-- The "Fork me on github" ribbon -->
+<div id="forkongithub"><a href="https://github.com/matplotlib/matplotlib">Fork me on GitHub</a></div>
 </div>
 
 
@@ -135,41 +132,41 @@ Travis-CI: <a href="https://travis-ci.org/matplotlib/matplotlib">
 
 
 <span class="k">class</span> <span class="nc">ProxyDelegate</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fn_name</span><span class="p">,</span> <span class="n">proxy_type</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fn_name</span><span class="p">,</span> <span class="n">proxy_type</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">proxy_type</span> <span class="o">=</span> <span class="n">proxy_type</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fn_name</span> <span class="o">=</span> <span class="n">fn_name</span>
 
-    <span class="k">def</span> <span class="nf">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">objtype</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">objtype</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">proxy_type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fn_name</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
 
 
 <span class="k">class</span> <span class="nc">TaggedValueMeta</span><span class="p">(</span><span class="nb">type</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">fn_name</span> <span class="ow">in</span> <span class="n">cls</span><span class="o">.</span><span class="n">_proxies</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">fn_name</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_proxies</span><span class="p">:</span>
             <span class="k">try</span><span class="p">:</span>
-                <span class="n">dummy</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">fn_name</span><span class="p">)</span>
+                <span class="n">dummy</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">fn_name</span><span class="p">)</span>
             <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
-                <span class="nb">setattr</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">fn_name</span><span class="p">,</span>
-                        <span class="n">ProxyDelegate</span><span class="p">(</span><span class="n">fn_name</span><span class="p">,</span> <span class="n">cls</span><span class="o">.</span><span class="n">_proxies</span><span class="p">[</span><span class="n">fn_name</span><span class="p">]))</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">fn_name</span><span class="p">,</span>
+                        <span class="n">ProxyDelegate</span><span class="p">(</span><span class="n">fn_name</span><span class="p">,</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_proxies</span><span class="p">[</span><span class="n">fn_name</span><span class="p">]))</span>
 
 
 <span class="k">class</span> <span class="nc">PassThroughProxy</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fn_name</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fn_name</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fn_name</span> <span class="o">=</span> <span class="n">fn_name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">target</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">proxy_target</span>
 
-    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
         <span class="n">fn</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fn_name</span><span class="p">)</span>
         <span class="n">ret</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">ret</span>
 
 
 <span class="k">class</span> <span class="nc">ConvertArgsProxy</span><span class="p">(</span><span class="n">PassThroughProxy</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fn_name</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
-        <span class="n">PassThroughProxy</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fn_name</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fn_name</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+        <span class="n">PassThroughProxy</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fn_name</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">unit</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">unit</span>
 
-    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
         <span class="n">converted_args</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
             <span class="k">try</span><span class="p">:</span>
@@ -177,26 +174,26 @@ Travis-CI: <a href="https://travis-ci.org/matplotlib/matplotlib">
             <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
                 <span class="n">converted_args</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">TaggedValue</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">unit</span><span class="p">))</span>
         <span class="n">converted_args</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">([</span><span class="n">c</span><span class="o">.</span><span class="n">get_value</span><span class="p">()</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">converted_args</span><span class="p">])</span>
-        <span class="k">return</span> <span class="n">PassThroughProxy</span><span class="o">.</span><span class="n">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">converted_args</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">PassThroughProxy</span><span class="o">.</span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">converted_args</span><span class="p">)</span>
 
 
 <span class="k">class</span> <span class="nc">ConvertReturnProxy</span><span class="p">(</span><span class="n">PassThroughProxy</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fn_name</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
-        <span class="n">PassThroughProxy</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fn_name</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fn_name</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+        <span class="n">PassThroughProxy</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fn_name</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">unit</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">unit</span>
 
-    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
-        <span class="n">ret</span> <span class="o">=</span> <span class="n">PassThroughProxy</span><span class="o">.</span><span class="n">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">PassThroughProxy</span><span class="o">.</span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
         <span class="k">return</span> <span class="p">(</span><span class="bp">NotImplemented</span> <span class="k">if</span> <span class="n">ret</span> <span class="ow">is</span> <span class="bp">NotImplemented</span>
                 <span class="k">else</span> <span class="n">TaggedValue</span><span class="p">(</span><span class="n">ret</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">unit</span><span class="p">))</span>
 
 
 <span class="k">class</span> <span class="nc">ConvertAllProxy</span><span class="p">(</span><span class="n">PassThroughProxy</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fn_name</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
-        <span class="n">PassThroughProxy</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fn_name</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fn_name</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+        <span class="n">PassThroughProxy</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fn_name</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">unit</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">unit</span>
 
-    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
         <span class="n">converted_args</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">arg_units</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">unit</span><span class="p">]</span>
         <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
@@ -219,7 +216,7 @@ Travis-CI: <a href="https://travis-ci.org/matplotlib/matplotlib">
                 <span class="k">else</span><span class="p">:</span>
                     <span class="n">arg_units</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
         <span class="n">converted_args</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">converted_args</span><span class="p">)</span>
-        <span class="n">ret</span> <span class="o">=</span> <span class="n">PassThroughProxy</span><span class="o">.</span><span class="n">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">converted_args</span><span class="p">)</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">PassThroughProxy</span><span class="o">.</span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">converted_args</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">ret</span> <span class="ow">is</span> <span class="bp">NotImplemented</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">NotImplemented</span>
         <span class="n">ret_unit</span> <span class="o">=</span> <span class="n">unit_resolver</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fn_name</span><span class="p">,</span> <span class="n">arg_units</span><span class="p">)</span>
@@ -239,55 +236,55 @@ Travis-CI: <a href="https://travis-ci.org/matplotlib/matplotlib">
                 <span class="s1">&#39;__gt__&#39;</span><span class="p">:</span> <span class="n">ConvertAllProxy</span><span class="p">,</span>
                 <span class="s1">&#39;__len__&#39;</span><span class="p">:</span> <span class="n">PassThroughProxy</span><span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__new__</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">unit</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">unit</span><span class="p">):</span>
         <span class="c1"># generate a new subclass for value</span>
         <span class="n">value_class</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
         <span class="k">try</span><span class="p">:</span>
-            <span class="n">subcls</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="s1">&#39;TaggedValue_of_</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">value_class</span><span class="o">.</span><span class="n">__name__</span><span class="p">),</span>
-                          <span class="nb">tuple</span><span class="p">([</span><span class="n">cls</span><span class="p">,</span> <span class="n">value_class</span><span class="p">]),</span>
+            <span class="n">subcls</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="s1">&#39;TaggedValue_of_</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">value_class</span><span class="o">.</span><span class="vm">__name__</span><span class="p">),</span>
+                          <span class="nb">tuple</span><span class="p">([</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value_class</span><span class="p">]),</span>
                           <span class="p">{})</span>
             <span class="k">if</span> <span class="n">subcls</span> <span class="ow">not</span> <span class="ow">in</span> <a href="../../api/units_api.html#matplotlib.units" title="View documentation for matplotlib.units"><span class="n">units</span></a><span class="o">.</span><span class="n">registry</span><span class="p">:</span>
                 <a href="../../api/units_api.html#matplotlib.units" title="View documentation for matplotlib.units"><span class="n">units</span></a><span class="o">.</span><span class="n">registry</span><span class="p">[</span><span class="n">subcls</span><span class="p">]</span> <span class="o">=</span> <span class="n">basicConverter</span>
-            <span class="k">return</span> <span class="nb">object</span><span class="o">.</span><span class="n">__new__</span><span class="p">(</span><span class="n">subcls</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">object</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="n">subcls</span><span class="p">)</span>
         <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">cls</span> <span class="ow">not</span> <span class="ow">in</span> <a href="../../api/units_api.html#matplotlib.units" title="View documentation for matplotlib.units"><span class="n">units</span></a><span class="o">.</span><span class="n">registry</span><span class="p">:</span>
-                <a href="../../api/units_api.html#matplotlib.units" title="View documentation for matplotlib.units"><span class="n">units</span></a><span class="o">.</span><span class="n">registry</span><span class="p">[</span><span class="n">cls</span><span class="p">]</span> <span class="o">=</span> <span class="n">basicConverter</span>
-            <span class="k">return</span> <span class="nb">object</span><span class="o">.</span><span class="n">__new__</span><span class="p">(</span><span class="n">cls</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">cls</span> <span class="ow">not</span> <span class="ow">in</span> <a href="../../api/units_api.html#matplotlib.units" title="View documentation for matplotlib.units"><span class="n">units</span></a><span class="o">.</span><span class="n">registry</span><span class="p">:</span>
+                <a href="../../api/units_api.html#matplotlib.units" title="View documentation for matplotlib.units"><span class="n">units</span></a><span class="o">.</span><span class="n">registry</span><span class="p">[</span><span class="bp">cls</span><span class="p">]</span> <span class="o">=</span> <span class="n">basicConverter</span>
+            <span class="k">return</span> <span class="nb">object</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">unit</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">unit</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">unit</span> <span class="o">=</span> <span class="n">unit</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">proxy_target</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span>
 
-    <span class="k">def</span> <span class="nf">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;__&#39;</span><span class="p">)):</span>
-            <span class="k">return</span> <span class="nb">object</span><span class="o">.</span><span class="n">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-        <span class="n">variable</span> <span class="o">=</span> <span class="nb">object</span><span class="o">.</span><span class="n">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nb">hasattr</span><span class="p">(</span><span class="n">variable</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span> <span class="ow">and</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__dict__</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">object</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="n">variable</span> <span class="o">=</span> <span class="nb">object</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">hasattr</span><span class="p">(</span><span class="n">variable</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span> <span class="ow">and</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">):</span>
             <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">variable</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-        <span class="k">return</span> <span class="nb">object</span><span class="o">.</span><span class="n">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">object</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">__array__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">t</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+            <span class="k">return</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.asarray.html#numpy.asarray" title="View documentation for numpy.asarray"><span class="n">np</span><span class="o">.</span><span class="n">asarray</span></a><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.asarray.html#numpy.asarray" title="View documentation for numpy.asarray"><span class="n">np</span><span class="o">.</span><span class="n">asarray</span></a><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">__array_wrap__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">array</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">TaggedValue</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="s1">&#39;TaggedValue(&#39;</span> <span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;, &#39;</span> <span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;)&#39;</span>
 
-    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; in &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">class</span> <span class="nc">IteratorProxy</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-            <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">iter</span><span class="p">,</span> <span class="n">unit</span><span class="p">):</span>
+            <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">iter</span><span class="p">,</span> <span class="n">unit</span><span class="p">):</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">iter</span> <span class="o">=</span> <span class="nb">iter</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">unit</span> <span class="o">=</span> <span class="n">unit</span>
 
@@ -298,7 +295,7 @@ Travis-CI: <a href="https://travis-ci.org/matplotlib/matplotlib">
         <span class="k">return</span> <span class="n">IteratorProxy</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">get_compressed_copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mask</span><span class="p">):</span>
-        <span class="n">new_value</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">masked_array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">)</span><span class="o">.</span><span class="n">compressed</span><span class="p">()</span>
+        <span class="n">new_value</span> <span class="o">=</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ma.masked_array.round.html#numpy.ma.masked_array" title="View documentation for numpy.ma.masked_array"><span class="n">np</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">masked_array</span></a><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">)</span><span class="o">.</span><span class="n">compressed</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">TaggedValue</span><span class="p">(</span><span class="n">new_value</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">convert_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">unit</span><span class="p">):</span>
@@ -318,23 +315,23 @@ Travis-CI: <a href="https://travis-ci.org/matplotlib/matplotlib">
 
 
 <span class="k">class</span> <span class="nc">BasicUnit</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">fullname</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">fullname</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
         <span class="k">if</span> <span class="n">fullname</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
             <span class="n">fullname</span> <span class="o">=</span> <span class="n">name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fullname</span> <span class="o">=</span> <span class="n">fullname</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">conversions</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="s1">&#39;BasicUnit(</span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
 
-    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fullname</span>
 
-    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">TaggedValue</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">__mul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rhs</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__mul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rhs</span><span class="p">):</span>
         <span class="n">value</span> <span class="o">=</span> <span class="n">rhs</span>
         <span class="n">unit</span> <span class="o">=</span> <span class="bp">self</span>
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">rhs</span><span class="p">,</span> <span class="s1">&#39;get_unit&#39;</span><span class="p">):</span>
@@ -345,14 +342,14 @@ Travis-CI: <a href="https://travis-ci.org/matplotlib/matplotlib">
             <span class="k">return</span> <span class="bp">NotImplemented</span>
         <span class="k">return</span> <span class="n">TaggedValue</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">unit</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">__rmul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lhs</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__rmul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lhs</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">*</span><span class="n">lhs</span>
 
     <span class="k">def</span> <span class="nf">__array_wrap__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">array</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">TaggedValue</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">__array__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-        <span class="n">ret</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">ret</span> <span class="o">=</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.array.html#numpy.array" title="View documentation for numpy.array"><span class="n">np</span><span class="o">.</span><span class="n">array</span></a><span class="p">([</span><span class="mi">1</span><span class="p">])</span>
         <span class="k">if</span> <span class="n">t</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">ret</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
@@ -399,7 +396,7 @@ Travis-CI: <a href="https://travis-ci.org/matplotlib/matplotlib">
         <span class="s1">&#39;__sub__&#39;</span><span class="p">:</span> <span class="n">addition_rule</span><span class="p">,</span>
         <span class="s1">&#39;__rsub__&#39;</span><span class="p">:</span> <span class="n">addition_rule</span><span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">operation</span><span class="p">,</span> <a href="../../api/units_api.html#matplotlib.units" title="View documentation for matplotlib.units"><span class="n">units</span></a><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">operation</span><span class="p">,</span> <a href="../../api/units_api.html#matplotlib.units" title="View documentation for matplotlib.units"><span class="n">units</span></a><span class="p">):</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">operation</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">op_dict</span><span class="p">):</span>
             <span class="k">return</span> <span class="bp">NotImplemented</span>
 
@@ -432,13 +429,13 @@ Travis-CI: <a href="https://travis-ci.org/matplotlib/matplotlib">
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="s1">&#39;0&#39;</span>
     <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">r&#39;$\pi/2$&#39;</span>
+        <span class="k">return</span> <span class="sa">r</span><span class="s1">&#39;$\pi/2$&#39;</span>
     <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">r&#39;$\pi$&#39;</span>
+        <span class="k">return</span> <span class="sa">r</span><span class="s1">&#39;$\pi$&#39;</span>
     <span class="k">elif</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">r&#39;$</span><span class="si">%s</span><span class="s1">\pi$&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">,)</span>
+        <span class="k">return</span> <span class="sa">r</span><span class="s1">&#39;$</span><span class="si">%s</span><span class="s1">\pi$&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">,)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">r&#39;$</span><span class="si">%s</span><span class="s1">\pi/2$&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">n</span><span class="p">,)</span>
+        <span class="k">return</span> <span class="sa">r</span><span class="s1">&#39;$</span><span class="si">%s</span><span class="s1">\pi/2$&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">n</span><span class="p">,)</span>
 
 
 <span class="k">class</span> <span class="nc">BasicUnitConverter</span><span class="p">(</span><a href="../../api/units_api.html#matplotlib.units.ConversionInterface" title="View documentation for matplotlib.units.ConversionInterface"><span class="n">units</span><span class="o">.</span><span class="n">ConversionInterface</span></a><span class="p">):</span>
@@ -455,7 +452,7 @@ Travis-CI: <a href="https://travis-ci.org/matplotlib/matplotlib">
         <span class="k">elif</span> <span class="n">unit</span> <span class="o">==</span> <span class="n">degrees</span><span class="p">:</span>
             <span class="k">return</span> <a href="../../api/units_api.html#matplotlib.units.AxisInfo" title="View documentation for matplotlib.units.AxisInfo"><span class="n">units</span><span class="o">.</span><span class="n">AxisInfo</span></a><span class="p">(</span>
                 <span class="n">majloc</span><span class="o">=</span><a href="../../api/ticker_api.html#matplotlib.ticker.AutoLocator" title="View documentation for matplotlib.ticker.AutoLocator"><span class="n">ticker</span><span class="o">.</span><span class="n">AutoLocator</span></a><span class="p">(),</span>
-                <span class="n">majfmt</span><span class="o">=</span><a href="../../api/ticker_api.html#matplotlib.ticker.FormatStrFormatter" title="View documentation for matplotlib.ticker.FormatStrFormatter"><span class="n">ticker</span><span class="o">.</span><span class="n">FormatStrFormatter</span></a><span class="p">(</span><span class="s1">r&#39;$</span><span class="si">%i</span><span class="s1">^\circ$&#39;</span><span class="p">),</span>
+                <span class="n">majfmt</span><span class="o">=</span><a href="../../api/ticker_api.html#matplotlib.ticker.FormatStrFormatter" title="View documentation for matplotlib.ticker.FormatStrFormatter"><span class="n">ticker</span><span class="o">.</span><span class="n">FormatStrFormatter</span></a><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$</span><span class="si">%i</span><span class="s1">^\circ$&#39;</span><span class="p">),</span>
                 <span class="n">label</span><span class="o">=</span><span class="n">unit</span><span class="o">.</span><span class="n">fullname</span><span class="p">,</span>
             <span class="p">)</span>
         <span class="k">elif</span> <span class="n">unit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
@@ -496,10 +493,10 @@ Travis-CI: <a href="https://travis-ci.org/matplotlib/matplotlib">
 </pre></div>
 </div>
 <p><strong>Total running time of the script:</strong> ( 0 minutes  0.002 seconds)</p>
-<div class="sphx-glr-footer container">
-<div class="sphx-glr-download container">
+<div class="sphx-glr-footer docutils container">
+<div class="sphx-glr-download docutils container">
 <a class="reference download internal" href="../../_downloads/basic_units.py" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">basic_units.py</span></code></a></div>
-<div class="sphx-glr-download container">
+<div class="sphx-glr-download docutils container">
 <a class="reference download internal" href="../../_downloads/basic_units.ipynb" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">basic_units.ipynb</span></code></a></div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Generated by Sphinx-Gallery</a></p>
@@ -514,9 +511,9 @@ Travis-CI: <a href="https://travis-ci.org/matplotlib/matplotlib">
     </div>
     <div class="footer">
         &copy; Copyright 2002 - 2012 John Hunter, Darren Dale, Eric Firing, Michael Droettboom and the Matplotlib development team; 2012 - 2017 The Matplotlib development team.
-      Last updated on Jul 16, 2017.
+      Last updated on Aug 06, 2017.
       Created using <a
-href="http://sphinx-doc.org/">Sphinx</a> 1.6.2.
+href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
     </div>
 
 <script>

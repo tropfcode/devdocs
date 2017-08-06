@@ -9,6 +9,19 @@ matplotlib\.animation\.FileMovieWriter
    .. automethod:: __init__
 
    
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~FileMovieWriter.__init__
+      ~FileMovieWriter.bin_path
+      ~FileMovieWriter.cleanup
+      ~FileMovieWriter.finish
+      ~FileMovieWriter.grab_frame
+      ~FileMovieWriter.isAvailable
+      ~FileMovieWriter.saving
+      ~FileMovieWriter.setup
+   
    
 
    

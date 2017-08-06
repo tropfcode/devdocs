@@ -58,7 +58,7 @@ Simple Axisline
         ax.plot([-2, 3, 2])
         plt.show()
 
-**Total running time of the script:** ( 0 minutes  0.031 seconds)
+**Total running time of the script:** ( 0 minutes  0.035 seconds)
 
 
 

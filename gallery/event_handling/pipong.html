@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Pipong &mdash; Matplotlib 2.0.2.post4416.dev0+g1df513f documentation</title>
+    <title>Pipong &mdash; Matplotlib 2.0.2.post4545+ga1937d4 documentation</title>
     
     <link rel="stylesheet" href="../../_static/mpl.css"
 type="text/css" />
@@ -17,7 +17,7 @@ type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.0.2.post4416.dev0+g1df513f',
+        VERSION:     '2.0.2.post4545+ga1937d4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -28,14 +28,14 @@ type="text/css" />
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Matplotlib 2.0.2.post4416.dev0+g1df513f documentation"
+          title="Search within Matplotlib 2.0.2.post4545+ga1937d4 documentation"
           href="../../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html"
 />
     <link rel="search" title="Search" href="../../search.html"
 />
-    <link rel="top" title="Matplotlib 2.0.2.post4416.dev0+g1df513f documentation" href="../../index.html" /> 
+    <link rel="top" title="Matplotlib 2.0.2.post4545+ga1937d4 documentation" href="../../index.html" /> 
 
 
   </head>
@@ -43,14 +43,11 @@ type="text/css" />
 
 
 
-<!-- The "Fork me on github" ribbon -->
-<img style="float: right; margin-bottom: -40px; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" usemap="#ribbonmap"/>
-<map name="ribbonmap">
-    <area shape="poly" coords="15,0,148,-1,148,135" href="https://github.com/matplotlib/matplotlib" title="Fork me on GitHub" />
-</map>
-
-<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px; position: relative;">
 <a href="../../index.html"><img src="../../_static/logo2.svg" width="540px" border="0" alt="matplotlib"/></a>
+
+<!-- The "Fork me on github" ribbon -->
+<div id="forkongithub"><a href="https://github.com/matplotlib/matplotlib">Fork me on GitHub</a></div>
 </div>
 
 
@@ -131,7 +128,7 @@ pipong.py was written by Paul Ivanov &lt;<a class="reference external" href="htt
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">randn</span><span class="p">,</span> <span class="n">randint</span>
+<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.random.randn.html#numpy.random.randn" title="View documentation for numpy.random.randn"><span class="n">randn</span></a><span class="p">,</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.random.randint.html#numpy.random.randint" title="View documentation for numpy.random.randint"><span class="n">randint</span></a>
 <span class="kn">from</span> <span class="nn">matplotlib.font_manager</span> <span class="kn">import</span> <a href="../../api/font_manager_api.html#matplotlib.font_manager.FontProperties" title="View documentation for matplotlib.font_manager.FontProperties"><span class="n">FontProperties</span></a>
 
 <span class="n">instructions</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
@@ -155,7 +152,7 @@ pipong.py was written by Paul Ivanov &lt;<a class="reference external" href="htt
 
 
 <span class="k">class</span> <span class="nc">Pad</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">disp</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;l&#39;</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">disp</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;l&#39;</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">disp</span> <span class="o">=</span> <span class="n">disp</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
@@ -178,7 +175,7 @@ pipong.py was written by Paul Ivanov &lt;<a class="reference external" href="htt
 
 
 <span class="k">class</span> <span class="nc">Puck</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">disp</span><span class="p">,</span> <span class="n">pad</span><span class="p">,</span> <span class="n">field</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">disp</span><span class="p">,</span> <span class="n">pad</span><span class="p">,</span> <span class="n">field</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="o">=</span> <span class="o">.</span><span class="mi">2</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">disp</span> <span class="o">=</span> <span class="n">disp</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">field</span> <span class="o">=</span> <span class="n">field</span>
@@ -216,7 +213,7 @@ pipong.py was written by Paul Ivanov &lt;<a class="reference external" href="htt
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">+</span> <span class="n">fudge</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">fudge</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">vy</span> <span class="o">*=</span> <span class="o">-</span><span class="mf">1.0</span>
             <span class="c1"># add some randomness, just to make it interesting</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">vy</span> <span class="o">-=</span> <span class="p">(</span><span class="n">randn</span><span class="p">()</span><span class="o">/</span><span class="mf">300.0</span> <span class="o">+</span> <span class="mi">1</span><span class="o">/</span><span class="mf">300.0</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vy</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">vy</span> <span class="o">-=</span> <span class="p">(</span><a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.random.randn.html#numpy.random.randn" title="View documentation for numpy.random.randn"><span class="n">randn</span></a><span class="p">()</span><span class="o">/</span><span class="mf">300.0</span> <span class="o">+</span> <span class="mi">1</span><span class="o">/</span><span class="mf">300.0</span><span class="p">)</span> <span class="o">*</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.sign.html#numpy.sign" title="View documentation for numpy.sign"><span class="n">np</span><span class="o">.</span><span class="n">sign</span></a><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vy</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_speedlimit</span><span class="p">()</span>
         <span class="k">return</span> <span class="bp">False</span>
 
@@ -241,7 +238,7 @@ pipong.py was written by Paul Ivanov &lt;<a class="reference external" href="htt
 
 
 <span class="k">class</span> <span class="nc">Game</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">):</span>
         <span class="c1"># create the initial line</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
@@ -262,14 +259,14 @@ pipong.py was written by Paul Ivanov &lt;<a class="reference external" href="htt
                            <span class="n">animated</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
         <span class="c1"># distractors</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">2.22</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">line</span><span class="p">,</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">),</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.arange.html#numpy.arange" title="View documentation for numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">2.22</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">line</span><span class="p">,</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.sin.html#numpy.sin" title="View documentation for numpy.sin"><span class="n">np</span><span class="o">.</span><span class="n">sin</span></a><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">),</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span>
                                   <span class="n">animated</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">line2</span><span class="p">,</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">),</span> <span class="s2">&quot;g&quot;</span><span class="p">,</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">line2</span><span class="p">,</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.cos.html#numpy.cos" title="View documentation for numpy.cos"><span class="n">np</span><span class="o">.</span><span class="n">cos</span></a><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">),</span> <span class="s2">&quot;g&quot;</span><span class="p">,</span>
                                    <span class="n">animated</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">line3</span><span class="p">,</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">),</span> <span class="s2">&quot;g&quot;</span><span class="p">,</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">line3</span><span class="p">,</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.cos.html#numpy.cos" title="View documentation for numpy.cos"><span class="n">np</span><span class="o">.</span><span class="n">cos</span></a><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">),</span> <span class="s2">&quot;g&quot;</span><span class="p">,</span>
                                    <span class="n">animated</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">line4</span><span class="p">,</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">),</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">line4</span><span class="p">,</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.cos.html#numpy.cos" title="View documentation for numpy.cos"><span class="n">np</span><span class="o">.</span><span class="n">cos</span></a><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">),</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span>
                                    <span class="n">animated</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 
         <span class="c1"># center line</span>
@@ -312,10 +309,10 @@ pipong.py was written by Paul Ivanov &lt;<a class="reference external" href="htt
 
         <span class="c1"># show the distractors</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">distract</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">line</span><span class="o">.</span><span class="n">set_ydata</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnt</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">res</span><span class="p">))</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">line2</span><span class="o">.</span><span class="n">set_ydata</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnt</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">res</span><span class="p">))</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">line3</span><span class="o">.</span><span class="n">set_ydata</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnt</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">res</span><span class="p">))</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">line4</span><span class="o">.</span><span class="n">set_ydata</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnt</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">res</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">line</span><span class="o">.</span><span class="n">set_ydata</span><span class="p">(</span><a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.sin.html#numpy.sin" title="View documentation for numpy.sin"><span class="n">np</span><span class="o">.</span><span class="n">sin</span></a><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnt</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">res</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">line2</span><span class="o">.</span><span class="n">set_ydata</span><span class="p">(</span><a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.cos.html#numpy.cos" title="View documentation for numpy.cos"><span class="n">np</span><span class="o">.</span><span class="n">cos</span></a><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnt</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">res</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">line3</span><span class="o">.</span><span class="n">set_ydata</span><span class="p">(</span><a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.tan.html#numpy.tan" title="View documentation for numpy.tan"><span class="n">np</span><span class="o">.</span><span class="n">tan</span></a><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnt</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">res</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">line4</span><span class="o">.</span><span class="n">set_ydata</span><span class="p">(</span><a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.tan.html#numpy.tan" title="View documentation for numpy.tan"><span class="n">np</span><span class="o">.</span><span class="n">tan</span></a><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnt</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">res</span><span class="p">))</span>
             <span class="n">draw_artist</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">line</span><span class="p">)</span>
             <span class="n">draw_artist</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">line2</span><span class="p">)</span>
             <span class="n">draw_artist</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">line3</span><span class="p">)</span>
@@ -384,12 +381,12 @@ pipong.py was written by Paul Ivanov &lt;<a class="reference external" href="htt
 
         <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">pucks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Puck</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">puckdisp</span><span class="p">,</span>
-                                   <span class="bp">self</span><span class="o">.</span><span class="n">pads</span><span class="p">[</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">)],</span>
+                                   <span class="bp">self</span><span class="o">.</span><span class="n">pads</span><span class="p">[</span><a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.random.randint.html#numpy.random.randint" title="View documentation for numpy.random.randint"><span class="n">randint</span></a><span class="p">(</span><span class="mi">2</span><span class="p">)],</span>
                                    <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">bbox</span><span class="p">))</span>
         <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;A&#39;</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pucks</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">pucks</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pucks</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">pucks</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">_reset</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pads</span><span class="p">[</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">)])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pucks</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">_reset</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pads</span><span class="p">[</span><a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.random.randint.html#numpy.random.randint" title="View documentation for numpy.random.randint"><span class="n">randint</span></a><span class="p">(</span><span class="mi">2</span><span class="p">)])</span>
         <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">:</span>
             <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">pucks</span><span class="p">:</span>
                 <span class="n">p</span><span class="o">.</span><span class="n">_slower</span><span class="p">()</span>
@@ -412,10 +409,10 @@ pipong.py was written by Paul Ivanov &lt;<a class="reference external" href="htt
 </pre></div>
 </div>
 <p><strong>Total running time of the script:</strong> ( 0 minutes  0.002 seconds)</p>
-<div class="sphx-glr-footer container">
-<div class="sphx-glr-download container">
+<div class="sphx-glr-footer docutils container">
+<div class="sphx-glr-download docutils container">
 <a class="reference download internal" href="../../_downloads/pipong.py" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">pipong.py</span></code></a></div>
-<div class="sphx-glr-download container">
+<div class="sphx-glr-download docutils container">
 <a class="reference download internal" href="../../_downloads/pipong.ipynb" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">pipong.ipynb</span></code></a></div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Generated by Sphinx-Gallery</a></p>
@@ -430,9 +427,9 @@ pipong.py was written by Paul Ivanov &lt;<a class="reference external" href="htt
     </div>
     <div class="footer">
         &copy; Copyright 2002 - 2012 John Hunter, Darren Dale, Eric Firing, Michael Droettboom and the Matplotlib development team; 2012 - 2017 The Matplotlib development team.
-      Last updated on Jul 16, 2017.
+      Last updated on Aug 06, 2017.
       Created using <a
-href="http://sphinx-doc.org/">Sphinx</a> 1.6.2.
+href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
     </div>
 
 <script>

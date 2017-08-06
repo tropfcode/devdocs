@@ -117,7 +117,7 @@ Connectionstyle Demo
 
     plt.show()
 
-**Total running time of the script:** ( 0 minutes  0.691 seconds)
+**Total running time of the script:** ( 0 minutes  0.835 seconds)
 
 
 

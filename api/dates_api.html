@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>dates &mdash; Matplotlib 2.0.2.post4416.dev0+g1df513f documentation</title>
+    <title>dates &mdash; Matplotlib 2.0.2.post4545+ga1937d4 documentation</title>
     
     <link rel="stylesheet" href="../_static/mpl.css"
 type="text/css" />
@@ -17,7 +17,7 @@ type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.0.2.post4416.dev0+g1df513f',
+        VERSION:     '2.0.2.post4545+ga1937d4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -28,14 +28,14 @@ type="text/css" />
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Matplotlib 2.0.2.post4416.dev0+g1df513f documentation"
+          title="Search within Matplotlib 2.0.2.post4545+ga1937d4 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html"
 />
     <link rel="search" title="Search" href="../search.html"
 />
-    <link rel="top" title="Matplotlib 2.0.2.post4416.dev0+g1df513f documentation" href="../index.html" />
+    <link rel="top" title="Matplotlib 2.0.2.post4545+ga1937d4 documentation" href="../index.html" />
     <link rel="up" title="The Matplotlib API" href="index.html" />
     <link rel="next" title="dviread" href="dviread.html" />
     <link rel="prev" title="container" href="container_api.html" /> 
@@ -46,14 +46,11 @@ type="text/css" />
 
 
 
-<!-- The "Fork me on github" ribbon -->
-<img style="float: right; margin-bottom: -40px; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" usemap="#ribbonmap"/>
-<map name="ribbonmap">
-    <area shape="poly" coords="15,0,148,-1,148,135" href="https://github.com/matplotlib/matplotlib" title="Fork me on GitHub" />
-</map>
-
-<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px; position: relative;">
 <a href="../index.html"><img src="../_static/logo2.svg" width="540px" border="0" alt="matplotlib"/></a>
+
+<!-- The "Fork me on github" ribbon -->
+<div id="forkongithub"><a href="https://github.com/matplotlib/matplotlib">Fork me on GitHub</a></div>
 </div>
 
 
@@ -246,7 +243,7 @@ example:</p>
 <div><ul class="simple">
 <li><a class="reference internal" href="#matplotlib.dates.MinuteLocator" title="matplotlib.dates.MinuteLocator"><code class="xref py py-class docutils literal"><span class="pre">MinuteLocator</span></code></a>: locate minutes</li>
 <li><a class="reference internal" href="#matplotlib.dates.HourLocator" title="matplotlib.dates.HourLocator"><code class="xref py py-class docutils literal"><span class="pre">HourLocator</span></code></a>: locate hours</li>
-<li><a class="reference internal" href="#matplotlib.dates.DayLocator" title="matplotlib.dates.DayLocator"><code class="xref py py-class docutils literal"><span class="pre">DayLocator</span></code></a>: locate specifed days of the month</li>
+<li><a class="reference internal" href="#matplotlib.dates.DayLocator" title="matplotlib.dates.DayLocator"><code class="xref py py-class docutils literal"><span class="pre">DayLocator</span></code></a>: locate specified days of the month</li>
 <li><a class="reference internal" href="#matplotlib.dates.WeekdayLocator" title="matplotlib.dates.WeekdayLocator"><code class="xref py py-class docutils literal"><span class="pre">WeekdayLocator</span></code></a>: Locate days of the week, e.g., MO, TU</li>
 <li><a class="reference internal" href="#matplotlib.dates.MonthLocator" title="matplotlib.dates.MonthLocator"><code class="xref py py-class docutils literal"><span class="pre">MonthLocator</span></code></a>: locate months, e.g., 7 for july</li>
 <li><a class="reference internal" href="#matplotlib.dates.YearLocator" title="matplotlib.dates.YearLocator"><code class="xref py py-class docutils literal"><span class="pre">YearLocator</span></code></a>: locate years that are multiples of base</li>
@@ -254,7 +251,7 @@ example:</p>
 <code class="xref py py-class docutils literal"><span class="pre">matplotlib.dates.rrulewrapper</span></code>.  The
 <code class="xref py py-class docutils literal"><span class="pre">rrulewrapper</span></code> is a simple wrapper around a
 <code class="xref py py-class docutils literal"><span class="pre">dateutil.rrule</span></code> (<a class="reference external" href="https://dateutil.readthedocs.io/en/stable/">dateutil</a>) which allow almost
-arbitrary date tick specifications.  See <a class="reference external" href="../gallery/pylab_examples/date_demo_rrule.html">rrule example</a>.</li>
+arbitrary date tick specifications.  See <a class="reference external" href="../gallery/ticks_and_spines/date_demo_rrule.html">rrule example</a>.</li>
 <li><a class="reference internal" href="#matplotlib.dates.AutoDateLocator" title="matplotlib.dates.AutoDateLocator"><code class="xref py py-class docutils literal"><span class="pre">AutoDateLocator</span></code></a>: On autoscale, this class picks the best
 <code class="xref py py-class docutils literal"><span class="pre">MultipleDateLocator</span></code> to set the view limits and the tick
 locations.</li>
@@ -344,7 +341,7 @@ below to include dates earlier than this year.</p>
 </dl>
 <dl class="attribute">
 <dt id="matplotlib.dates.DateFormatter.illegal_s">
-<code class="descname">illegal_s</code><em class="property"> = re.compile(‘((^|[^%])(%%)*%s)’)</em><a class="headerlink" href="#matplotlib.dates.DateFormatter.illegal_s" title="Permalink to this definition">¶</a></dt>
+<code class="descname">illegal_s</code><em class="property"> = re.compile('((^|[^%])(%%)*%s)')</em><a class="headerlink" href="#matplotlib.dates.DateFormatter.illegal_s" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -389,7 +386,7 @@ strings by index.</p>
 
 <dl class="class">
 <dt id="matplotlib.dates.AutoDateFormatter">
-<em class="property">class </em><code class="descclassname">matplotlib.dates.</code><code class="descname">AutoDateFormatter</code><span class="sig-paren">(</span><em>locator</em>, <em>tz=None</em>, <em>defaultfmt=’%Y-%m-%d’</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.dates.AutoDateFormatter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.dates.</code><code class="descname">AutoDateFormatter</code><span class="sig-paren">(</span><em>locator</em>, <em>tz=None</em>, <em>defaultfmt='%Y-%m-%d'</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.dates.AutoDateFormatter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="ticker_api.html#matplotlib.ticker.Formatter" title="matplotlib.ticker.Formatter"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.ticker.Formatter</span></code></a></p>
 <p>This class attempts to figure out the best format to use.  This is
 most useful when used with the <a class="reference internal" href="#matplotlib.dates.AutoDateLocator" title="matplotlib.dates.AutoDateLocator"><code class="xref py py-class docutils literal"><span class="pre">AutoDateLocator</span></code></a>.</p>
@@ -452,7 +449,7 @@ returned by <code class="docutils literal"><span class="pre">locator._get_unit()
 
 <dl class="attribute">
 <dt id="matplotlib.dates.DateLocator.hms0d">
-<code class="descname">hms0d</code><em class="property"> = {‘bysecond’: 0, ‘byminute’: 0, ‘byhour’: 0}</em><a class="headerlink" href="#matplotlib.dates.DateLocator.hms0d" title="Permalink to this definition">¶</a></dt>
+<code class="descname">hms0d</code><em class="property"> = {'bysecond': 0, 'byhour': 0, 'byminute': 0}</em><a class="headerlink" href="#matplotlib.dates.DateLocator.hms0d" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -822,6 +819,13 @@ Sunday itself. This is an extension to the RFC specification.</li>
 </tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="matplotlib.dates.rrule.replace">
+<code class="descname">replace</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.dates.rrule.replace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return new rrule with same attributes except for those attributes given new
+values by whichever keyword arguments are specified.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
@@ -851,7 +855,7 @@ first one is passing it two date/datetime classes:</p>
     <span class="n">Relative</span> <span class="n">information</span><span class="p">,</span> <span class="n">may</span> <span class="n">be</span> <span class="n">negative</span> <span class="p">(</span><span class="n">argument</span> <span class="ow">is</span> <span class="n">plural</span><span class="p">);</span> <span class="n">adding</span>
     <span class="ow">or</span> <span class="n">subtracting</span> <span class="n">a</span> <span class="n">relativedelta</span> <span class="k">with</span> <span class="n">relative</span> <span class="n">information</span> <span class="n">performs</span>
     <span class="n">the</span> <span class="n">corresponding</span> <span class="n">aritmetic</span> <span class="n">operation</span> <span class="n">on</span> <span class="n">the</span> <span class="n">original</span> <span class="n">datetime</span> <span class="n">value</span>
-    <span class="k">with</span> <span class="n">the</span> <span class="n">information</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">relativedelta</span><span class="o">.</span>  
+    <span class="k">with</span> <span class="n">the</span> <span class="n">information</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">relativedelta</span><span class="o">.</span>
 
 <span class="n">weekday</span><span class="p">:</span>
     <span class="n">One</span> <span class="n">of</span> <span class="n">the</span> <span class="n">weekday</span> <span class="n">instances</span> <span class="p">(</span><span class="n">MO</span><span class="p">,</span> <span class="n">TU</span><span class="p">,</span> <span class="n">etc</span><span class="p">)</span><span class="o">.</span> <span class="n">These</span> <span class="n">instances</span> <span class="n">may</span>
@@ -954,9 +958,9 @@ values for the relative attributes.</p>
     </div>
     <div class="footer">
         &copy; Copyright 2002 - 2012 John Hunter, Darren Dale, Eric Firing, Michael Droettboom and the Matplotlib development team; 2012 - 2017 The Matplotlib development team.
-      Last updated on Jul 16, 2017.
+      Last updated on Aug 06, 2017.
       Created using <a
-href="http://sphinx-doc.org/">Sphinx</a> 1.6.2.
+href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
     </div>
 
 <script>

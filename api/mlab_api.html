@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>mlab &mdash; Matplotlib 2.0.2.post4416.dev0+g1df513f documentation</title>
+    <title>mlab &mdash; Matplotlib 2.0.2.post4545+ga1937d4 documentation</title>
     
     <link rel="stylesheet" href="../_static/mpl.css"
 type="text/css" />
@@ -17,7 +17,7 @@ type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.0.2.post4416.dev0+g1df513f',
+        VERSION:     '2.0.2.post4545+ga1937d4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -28,14 +28,14 @@ type="text/css" />
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Matplotlib 2.0.2.post4416.dev0+g1df513f documentation"
+          title="Search within Matplotlib 2.0.2.post4545+ga1937d4 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html"
 />
     <link rel="search" title="Search" href="../search.html"
 />
-    <link rel="top" title="Matplotlib 2.0.2.post4416.dev0+g1df513f documentation" href="../index.html" />
+    <link rel="top" title="Matplotlib 2.0.2.post4545+ga1937d4 documentation" href="../index.html" />
     <link rel="up" title="The Matplotlib API" href="index.html" />
     <link rel="next" title="offsetbox" href="offsetbox_api.html" />
     <link rel="prev" title="mathtext" href="mathtext_api.html" /> 
@@ -46,14 +46,11 @@ type="text/css" />
 
 
 
-<!-- The "Fork me on github" ribbon -->
-<img style="float: right; margin-bottom: -40px; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" usemap="#ribbonmap"/>
-<map name="ribbonmap">
-    <area shape="poly" coords="15,0,148,-1,148,135" href="https://github.com/matplotlib/matplotlib" title="Fork me on GitHub" />
-</map>
-
-<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px; position: relative;">
 <a href="../index.html"><img src="../_static/logo2.svg" width="540px" border="0" alt="matplotlib"/></a>
+
+<!-- The "Fork me on github" ribbon -->
+<div id="forkongithub"><a href="https://github.com/matplotlib/matplotlib">Fork me on GitHub</a></div>
 </div>
 
 
@@ -309,7 +306,7 @@ negative values red, set percent formatting and scaling, etc.</p>
 
 <dl class="class">
 <dt id="matplotlib.mlab.FormatDatetime">
-<em class="property">class </em><code class="descclassname">matplotlib.mlab.</code><code class="descname">FormatDatetime</code><span class="sig-paren">(</span><em>fmt=’%Y-%m-%d %H:%M:%S’</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.mlab.FormatDatetime" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.mlab.</code><code class="descname">FormatDatetime</code><span class="sig-paren">(</span><em>fmt='%Y-%m-%d %H:%M:%S'</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.mlab.FormatDatetime" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#matplotlib.mlab.FormatDate" title="matplotlib.mlab.FormatDate"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.mlab.FormatDate</span></code></a></p>
 <dl class="method">
 <dt id="matplotlib.mlab.FormatDatetime.fromstr">
@@ -445,26 +442,26 @@ parameter and return a scalar. If None (default), ‘scott’ is used.</p>
 <p class="rubric">Attributes</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="8%" />
-<col width="92%" />
+<col width="11%" />
+<col width="89%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td>dataset</td>
+<tr class="row-odd"><td><strong>dataset</strong></td>
 <td>(ndarray) The dataset with which <code class="xref py py-obj docutils literal"><span class="pre">gaussian_kde</span></code> was initialized.</td>
 </tr>
-<tr class="row-even"><td>dim</td>
+<tr class="row-even"><td><strong>dim</strong></td>
 <td>(int) Number of dimensions.</td>
 </tr>
-<tr class="row-odd"><td>num_dp</td>
+<tr class="row-odd"><td><strong>num_dp</strong></td>
 <td>(int) Number of datapoints.</td>
 </tr>
-<tr class="row-even"><td>factor</td>
+<tr class="row-even"><td><strong>factor</strong></td>
 <td>(float) The bandwidth factor, obtained from <code class="xref py py-obj docutils literal"><span class="pre">kde.covariance_factor</span></code>, with which the covariance matrix is multiplied.</td>
 </tr>
-<tr class="row-odd"><td>covariance</td>
+<tr class="row-odd"><td><strong>covariance</strong></td>
 <td>(ndarray) The covariance matrix of <code class="xref py py-obj docutils literal"><span class="pre">dataset</span></code>, scaled by the calculated bandwidth (<code class="xref py py-obj docutils literal"><span class="pre">kde.factor</span></code>).</td>
 </tr>
-<tr class="row-even"><td>inv_cov</td>
+<tr class="row-even"><td><strong>inv_cov</strong></td>
 <td>(ndarray) The inverse of <code class="xref py py-obj docutils literal"><span class="pre">covariance</span></code>.</td>
 </tr>
 </tbody>
@@ -472,14 +469,14 @@ parameter and return a scalar. If None (default), ‘scott’ is used.</p>
 <p class="rubric">Methods</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="24%" />
-<col width="76%" />
+<col width="27%" />
+<col width="73%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td>kde.evaluate(points)</td>
+<tr class="row-odd"><td><strong>kde.evaluate(points)</strong></td>
 <td>(ndarray) Evaluate the estimated pdf on a provided set of points.</td>
 </tr>
-<tr class="row-even"><td>kde(points)</td>
+<tr class="row-even"><td><strong>kde(points)</strong></td>
 <td>(ndarray) Same as kde.evaluate(points)</td>
 </tr>
 </tbody>
@@ -562,32 +559,32 @@ also the first eigenvector.</p>
 <p class="rubric">Attributes</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="15%" />
-<col width="85%" />
+<col width="18%" />
+<col width="82%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td>a</td>
+<tr class="row-odd"><td><strong>a</strong></td>
 <td>A centered unit sigma version of input <code class="docutils literal"><span class="pre">a</span></code>.</td>
 </tr>
-<tr class="row-even"><td>numrows, numcols</td>
+<tr class="row-even"><td><strong>numrows, numcols</strong></td>
 <td>The dimensions of <code class="docutils literal"><span class="pre">a</span></code>.</td>
 </tr>
-<tr class="row-odd"><td>mu</td>
+<tr class="row-odd"><td><strong>mu</strong></td>
 <td>A numdims array of means of <code class="docutils literal"><span class="pre">a</span></code>. This is the vector that points to the origin of PCA space.</td>
 </tr>
-<tr class="row-even"><td>sigma</td>
+<tr class="row-even"><td><strong>sigma</strong></td>
 <td>A numdims array of standard deviation of <code class="docutils literal"><span class="pre">a</span></code>.</td>
 </tr>
-<tr class="row-odd"><td>fracs</td>
+<tr class="row-odd"><td><strong>fracs</strong></td>
 <td>The proportion of variance of each of the principal components.</td>
 </tr>
-<tr class="row-even"><td>s</td>
+<tr class="row-even"><td><strong>s</strong></td>
 <td>The actual eigenvalues of the decomposition.</td>
 </tr>
-<tr class="row-odd"><td>Wt</td>
+<tr class="row-odd"><td><strong>Wt</strong></td>
 <td>The weight vector for projecting a numdims point or array into PCA space.</td>
 </tr>
-<tr class="row-even"><td>Y</td>
+<tr class="row-even"><td><strong>Y</strong></td>
 <td>A projected into PCA space.</td>
 </tr>
 </tbody>
@@ -610,7 +607,7 @@ of variance&lt;minfrac</p>
 
 <dl class="function">
 <dt id="matplotlib.mlab.amap">
-<code class="descclassname">matplotlib.mlab.</code><code class="descname">amap</code><span class="sig-paren">(</span><em>function</em>, <em>sequence</em><span class="optional">[</span>, <em>sequence</em>, <em>…</em><span class="optional">]</span><span class="sig-paren">)</span> &#x2192; array.<a class="headerlink" href="#matplotlib.mlab.amap" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">matplotlib.mlab.</code><code class="descname">amap</code><span class="sig-paren">(</span><em>function</em>, <em>sequence</em><span class="optional">[</span>, <em>sequence</em>, <em>...</em><span class="optional">]</span><span class="sig-paren">)</span> &#x2192; array.<a class="headerlink" href="#matplotlib.mlab.amap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Works like <a class="reference external" href="https://docs.python.org/2/library/functions.html#map" title="(in Python v2.7)"><code class="xref py py-func docutils literal"><span class="pre">map()</span></code></a>, but it returns an array.  This is just a
 convenient shorthand for <code class="docutils literal"><span class="pre">numpy.array(map(...))</span></code>.</p>
 </dd></dl>
@@ -759,7 +756,7 @@ opposite to the numpy axis kwarg.)</p>
 
 <dl class="function">
 <dt id="matplotlib.mlab.cohere">
-<code class="descclassname">matplotlib.mlab.</code><code class="descname">cohere</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>NFFT=256</em>, <em>Fs=2</em>, <em>detrend=&lt;function detrend_none&gt;</em>, <em>window=&lt;function window_hanning&gt;</em>, <em>noverlap=0</em>, <em>pad_to=None</em>, <em>sides=’default’</em>, <em>scale_by_freq=None</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.mlab.cohere" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">matplotlib.mlab.</code><code class="descname">cohere</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>NFFT=256</em>, <em>Fs=2</em>, <em>detrend=&lt;function detrend_none&gt;</em>, <em>window=&lt;function window_hanning&gt;</em>, <em>noverlap=0</em>, <em>pad_to=None</em>, <em>sides='default'</em>, <em>scale_by_freq=None</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.mlab.cohere" title="Permalink to this definition">¶</a></dt>
 <dd><p>The coherence between <em>x</em> and <em>y</em>.  Coherence is the normalized
 cross spectral density:</p>
 <img src="../_images/mathmpl/math-58775d54bf.png" class="center" /><table class="docutils field-list" frame="void" rules="none">
@@ -1189,7 +1186,7 @@ Wiley &amp; Sons (1986)</p>
 
 <dl class="function">
 <dt id="matplotlib.mlab.csv2rec">
-<code class="descclassname">matplotlib.mlab.</code><code class="descname">csv2rec</code><span class="sig-paren">(</span><em>fname</em>, <em>comments=’#’</em>, <em>skiprows=0</em>, <em>checkrows=0</em>, <em>delimiter=’</em>, <em>’</em>, <em>converterd=None</em>, <em>names=None</em>, <em>missing=”</em>, <em>missingd=None</em>, <em>use_mrecords=False</em>, <em>dayfirst=False</em>, <em>yearfirst=False</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.mlab.csv2rec" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">matplotlib.mlab.</code><code class="descname">csv2rec</code><span class="sig-paren">(</span><em>fname</em>, <em>comments='#'</em>, <em>skiprows=0</em>, <em>checkrows=0</em>, <em>delimiter='</em>, <em>'</em>, <em>converterd=None</em>, <em>names=None</em>, <em>missing=''</em>, <em>missingd=None</em>, <em>use_mrecords=False</em>, <em>dayfirst=False</em>, <em>yearfirst=False</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.mlab.csv2rec" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load data from comma/space/tab delimited file in <em>fname</em> into a
 numpy record array and return the record array.</p>
 <p>If <em>names</em> is <em>None</em>, a header row is required to automatically
@@ -1558,7 +1555,7 @@ is (<em>x</em>, <em>y</em>, <em>z</em>) where <em>x</em> and <em>y</em> are the 
 
 <dl class="function">
 <dt id="matplotlib.mlab.griddata">
-<code class="descclassname">matplotlib.mlab.</code><code class="descname">griddata</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>z</em>, <em>xi</em>, <em>yi</em>, <em>interp=’nn’</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.mlab.griddata" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">matplotlib.mlab.</code><code class="descname">griddata</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>z</em>, <em>xi</em>, <em>yi</em>, <em>interp='nn'</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.mlab.griddata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interpolates from a nonuniformly spaced grid to some other
 grid.</p>
 <p>Fits a surface of the form z = f(<code class="xref py py-obj docutils literal"><span class="pre">x</span></code>, <code class="xref py py-obj docutils literal"><span class="pre">y</span></code>) to the data in the
@@ -1610,7 +1607,7 @@ matplotlib.tri.Triangulation and a matplotlib.tri.TriInterpolator.</p>
 
 <dl class="function">
 <dt id="matplotlib.mlab.identity">
-<code class="descclassname">matplotlib.mlab.</code><code class="descname">identity</code><span class="sig-paren">(</span><em>n</em>, <em>rank=2</em>, <em>dtype=’l’</em>, <em>typecode=None</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.mlab.identity" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">matplotlib.mlab.</code><code class="descname">identity</code><span class="sig-paren">(</span><em>n</em>, <em>rank=2</em>, <em>dtype='l'</em>, <em>typecode=None</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.mlab.identity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the identity matrix of shape (<em>n</em>, <em>n</em>, …, <em>n</em>) (rank <em>r</em>).</p>
 <p>For ranks higher than 2, this object is simply a multi-index Kronecker
 delta:</p>
@@ -2110,7 +2107,7 @@ points of a quadratic curve, and the output is a tuple of <em>x</em> and
 
 <dl class="function">
 <dt id="matplotlib.mlab.rec2csv">
-<code class="descclassname">matplotlib.mlab.</code><code class="descname">rec2csv</code><span class="sig-paren">(</span><em>r</em>, <em>fname</em>, <em>delimiter=’</em>, <em>’</em>, <em>formatd=None</em>, <em>missing=”</em>, <em>missingd=None</em>, <em>withheader=True</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.mlab.rec2csv" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">matplotlib.mlab.</code><code class="descname">rec2csv</code><span class="sig-paren">(</span><em>r</em>, <em>fname</em>, <em>delimiter='</em>, <em>'</em>, <em>formatd=None</em>, <em>missing=''</em>, <em>missingd=None</em>, <em>withheader=True</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.mlab.rec2csv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Save the data from numpy recarray <em>r</em> into a
 comma-/space-/tab-delimited file.  The record array dtype names
 will be used for column headers.</p>
@@ -2208,7 +2205,7 @@ stat summary output.</p>
 
 <dl class="function">
 <dt id="matplotlib.mlab.rec_join">
-<code class="descclassname">matplotlib.mlab.</code><code class="descname">rec_join</code><span class="sig-paren">(</span><em>key</em>, <em>r1</em>, <em>r2</em>, <em>jointype=’inner’</em>, <em>defaults=None</em>, <em>r1postfix=‘1’</em>, <em>r2postfix=‘2’</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.mlab.rec_join" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">matplotlib.mlab.</code><code class="descname">rec_join</code><span class="sig-paren">(</span><em>key</em>, <em>r1</em>, <em>r2</em>, <em>jointype='inner'</em>, <em>defaults=None</em>, <em>r1postfix='1'</em>, <em>r2postfix='2'</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.mlab.rec_join" title="Permalink to this definition">¶</a></dt>
 <dd><p>Join record arrays <em>r1</em> and <em>r2</em> on <em>key</em>; <em>key</em> is a tuple of
 field names – if <em>key</em> is a string it is assumed to be a single
 attribute name. If <em>r1</em> and <em>r2</em> have equal values on all the keys
@@ -2243,7 +2240,7 @@ array is identical to <em>r</em>, with extra arrays for each element in
 
 <dl class="function">
 <dt id="matplotlib.mlab.recs_join">
-<code class="descclassname">matplotlib.mlab.</code><code class="descname">recs_join</code><span class="sig-paren">(</span><em>key</em>, <em>name</em>, <em>recs</em>, <em>jointype=’outer’</em>, <em>missing=0.0</em>, <em>postfixes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.mlab.recs_join" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">matplotlib.mlab.</code><code class="descname">recs_join</code><span class="sig-paren">(</span><em>key</em>, <em>name</em>, <em>recs</em>, <em>jointype='outer'</em>, <em>missing=0.0</em>, <em>postfixes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.mlab.recs_join" title="Permalink to this definition">¶</a></dt>
 <dd><p>Join a sequence of record arrays on single column key.</p>
 <p>This function only joins a single column of the multiple record arrays</p>
 <dl class="docutils">
@@ -2685,9 +2682,9 @@ compute over all elements of <em>X</em>.</p>
     </div>
     <div class="footer">
         &copy; Copyright 2002 - 2012 John Hunter, Darren Dale, Eric Firing, Michael Droettboom and the Matplotlib development team; 2012 - 2017 The Matplotlib development team.
-      Last updated on Jul 16, 2017.
+      Last updated on Aug 06, 2017.
       Created using <a
-href="http://sphinx-doc.org/">Sphinx</a> 1.6.2.
+href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
     </div>
 
 <script>

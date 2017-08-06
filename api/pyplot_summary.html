@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>The Pyplot API &mdash; Matplotlib 2.0.2.post4416.dev0+g1df513f documentation</title>
+    <title>The Pyplot API &mdash; Matplotlib 2.0.2.post4545+ga1937d4 documentation</title>
     
     <link rel="stylesheet" href="../_static/mpl.css"
 type="text/css" />
@@ -17,7 +17,7 @@ type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.0.2.post4416.dev0+g1df513f',
+        VERSION:     '2.0.2.post4545+ga1937d4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -28,14 +28,14 @@ type="text/css" />
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Matplotlib 2.0.2.post4416.dev0+g1df513f documentation"
+          title="Search within Matplotlib 2.0.2.post4545+ga1937d4 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html"
 />
     <link rel="search" title="Search" href="../search.html"
 />
-    <link rel="top" title="Matplotlib 2.0.2.post4416.dev0+g1df513f documentation" href="../index.html" />
+    <link rel="top" title="Matplotlib 2.0.2.post4545+ga1937d4 documentation" href="../index.html" />
     <link rel="up" title="The Matplotlib API" href="index.html" />
     <link rel="next" title="API Changes" href="api_changes.html" />
     <link rel="prev" title="The Matplotlib API" href="index.html" /> 
@@ -46,14 +46,11 @@ type="text/css" />
 
 
 
-<!-- The "Fork me on github" ribbon -->
-<img style="float: right; margin-bottom: -40px; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" usemap="#ribbonmap"/>
-<map name="ribbonmap">
-    <area shape="poly" coords="15,0,148,-1,148,135" href="https://github.com/matplotlib/matplotlib" title="Fork me on GitHub" />
-</map>
-
-<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px; position: relative;">
 <a href="../index.html"><img src="../_static/logo2.svg" width="540px" border="0" alt="matplotlib"/></a>
+
+<!-- The "Fork me on github" ribbon -->
+<div id="forkongithub"><a href="https://github.com/matplotlib/matplotlib">Fork me on GitHub</a></div>
 </div>
 
 
@@ -157,7 +154,7 @@ Travis-CI: <a href="https://travis-ci.org/matplotlib/matplotlib">
 <p>The <code class="xref py py-mod docutils literal"><span class="pre">matplotlib.pyplot</span></code> module contains functions that allow you to generate
 many kinds of plots quickly. For examples that showcase the use
 of the <code class="xref py py-mod docutils literal"><span class="pre">matplotlib.pyplot</span></code> module, see the
-<a class="reference internal" href="../tutorials/01_introductory/pyplot.html#sphx-glr-tutorials-01-introductory-pyplot-py"><span class="std std-ref">Pyplot tutorial</span></a>
+<a class="reference internal" href="../tutorials/introductory/pyplot.html#sphx-glr-tutorials-introductory-pyplot-py"><span class="std std-ref">Pyplot tutorial</span></a>
 or the <a class="reference internal" href="../gallery/index.html#pyplots-examples"><span class="std std-ref">Pyplot Examples</span></a>. We also recommend that you look into
 the object-oriented approach to plotting, described below.</p>
 <dl class="function">
@@ -544,7 +541,7 @@ the object-oriented approach to plotting, described below.</p>
 <td>Plot the cross correlation between <em>x</em> and <em>y</em>.</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="_as_gen/matplotlib.pyplot.xkcd.html#matplotlib.pyplot.xkcd" title="matplotlib.pyplot.xkcd"><code class="xref py py-obj docutils literal"><span class="pre">xkcd</span></code></a></td>
-<td>Turns on <a class="reference external" href="http://xkcd.com/">xkcd</a> sketch-style drawing mode.</td>
+<td>Turns on <a class="reference external" href="https://xkcd.com/">xkcd</a> sketch-style drawing mode.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="_as_gen/matplotlib.pyplot.xlabel.html#matplotlib.pyplot.xlabel" title="matplotlib.pyplot.xlabel"><code class="xref py py-obj docutils literal"><span class="pre">xlabel</span></code></a></td>
 <td>Set the <em>x</em> axis label of the current axis.</td>
@@ -629,13 +626,13 @@ endpoints, such as phase angle, wind direction, or time of day</dd>
 <dd>for nominal data that has no inherent ordering, where color is used
 only to distinguish categories</dd>
 </dl>
-<p>The base colormaps are derived from those of the same name provided
-with Matlab:</p>
+<p>Matplotlib ships with 4 perceptually uniform color maps which are
+the recommended color maps for sequential data:</p>
 <blockquote>
 <div><table border="1" class="docutils">
 <colgroup>
-<col width="13%" />
-<col width="87%" />
+<col width="15%" />
+<col width="85%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Colormap</th>
@@ -643,113 +640,17 @@ with Matlab:</p>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>autumn</td>
-<td>sequential linearly-increasing shades of red-orange-yellow</td>
-</tr>
-<tr class="row-odd"><td>bone</td>
-<td>sequential increasing black-white color map with
-a tinge of blue, to emulate X-ray film</td>
-</tr>
-<tr class="row-even"><td>cool</td>
-<td>linearly-decreasing shades of cyan-magenta</td>
-</tr>
-<tr class="row-odd"><td>copper</td>
-<td>sequential increasing shades of black-copper</td>
-</tr>
-<tr class="row-even"><td>flag</td>
-<td>repetitive red-white-blue-black pattern (not cyclic at
-endpoints)</td>
-</tr>
-<tr class="row-odd"><td>gray</td>
-<td>sequential linearly-increasing black-to-white
-grayscale</td>
-</tr>
-<tr class="row-even"><td>hot</td>
-<td>sequential black-red-yellow-white, to emulate blackbody
-radiation from an object at increasing temperatures</td>
-</tr>
-<tr class="row-odd"><td>hsv</td>
-<td>cyclic red-yellow-green-cyan-blue-magenta-red, formed
-by changing the hue component in the HSV color space</td>
-</tr>
 <tr class="row-even"><td>inferno</td>
 <td>perceptually uniform shades of black-red-yellow</td>
 </tr>
-<tr class="row-odd"><td>jet</td>
-<td>a spectral map with dark endpoints, blue-cyan-yellow-red;
-based on a fluid-jet simulation by NCSA <a class="footnote-reference" href="#id6" id="id1">[1]</a></td>
-</tr>
-<tr class="row-even"><td>magma</td>
+<tr class="row-odd"><td>magma</td>
 <td>perceptually uniform shades of black-red-white</td>
-</tr>
-<tr class="row-odd"><td>pink</td>
-<td>sequential increasing pastel black-pink-white, meant
-for sepia tone colorization of photographs</td>
 </tr>
 <tr class="row-even"><td>plasma</td>
 <td>perceptually uniform shades of blue-red-yellow</td>
 </tr>
-<tr class="row-odd"><td>prism</td>
-<td>repetitive red-yellow-green-blue-purple-…-green pattern
-(not cyclic at endpoints)</td>
-</tr>
-<tr class="row-even"><td>spring</td>
-<td>linearly-increasing shades of magenta-yellow</td>
-</tr>
-<tr class="row-odd"><td>summer</td>
-<td>sequential linearly-increasing shades of green-yellow</td>
-</tr>
-<tr class="row-even"><td>viridis</td>
+<tr class="row-odd"><td>viridis</td>
 <td>perceptually uniform shades of blue-green-yellow</td>
-</tr>
-<tr class="row-odd"><td>winter</td>
-<td>linearly-increasing shades of blue-green</td>
-</tr>
-</tbody>
-</table>
-</div></blockquote>
-<p>For the above list only, you can also set the colormap using the
-corresponding pylab shortcut interface function, similar to Matlab:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">imshow</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-<span class="n">hot</span><span class="p">()</span>
-<span class="n">jet</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>The next set of palettes are from the <a class="reference external" href="http://dhmunro.github.io/yorick-doc/">Yorick scientific visualisation
-package</a>, an evolution of
-the GIST package, both by David H. Munro:</p>
-<blockquote>
-<div><table border="1" class="docutils">
-<colgroup>
-<col width="18%" />
-<col width="82%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Colormap</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>gist_earth</td>
-<td>mapmaker’s colors from dark blue deep ocean to green
-lowlands to brown highlands to white mountains</td>
-</tr>
-<tr class="row-odd"><td>gist_heat</td>
-<td>sequential increasing black-red-orange-white, to emulate
-blackbody radiation from an iron bar as it grows hotter</td>
-</tr>
-<tr class="row-even"><td>gist_ncar</td>
-<td>pseudo-spectral black-blue-green-yellow-red-purple-white
-colormap from National Center for Atmospheric
-Research <a class="footnote-reference" href="#id7" id="id2">[2]</a></td>
-</tr>
-<tr class="row-odd"><td>gist_rainbow</td>
-<td>runs through the colors in spectral order from red to
-violet at full saturation (like <em>hsv</em> but not cyclic)</td>
-</tr>
-<tr class="row-even"><td>gist_stern</td>
-<td>“Stern special” color table from Interactive Data
-Language software</td>
 </tr>
 </tbody>
 </table>
@@ -884,6 +785,112 @@ recommended for different numbers of categories.)</p>
 <li>Set2</li>
 <li>Set3</li>
 </ul>
+<p>A set of colormaps derived from those of the same name provided
+with Matlab are also included:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Colormap</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>autumn</td>
+<td>sequential linearly-increasing shades of red-orange-yellow</td>
+</tr>
+<tr class="row-odd"><td>bone</td>
+<td>sequential increasing black-white color map with
+a tinge of blue, to emulate X-ray film</td>
+</tr>
+<tr class="row-even"><td>cool</td>
+<td>linearly-decreasing shades of cyan-magenta</td>
+</tr>
+<tr class="row-odd"><td>copper</td>
+<td>sequential increasing shades of black-copper</td>
+</tr>
+<tr class="row-even"><td>flag</td>
+<td>repetitive red-white-blue-black pattern (not cyclic at
+endpoints)</td>
+</tr>
+<tr class="row-odd"><td>gray</td>
+<td>sequential linearly-increasing black-to-white
+grayscale</td>
+</tr>
+<tr class="row-even"><td>hot</td>
+<td>sequential black-red-yellow-white, to emulate blackbody
+radiation from an object at increasing temperatures</td>
+</tr>
+<tr class="row-odd"><td>hsv</td>
+<td>cyclic red-yellow-green-cyan-blue-magenta-red, formed
+by changing the hue component in the HSV color space</td>
+</tr>
+<tr class="row-even"><td>jet</td>
+<td>a spectral map with dark endpoints, blue-cyan-yellow-red;
+based on a fluid-jet simulation by NCSA <a class="footnote-reference" href="#id6" id="id1">[1]</a></td>
+</tr>
+<tr class="row-odd"><td>pink</td>
+<td>sequential increasing pastel black-pink-white, meant
+for sepia tone colorization of photographs</td>
+</tr>
+<tr class="row-even"><td>prism</td>
+<td>repetitive red-yellow-green-blue-purple-…-green pattern
+(not cyclic at endpoints)</td>
+</tr>
+<tr class="row-odd"><td>spring</td>
+<td>linearly-increasing shades of magenta-yellow</td>
+</tr>
+<tr class="row-even"><td>summer</td>
+<td>sequential linearly-increasing shades of green-yellow</td>
+</tr>
+<tr class="row-odd"><td>winter</td>
+<td>linearly-increasing shades of blue-green</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>A set of palettes from the <a class="reference external" href="https://dhmunro.github.io/yorick-doc/">Yorick scientific visualisation
+package</a>, an evolution of
+the GIST package, both by David H. Munro are included:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="82%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Colormap</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>gist_earth</td>
+<td>mapmaker’s colors from dark blue deep ocean to green
+lowlands to brown highlands to white mountains</td>
+</tr>
+<tr class="row-odd"><td>gist_heat</td>
+<td>sequential increasing black-red-orange-white, to emulate
+blackbody radiation from an iron bar as it grows hotter</td>
+</tr>
+<tr class="row-even"><td>gist_ncar</td>
+<td>pseudo-spectral black-blue-green-yellow-red-purple-white
+colormap from National Center for Atmospheric
+Research <a class="footnote-reference" href="#id7" id="id2">[2]</a></td>
+</tr>
+<tr class="row-odd"><td>gist_rainbow</td>
+<td>runs through the colors in spectral order from red to
+violet at full saturation (like <em>hsv</em> but not cyclic)</td>
+</tr>
+<tr class="row-even"><td>gist_stern</td>
+<td>“Stern special” color table from Interactive Data
+Language software</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
 <p>Other miscellaneous schemes:</p>
 <blockquote>
 <div><table border="1" class="docutils">
@@ -1000,7 +1007,7 @@ Map (Still) Considered Harmful</a></td></tr>
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
 <tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>Resembles “BkBlAqGrYeOrReViWh200” from NCAR Command
-Language. See <a class="reference external" href="http://www.ncl.ucar.edu/Document/Graphics/color_table_gallery.shtml">Color Table Gallery</a></td></tr>
+Language. See <a class="reference external" href="https://www.ncl.ucar.edu/Document/Graphics/color_table_gallery.shtml">Color Table Gallery</a></td></tr>
 </tbody>
 </table>
 <table class="docutils footnote" frame="void" id="id8" rules="none">
@@ -1012,7 +1019,7 @@ Language. See <a class="reference external" href="http://www.ncl.ucar.edu/Docume
 <table class="docutils footnote" frame="void" id="id9" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id4">[4]</a></td><td>See <a class="reference external" href="http://www.mathworks.com/matlabcentral/fileexchange/2662-cmrmap-m">A Color Map for Effective Black-and-White Rendering of
+<tr><td class="label"><a class="fn-backref" href="#id4">[4]</a></td><td>See <a class="reference external" href="https://www.mathworks.com/matlabcentral/fileexchange/2662-cmrmap-m">A Color Map for Effective Black-and-White Rendering of
 Color-Scale Images</a>
 by Carey Rappaport</td></tr>
 </tbody>
@@ -1038,9 +1045,9 @@ by Carey Rappaport</td></tr>
     </div>
     <div class="footer">
         &copy; Copyright 2002 - 2012 John Hunter, Darren Dale, Eric Firing, Michael Droettboom and the Matplotlib development team; 2012 - 2017 The Matplotlib development team.
-      Last updated on Jul 16, 2017.
+      Last updated on Aug 06, 2017.
       Created using <a
-href="http://sphinx-doc.org/">Sphinx</a> 1.6.2.
+href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
     </div>
 
 <script>

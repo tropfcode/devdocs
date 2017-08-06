@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>dviread &mdash; Matplotlib 2.0.2.post4416.dev0+g1df513f documentation</title>
+    <title>dviread &mdash; Matplotlib 2.0.2.post4545+ga1937d4 documentation</title>
     
     <link rel="stylesheet" href="../_static/mpl.css"
 type="text/css" />
@@ -17,7 +17,7 @@ type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.0.2.post4416.dev0+g1df513f',
+        VERSION:     '2.0.2.post4545+ga1937d4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -28,14 +28,14 @@ type="text/css" />
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Matplotlib 2.0.2.post4416.dev0+g1df513f documentation"
+          title="Search within Matplotlib 2.0.2.post4545+ga1937d4 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html"
 />
     <link rel="search" title="Search" href="../search.html"
 />
-    <link rel="top" title="Matplotlib 2.0.2.post4416.dev0+g1df513f documentation" href="../index.html" />
+    <link rel="top" title="Matplotlib 2.0.2.post4545+ga1937d4 documentation" href="../index.html" />
     <link rel="up" title="The Matplotlib API" href="index.html" />
     <link rel="next" title="figure" href="figure_api.html" />
     <link rel="prev" title="dates" href="dates_api.html" /> 
@@ -46,14 +46,11 @@ type="text/css" />
 
 
 
-<!-- The "Fork me on github" ribbon -->
-<img style="float: right; margin-bottom: -40px; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" usemap="#ribbonmap"/>
-<map name="ribbonmap">
-    <area shape="poly" coords="15,0,148,-1,148,135" href="https://github.com/matplotlib/matplotlib" title="Fork me on GitHub" />
-</map>
-
-<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px; position: relative;">
 <a href="../index.html"><img src="../_static/logo2.svg" width="540px" border="0" alt="matplotlib"/></a>
+
+<!-- The "Fork me on github" ribbon -->
+<div id="forkongithub"><a href="https://github.com/matplotlib/matplotlib">Fork me on GitHub</a></div>
 </div>
 
 
@@ -235,17 +232,17 @@ the external name of the font.</p>
 <p class="rubric">Attributes</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="7%" />
-<col width="93%" />
+<col width="11%" />
+<col width="89%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td>texname</td>
+<tr class="row-odd"><td><strong>texname</strong></td>
 <td>(bytes)</td>
 </tr>
-<tr class="row-even"><td>size</td>
+<tr class="row-even"><td><strong>size</strong></td>
 <td>(float) Size of the font in Adobe points, converted from the slightly smaller TeX points.</td>
 </tr>
-<tr class="row-odd"><td>widths</td>
+<tr class="row-odd"><td><strong>widths</strong></td>
 <td>(list) Widths of glyphs in glyph-space units, typically 1/1000ths of the point size.</td>
 </tr>
 </tbody>
@@ -290,11 +287,11 @@ PostScript.</p>
 <p class="rubric">Attributes</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="21%" />
-<col width="79%" />
+<col width="29%" />
+<col width="71%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td>encoding</td>
+<tr class="row-odd"><td><strong>encoding</strong></td>
 <td>(list) List of character names</td>
 </tr>
 </tbody>
@@ -356,7 +353,7 @@ PostScript.</p>
 <p>A psfonts.map formatted file, mapping TeX fonts to PS fonts.</p>
 <p>Usage:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">map</span> <span class="o">=</span> <span class="n">PsfontsMap</span><span class="p">(</span><span class="n">find_tex_file</span><span class="p">(</span><span class="s1">&#39;pdftex.map&#39;</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">entry</span> <span class="o">=</span> <span class="nb">map</span><span class="p">[</span><span class="n">b</span><span class="s1">&#39;ptmbo8r&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">entry</span> <span class="o">=</span> <span class="nb">map</span><span class="p">[</span><span class="sa">b</span><span class="s1">&#39;ptmbo8r&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">entry</span><span class="o">.</span><span class="n">texname</span>
 <span class="go">b&#39;ptmbo8r&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">entry</span><span class="o">.</span><span class="n">psname</span>
@@ -451,17 +448,17 @@ configured these files differently.</p>
 <p class="rubric">Attributes</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="12%" />
-<col width="88%" />
+<col width="14%" />
+<col width="86%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td>checksum</td>
+<tr class="row-odd"><td><strong>checksum</strong></td>
 <td>(int) Used for verifying against the dvi file.</td>
 </tr>
-<tr class="row-even"><td>design_size</td>
+<tr class="row-even"><td><strong>design_size</strong></td>
 <td>(int) Design size of the font (unknown units)</td>
 </tr>
-<tr class="row-odd"><td>width, height, depth</td>
+<tr class="row-odd"><td><strong>width, height, depth</strong></td>
 <td>(dict) Dimensions of each character, need to be scaled by the factor specified in the dvi file. These are dicts because indexing may not start from 0.</td>
 </tr>
 </tbody>
@@ -524,7 +521,7 @@ but replaces the <code class="xref py py-obj docutils literal"><span class="pre"
 <code class="descclassname">matplotlib.dviread.</code><code class="descname">find_tex_file</code><span class="sig-paren">(</span><em>filename</em>, <em>format=None</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.dviread.find_tex_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find a file in the texmf tree.</p>
 <p>Calls <strong class="program">kpsewhich</strong> which is an interface to the kpathsea
-library <a class="reference internal" href="#r1" id="id1">[R1]</a>. Most existing TeX distributions on Unix-like systems use
+library <a class="reference internal" href="#r22" id="id1">[R22]</a>. Most existing TeX distributions on Unix-like systems use
 kpathsea. It is also available as part of MikTeX, a popular
 distribution on Windows.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -542,10 +539,10 @@ Could be e.g. ‘tfm’ or ‘vf’ to limit the search to that type of files.</
 </tbody>
 </table>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r1" rules="none">
+<table class="docutils citation" frame="void" id="r22" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[R1]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id2">2</a>)</em> <a class="reference external" href="http://www.tug.org/kpathsea/">Kpathsea documentation</a>
+<tr><td class="label">[R22]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id2">2</a>)</em> <a class="reference external" href="http://www.tug.org/kpathsea/">Kpathsea documentation</a>
 The library that <strong class="program">kpsewhich</strong> is part of.</td></tr>
 </tbody>
 </table>
@@ -620,9 +617,9 @@ integers.</p>
     </div>
     <div class="footer">
         &copy; Copyright 2002 - 2012 John Hunter, Darren Dale, Eric Firing, Michael Droettboom and the Matplotlib development team; 2012 - 2017 The Matplotlib development team.
-      Last updated on Jul 16, 2017.
+      Last updated on Aug 06, 2017.
       Created using <a
-href="http://sphinx-doc.org/">Sphinx</a> 1.6.2.
+href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
     </div>
 
 <script>

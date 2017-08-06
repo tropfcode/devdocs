@@ -35,9 +35,9 @@ effectively.
 
 .. only:: html
 
-    .. figure:: /tutorials/01_introductory/images/thumb/sphx_glr_sample_plots_thumb.png
+    .. figure:: /tutorials/introductory/images/thumb/sphx_glr_sample_plots_thumb.png
 
-        :ref:`sphx_glr_tutorials_01_introductory_sample_plots.py`
+        :ref:`sphx_glr_tutorials_introductory_sample_plots.py`
 
 .. raw:: html
 
@@ -47,7 +47,7 @@ effectively.
 .. toctree::
    :hidden:
 
-   /tutorials/01_introductory/sample_plots
+   /tutorials/introductory/sample_plots
 
 .. raw:: html
 
@@ -55,9 +55,9 @@ effectively.
 
 .. only:: html
 
-    .. figure:: /tutorials/01_introductory/images/thumb/sphx_glr_customizing_thumb.png
+    .. figure:: /tutorials/introductory/images/thumb/sphx_glr_customizing_thumb.png
 
-        :ref:`sphx_glr_tutorials_01_introductory_customizing.py`
+        :ref:`sphx_glr_tutorials_introductory_customizing.py`
 
 .. raw:: html
 
@@ -67,7 +67,7 @@ effectively.
 .. toctree::
    :hidden:
 
-   /tutorials/01_introductory/customizing
+   /tutorials/introductory/customizing
 
 .. raw:: html
 
@@ -75,9 +75,9 @@ effectively.
 
 .. only:: html
 
-    .. figure:: /tutorials/01_introductory/images/thumb/sphx_glr_images_thumb.png
+    .. figure:: /tutorials/introductory/images/thumb/sphx_glr_images_thumb.png
 
-        :ref:`sphx_glr_tutorials_01_introductory_images.py`
+        :ref:`sphx_glr_tutorials_introductory_images.py`
 
 .. raw:: html
 
@@ -87,7 +87,7 @@ effectively.
 .. toctree::
    :hidden:
 
-   /tutorials/01_introductory/images
+   /tutorials/introductory/images
 
 .. raw:: html
 
@@ -95,9 +95,9 @@ effectively.
 
 .. only:: html
 
-    .. figure:: /tutorials/01_introductory/images/thumb/sphx_glr_usage_thumb.png
+    .. figure:: /tutorials/introductory/images/thumb/sphx_glr_usage_thumb.png
 
-        :ref:`sphx_glr_tutorials_01_introductory_usage.py`
+        :ref:`sphx_glr_tutorials_introductory_usage.py`
 
 .. raw:: html
 
@@ -107,7 +107,7 @@ effectively.
 .. toctree::
    :hidden:
 
-   /tutorials/01_introductory/usage
+   /tutorials/introductory/usage
 
 .. raw:: html
 
@@ -115,9 +115,9 @@ effectively.
 
 .. only:: html
 
-    .. figure:: /tutorials/01_introductory/images/thumb/sphx_glr_pyplot_thumb.png
+    .. figure:: /tutorials/introductory/images/thumb/sphx_glr_pyplot_thumb.png
 
-        :ref:`sphx_glr_tutorials_01_introductory_pyplot.py`
+        :ref:`sphx_glr_tutorials_introductory_pyplot.py`
 
 .. raw:: html
 
@@ -127,7 +127,7 @@ effectively.
 .. toctree::
    :hidden:
 
-   /tutorials/01_introductory/pyplot
+   /tutorials/introductory/pyplot
 
 .. raw:: html
 
@@ -135,9 +135,9 @@ effectively.
 
 .. only:: html
 
-    .. figure:: /tutorials/01_introductory/images/thumb/sphx_glr_lifecycle_thumb.png
+    .. figure:: /tutorials/introductory/images/thumb/sphx_glr_lifecycle_thumb.png
 
-        :ref:`sphx_glr_tutorials_01_introductory_lifecycle.py`
+        :ref:`sphx_glr_tutorials_introductory_lifecycle.py`
 
 .. raw:: html
 
@@ -147,7 +147,7 @@ effectively.
 .. toctree::
    :hidden:
 
-   /tutorials/01_introductory/lifecycle
+   /tutorials/introductory/lifecycle
 .. raw:: html
 
     <div style='clear:both'></div>
@@ -169,9 +169,9 @@ visualizations.
 
 .. only:: html
 
-    .. figure:: /tutorials/02_intermediate/images/thumb/sphx_glr_legend_guide_thumb.png
+    .. figure:: /tutorials/intermediate/images/thumb/sphx_glr_legend_guide_thumb.png
 
-        :ref:`sphx_glr_tutorials_02_intermediate_legend_guide.py`
+        :ref:`sphx_glr_tutorials_intermediate_legend_guide.py`
 
 .. raw:: html
 
@@ -181,7 +181,7 @@ visualizations.
 .. toctree::
    :hidden:
 
-   /tutorials/02_intermediate/legend_guide
+   /tutorials/intermediate/legend_guide
 
 .. raw:: html
 
@@ -189,9 +189,9 @@ visualizations.
 
 .. only:: html
 
-    .. figure:: /tutorials/02_intermediate/images/thumb/sphx_glr_artists_thumb.png
+    .. figure:: /tutorials/intermediate/images/thumb/sphx_glr_artists_thumb.png
 
-        :ref:`sphx_glr_tutorials_02_intermediate_artists.py`
+        :ref:`sphx_glr_tutorials_intermediate_artists.py`
 
 .. raw:: html
 
@@ -201,7 +201,7 @@ visualizations.
 .. toctree::
    :hidden:
 
-   /tutorials/02_intermediate/artists
+   /tutorials/intermediate/artists
 
 .. raw:: html
 
@@ -209,9 +209,9 @@ visualizations.
 
 .. only:: html
 
-    .. figure:: /tutorials/02_intermediate/images/thumb/sphx_glr_gridspec_thumb.png
+    .. figure:: /tutorials/intermediate/images/thumb/sphx_glr_gridspec_thumb.png
 
-        :ref:`sphx_glr_tutorials_02_intermediate_gridspec.py`
+        :ref:`sphx_glr_tutorials_intermediate_gridspec.py`
 
 .. raw:: html
 
@@ -221,7 +221,7 @@ visualizations.
 .. toctree::
    :hidden:
 
-   /tutorials/02_intermediate/gridspec
+   /tutorials/intermediate/gridspec
 
 .. raw:: html
 
@@ -229,9 +229,9 @@ visualizations.
 
 .. only:: html
 
-    .. figure:: /tutorials/02_intermediate/images/thumb/sphx_glr_tight_layout_guide_thumb.png
+    .. figure:: /tutorials/intermediate/images/thumb/sphx_glr_tight_layout_guide_thumb.png
 
-        :ref:`sphx_glr_tutorials_02_intermediate_tight_layout_guide.py`
+        :ref:`sphx_glr_tutorials_intermediate_tight_layout_guide.py`
 
 .. raw:: html
 
@@ -241,7 +241,7 @@ visualizations.
 .. toctree::
    :hidden:
 
-   /tutorials/02_intermediate/tight_layout_guide
+   /tutorials/intermediate/tight_layout_guide
 .. raw:: html
 
     <div style='clear:both'></div>
@@ -262,9 +262,9 @@ users and developers.
 
 .. only:: html
 
-    .. figure:: /tutorials/03_advanced/images/thumb/sphx_glr_patheffects_guide_thumb.png
+    .. figure:: /tutorials/advanced/images/thumb/sphx_glr_patheffects_guide_thumb.png
 
-        :ref:`sphx_glr_tutorials_03_advanced_patheffects_guide.py`
+        :ref:`sphx_glr_tutorials_advanced_patheffects_guide.py`
 
 .. raw:: html
 
@@ -274,7 +274,7 @@ users and developers.
 .. toctree::
    :hidden:
 
-   /tutorials/03_advanced/patheffects_guide
+   /tutorials/advanced/patheffects_guide
 
 .. raw:: html
 
@@ -282,9 +282,9 @@ users and developers.
 
 .. only:: html
 
-    .. figure:: /tutorials/03_advanced/images/thumb/sphx_glr_path_tutorial_thumb.png
+    .. figure:: /tutorials/advanced/images/thumb/sphx_glr_path_tutorial_thumb.png
 
-        :ref:`sphx_glr_tutorials_03_advanced_path_tutorial.py`
+        :ref:`sphx_glr_tutorials_advanced_path_tutorial.py`
 
 .. raw:: html
 
@@ -294,7 +294,7 @@ users and developers.
 .. toctree::
    :hidden:
 
-   /tutorials/03_advanced/path_tutorial
+   /tutorials/advanced/path_tutorial
 
 .. raw:: html
 
@@ -302,9 +302,9 @@ users and developers.
 
 .. only:: html
 
-    .. figure:: /tutorials/03_advanced/images/thumb/sphx_glr_transforms_tutorial_thumb.png
+    .. figure:: /tutorials/advanced/images/thumb/sphx_glr_transforms_tutorial_thumb.png
 
-        :ref:`sphx_glr_tutorials_03_advanced_transforms_tutorial.py`
+        :ref:`sphx_glr_tutorials_advanced_transforms_tutorial.py`
 
 .. raw:: html
 
@@ -314,7 +314,7 @@ users and developers.
 .. toctree::
    :hidden:
 
-   /tutorials/03_advanced/transforms_tutorial
+   /tutorials/advanced/transforms_tutorial
 .. raw:: html
 
     <div style='clear:both'></div>
@@ -632,13 +632,13 @@ of Matplotlib in order to accomplish specific goals.
 
   .. container:: sphx-glr-download
 
-    :download:`Download all examples in Python source code: tutorials_python.zip <//home/elliott/code/matplotlib/doc/tutorials/tutorials_python.zip>`
+    :download:`Download all examples in Python source code: tutorials_python.zip <//home/circleci/project/doc/tutorials/tutorials_python.zip>`
 
 
 
   .. container:: sphx-glr-download
 
-    :download:`Download all examples in Jupyter notebooks: tutorials_jupyter.zip <//home/elliott/code/matplotlib/doc/tutorials/tutorials_jupyter.zip>`
+    :download:`Download all examples in Jupyter notebooks: tutorials_jupyter.zip <//home/circleci/project/doc/tutorials/tutorials_jupyter.zip>`
 
 .. rst-class:: sphx-glr-signature
 

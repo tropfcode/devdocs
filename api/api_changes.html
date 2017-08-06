@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>API Changes &mdash; Matplotlib 2.0.2.post4416.dev0+g1df513f documentation</title>
+    <title>API Changes &mdash; Matplotlib 2.0.2.post4545+ga1937d4 documentation</title>
     
     <link rel="stylesheet" href="../_static/mpl.css"
 type="text/css" />
@@ -17,7 +17,7 @@ type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.0.2.post4416.dev0+g1df513f',
+        VERSION:     '2.0.2.post4545+ga1937d4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -28,14 +28,14 @@ type="text/css" />
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Matplotlib 2.0.2.post4416.dev0+g1df513f documentation"
+          title="Search within Matplotlib 2.0.2.post4545+ga1937d4 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html"
 />
     <link rel="search" title="Search" href="../search.html"
 />
-    <link rel="top" title="Matplotlib 2.0.2.post4416.dev0+g1df513f documentation" href="../index.html" />
+    <link rel="top" title="Matplotlib 2.0.2.post4545+ga1937d4 documentation" href="../index.html" />
     <link rel="up" title="The Matplotlib API" href="index.html" />
     <link rel="next" title="The top level matplotlib module" href="matplotlib_configuration_api.html" />
     <link rel="prev" title="The Pyplot API" href="pyplot_summary.html" /> 
@@ -46,14 +46,11 @@ type="text/css" />
 
 
 
-<!-- The "Fork me on github" ribbon -->
-<img style="float: right; margin-bottom: -40px; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" usemap="#ribbonmap"/>
-<map name="ribbonmap">
-    <area shape="poly" coords="15,0,148,-1,148,135" href="https://github.com/matplotlib/matplotlib" title="Fork me on GitHub" />
-</map>
-
-<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px; position: relative;">
 <a href="../index.html"><img src="../_static/logo2.svg" width="540px" border="0" alt="matplotlib"/></a>
+
+<!-- The "Fork me on github" ribbon -->
+<div id="forkongithub"><a href="https://github.com/matplotlib/matplotlib">Fork me on GitHub</a></div>
 </div>
 
 
@@ -477,7 +474,7 @@ a precise number of ticks.</p>
 changed so that more convenient tick locations are chosen. The new algorithm
 returns a plot view range that is a multiple of the user-requested number of
 ticks. This ensures tick marks will be located at whole integers more
-consistently. For example, when both y-axes of a“twinx“ plot use
+consistently. For example, when both y-axes of a``twinx`` plot use
 <code class="docutils literal"><span class="pre">matplotlib.ticker.LinearLocator</span></code> with the same number of ticks,
 their y-tick locations and grid lines will coincide.</p>
 </div>
@@ -1023,7 +1020,7 @@ thus <code class="xref py py-obj docutils literal"><span class="pre">colorbar.Co
 <li><p class="first">The legend handler interface has changed from a callable, to any object
 which implements the <code class="docutils literal"><span class="pre">legend_artists</span></code> method (a deprecation phase will
 see this interface be maintained for v1.4). See
-<a class="reference internal" href="../tutorials/02_intermediate/legend_guide.html#sphx-glr-tutorials-02-intermediate-legend-guide-py"><span class="std std-ref">Legend guide</span></a> for further details. Further legend changes
+<a class="reference internal" href="../tutorials/intermediate/legend_guide.html#sphx-glr-tutorials-intermediate-legend-guide-py"><span class="std std-ref">Legend guide</span></a> for further details. Further legend changes
 include:</p>
 <blockquote>
 <div><ul class="simple">
@@ -2425,7 +2422,7 @@ supports the ‘xlim_changed’ and ‘ylim_changed’ Axes events.</li>
 
 <span class="n">New</span> <span class="n">LogNorm</span> <span class="n">subclass</span> <span class="n">of</span> <span class="n">Normalize</span> <span class="n">added</span> <span class="n">to</span> <span class="n">colors</span><span class="o">.</span><span class="n">py</span><span class="o">.</span>
 <span class="n">All</span> <span class="n">Normalize</span> <span class="n">subclasses</span> <span class="n">have</span> <span class="n">new</span> <span class="n">inverse</span><span class="p">()</span> <span class="n">method</span><span class="p">,</span> <span class="ow">and</span>
-<span class="n">the</span> <span class="n">__call__</span><span class="p">()</span> <span class="n">method</span> <span class="n">has</span> <span class="n">a</span> <span class="n">new</span> <span class="n">clip</span> <span class="n">kwarg</span><span class="o">.</span>
+<span class="n">the</span> <span class="fm">__call__</span><span class="p">()</span> <span class="n">method</span> <span class="n">has</span> <span class="n">a</span> <span class="n">new</span> <span class="n">clip</span> <span class="n">kwarg</span><span class="o">.</span>
 
 <span class="n">Changed</span> <span class="k">class</span> <span class="nc">names</span> <span class="ow">in</span> <span class="n">colors</span><span class="o">.</span><span class="n">py</span> <span class="n">to</span> <span class="n">match</span> <span class="n">convention</span><span class="p">:</span>
 <span class="n">normalize</span> <span class="o">-&gt;</span> <span class="n">Normalize</span><span class="p">,</span> <span class="n">no_norm</span> <span class="o">-&gt;</span> <span class="n">NoNorm</span><span class="o">.</span>  <span class="n">Old</span> <span class="n">names</span>
@@ -2626,7 +2623,7 @@ supports the ‘xlim_changed’ and ‘ylim_changed’ Axes events.</li>
   <span class="n">If</span> <span class="n">old</span> <span class="n">files</span> <span class="n">are</span> <span class="n">found</span><span class="p">,</span> <span class="n">a</span> <span class="n">warning</span> <span class="ow">is</span> <span class="n">issued</span> <span class="ow">and</span> <span class="n">they</span> <span class="n">are</span> <span class="n">moved</span> <span class="n">to</span>
   <span class="n">the</span> <span class="n">new</span> <span class="n">location</span><span class="o">.</span>
 
-<span class="o">-</span> <span class="n">backends</span><span class="o">/</span><span class="n">__init__</span><span class="o">.</span><span class="n">py</span> <span class="n">no</span> <span class="n">longer</span> <span class="n">imports</span> <span class="n">new_figure_manager</span><span class="p">,</span>
+<span class="o">-</span> <span class="n">backends</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="n">no</span> <span class="n">longer</span> <span class="n">imports</span> <span class="n">new_figure_manager</span><span class="p">,</span>
   <span class="n">draw_if_interactive</span> <span class="ow">and</span> <span class="n">show</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">default</span> <span class="n">backend</span><span class="p">,</span> <span class="n">but</span> <span class="n">puts</span>
   <span class="n">these</span> <span class="n">imports</span> <span class="n">into</span> <span class="n">a</span> <span class="n">call</span> <span class="n">to</span> <span class="n">pylab_setup</span><span class="o">.</span>  <span class="n">Also</span><span class="p">,</span> <span class="n">the</span> <span class="n">Toolbar</span> <span class="ow">is</span> <span class="n">no</span>
   <span class="n">longer</span> <span class="n">imported</span> <span class="kn">from</span> <span class="nn">WX</span><span class="o">/</span><span class="n">WXAgg</span><span class="o">.</span>  <span class="n">New</span> <span class="n">usage</span><span class="p">:</span>
@@ -2736,7 +2733,7 @@ supports the ‘xlim_changed’ and ‘ylim_changed’ Axes events.</li>
        <span class="n">Old</span><span class="p">:</span> <span class="n">contourf</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span> <span class="n">would</span> <span class="k">yield</span> <span class="mi">3</span> <span class="n">regions</span><span class="p">:</span> <span class="mi">0</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="ow">and</span> <span class="o">&gt;</span><span class="mf">2.</span>
        <span class="n">New</span><span class="p">:</span> <span class="n">it</span> <span class="n">would</span> <span class="k">yield</span> <span class="mi">2</span> <span class="n">regions</span><span class="p">:</span> <span class="mi">0</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="o">-</span><span class="mf">2.</span>  <span class="n">If</span> <span class="n">the</span> <span class="n">same</span> <span class="mi">3</span> <span class="n">regions</span> <span class="n">were</span>
        <span class="n">desired</span><span class="p">,</span> <span class="n">the</span> <span class="n">equivalent</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">levels</span> <span class="n">would</span> <span class="n">be</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span>
-       <span class="mi">1</span><span class="n">e38</span><span class="p">]</span><span class="o">.</span>
+       <span class="mf">1e38</span><span class="p">]</span><span class="o">.</span>
 </pre></div>
 </div>
 </div>
@@ -2991,10 +2988,10 @@ to adjust your size arguments accordingly or use scatter_classic.</p>
 <h4>mathtext spacing<a class="headerlink" href="#mathtext-spacing" title="Permalink to this headline">¶</a></h4>
 <p>For reasons not clear to me (and which I’ll eventually fix) spacing no
 longer works in font groups.  However, I added three new spacing
-commands which compensate for this ” (regular space), ‘/’ (small
+commands which compensate for this ‘’ (regular space), ‘/’ (small
 space) and ‘hspace{frac}’ where frac is a fraction of fontsize in
 points.  You will need to quote spaces in font strings, is:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">title</span><span class="p">(</span><span class="s1">r&#39;$\rm{Histogram\ of\ IQ:}\ \mu=100,\ \sigma=15$&#39;</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\rm{Histogram\ of\ IQ:}\ \mu=100,\ \sigma=15$&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3264,7 +3261,7 @@ transformations.</p>
 <div class="section" id="changes-for-0-40">
 <h2>Changes for 0.40<a class="headerlink" href="#changes-for-0-40" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">Artist</span>
-    <span class="o">*</span> <span class="n">__init__</span> <span class="n">takes</span> <span class="n">a</span> <span class="n">DPI</span> <span class="n">instance</span> <span class="ow">and</span> <span class="n">a</span> <span class="n">Bound2D</span> <span class="n">instance</span> <span class="n">which</span> <span class="ow">is</span>
+    <span class="o">*</span> <span class="fm">__init__</span> <span class="n">takes</span> <span class="n">a</span> <span class="n">DPI</span> <span class="n">instance</span> <span class="ow">and</span> <span class="n">a</span> <span class="n">Bound2D</span> <span class="n">instance</span> <span class="n">which</span> <span class="ow">is</span>
       <span class="n">the</span> <span class="n">bounding</span> <span class="n">box</span> <span class="n">of</span> <span class="n">the</span> <span class="n">artist</span> <span class="ow">in</span> <span class="n">display</span> <span class="n">coords</span>
     <span class="o">*</span> <span class="n">get_window_extent</span> <span class="n">returns</span> <span class="n">a</span> <span class="n">Bound2D</span> <span class="n">instance</span>
     <span class="o">*</span> <span class="n">set_size</span> <span class="ow">is</span> <span class="n">removed</span><span class="p">;</span> <span class="n">replaced</span> <span class="n">by</span> <span class="n">bbox</span> <span class="ow">and</span> <span class="n">dpi</span>
@@ -3293,11 +3290,11 @@ transformations.</p>
 
 <span class="o">-</span> <span class="n">Axes</span>
     <span class="o">*</span> <span class="n">removed</span> <span class="n">figbg</span> <span class="n">attribute</span>
-    <span class="o">*</span> <span class="n">added</span> <span class="n">fig</span> <span class="n">instance</span> <span class="n">to</span> <span class="n">__init__</span>
+    <span class="o">*</span> <span class="n">added</span> <span class="n">fig</span> <span class="n">instance</span> <span class="n">to</span> <span class="fm">__init__</span>
     <span class="o">*</span> <span class="n">resizing</span> <span class="ow">is</span> <span class="n">handled</span> <span class="n">by</span> <span class="n">figure</span> <span class="n">call</span> <span class="n">to</span> <span class="n">resize</span><span class="o">.</span>
 
 <span class="o">-</span> <span class="n">Subplot</span>
-    <span class="o">*</span> <span class="n">added</span> <span class="n">fig</span> <span class="n">instance</span> <span class="n">to</span> <span class="n">__init__</span>
+    <span class="o">*</span> <span class="n">added</span> <span class="n">fig</span> <span class="n">instance</span> <span class="n">to</span> <span class="fm">__init__</span>
 
 <span class="o">-</span> <span class="n">Renderer</span> <span class="n">methods</span> <span class="k">for</span> <span class="n">patches</span> <span class="n">now</span> <span class="n">take</span> <span class="n">gcEdge</span> <span class="ow">and</span> <span class="n">gcFace</span> <span class="n">instances</span><span class="o">.</span>
   <span class="n">gcFace</span><span class="o">=</span><span class="kc">None</span> <span class="n">takes</span> <span class="n">the</span> <span class="n">place</span> <span class="n">of</span> <span class="n">filled</span><span class="o">=</span><span class="kc">False</span>
@@ -3338,9 +3335,9 @@ transformations.</p>
     </div>
     <div class="footer">
         &copy; Copyright 2002 - 2012 John Hunter, Darren Dale, Eric Firing, Michael Droettboom and the Matplotlib development team; 2012 - 2017 The Matplotlib development team.
-      Last updated on Jul 16, 2017.
+      Last updated on Aug 06, 2017.
       Created using <a
-href="http://sphinx-doc.org/">Sphinx</a> 1.6.2.
+href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
     </div>
 
 <script>

@@ -9,6 +9,15 @@ matplotlib\.animation\.AbstractMovieWriter
    .. automethod:: __init__
 
    
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~AbstractMovieWriter.finish
+      ~AbstractMovieWriter.grab_frame
+      ~AbstractMovieWriter.saving
+      ~AbstractMovieWriter.setup
+   
    
 
    

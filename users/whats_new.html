@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>What’s new in matplotlib &mdash; Matplotlib 2.0.2.post4416.dev0+g1df513f documentation</title>
+    <title>What’s new in matplotlib &mdash; Matplotlib 2.0.2.post4545+ga1937d4 documentation</title>
     
     <link rel="stylesheet" href="../_static/mpl.css"
 type="text/css" />
@@ -17,7 +17,7 @@ type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.0.2.post4416.dev0+g1df513f',
+        VERSION:     '2.0.2.post4545+ga1937d4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -28,16 +28,16 @@ type="text/css" />
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Matplotlib 2.0.2.post4416.dev0+g1df513f documentation"
+          title="Search within Matplotlib 2.0.2.post4545+ga1937d4 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html"
 />
     <link rel="search" title="Search" href="../search.html"
 />
-    <link rel="top" title="Matplotlib 2.0.2.post4416.dev0+g1df513f documentation" href="../index.html" />
+    <link rel="top" title="Matplotlib 2.0.2.post4545+ga1937d4 documentation" href="../index.html" />
     <link rel="up" title="User’s Guide" href="index.html" />
-    <link rel="next" title="Changes to the default style" href="dflt_style_changes.html" />
+    <link rel="next" title="New TransformedPatchPath caching object" href="next_whats_new/2015-10-31_TransformedPatchPath.html" />
     <link rel="prev" title="Event handling and picking" href="event_handling.html" /> 
 
 
@@ -46,14 +46,11 @@ type="text/css" />
 
 
 
-<!-- The "Fork me on github" ribbon -->
-<img style="float: right; margin-bottom: -40px; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" usemap="#ribbonmap"/>
-<map name="ribbonmap">
-    <area shape="poly" coords="15,0,148,-1,148,135" href="https://github.com/matplotlib/matplotlib" title="Fork me on GitHub" />
-</map>
-
-<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px; position: relative;">
 <a href="../index.html"><img src="../_static/logo2.svg" width="540px" border="0" alt="matplotlib"/></a>
+
+<!-- The "Fork me on github" ribbon -->
+<div id="forkongithub"><a href="https://github.com/matplotlib/matplotlib">Fork me on GitHub</a></div>
 </div>
 
 
@@ -69,7 +66,7 @@ type="text/css" />
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="dflt_style_changes.html" title="Changes to the default style"
+          <a href="next_whats_new/2015-10-31_TransformedPatchPath.html" title="New TransformedPatchPath caching object"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="event_handling.html" title="Event handling and picking"
@@ -105,6 +102,7 @@ Travis-CI: <a href="https://travis-ci.org/matplotlib/matplotlib">
   <h3><a href="../contents.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">What’s new in matplotlib</a><ul>
+<li><a class="reference internal" href="#what-s-new-in-unreleased-matplotlib">What’s new in unreleased Matplotlib?</a></li>
 <li><a class="reference internal" href="#new-in-matplotlib-2-0">New in matplotlib 2.0</a><ul>
 <li><a class="reference internal" href="#default-style-changes">Default style changes</a></li>
 <li><a class="reference internal" href="#improved-color-conversion-api-and-rgba-support">Improved color conversion API and RGBA support</a></li>
@@ -144,7 +142,7 @@ Travis-CI: <a href="https://travis-ci.org/matplotlib/matplotlib">
   <li><a href="../contents.html">Documentation overview</a><ul>
   <li><a href="index.html">User’s Guide</a><ul>
       <li>Previous: <a href="event_handling.html" title="previous chapter">Event handling and picking</a></li>
-      <li>Next: <a href="dflt_style_changes.html" title="next chapter">Changes to the default style</a></li>
+      <li>Next: <a href="next_whats_new/2015-10-31_TransformedPatchPath.html" title="next chapter">New TransformedPatchPath caching object</a></li>
   </ul></li>
   </ul></li>
 </ul>
@@ -181,41 +179,93 @@ revision, see the <a class="reference internal" href="github_stats.html#github-s
 <p class="topic-title first">Table of Contents</p>
 <ul class="simple">
 <li><a class="reference internal" href="#what-s-new-in-matplotlib" id="id1">What’s new in matplotlib</a><ul>
-<li><a class="reference internal" href="#new-in-matplotlib-2-0" id="id2">New in matplotlib 2.0</a><ul>
-<li><a class="reference internal" href="#default-style-changes" id="id3">Default style changes</a></li>
-<li><a class="reference internal" href="#improved-color-conversion-api-and-rgba-support" id="id4">Improved color conversion API and RGBA support</a></li>
-<li><a class="reference internal" href="#new-configuration-rcparams" id="id5">New Configuration (rcParams)</a></li>
-<li><a class="reference internal" href="#qualitative-colormaps" id="id6">Qualitative colormaps</a></li>
-<li><a class="reference internal" href="#axis-offset-label-now-responds-to-labelcolor" id="id7">Axis offset label now responds to <code class="xref py py-obj docutils literal"><span class="pre">labelcolor</span></code></a></li>
-<li><a class="reference internal" href="#improved-offset-text-choice" id="id8">Improved offset text choice</a></li>
-<li><a class="reference internal" href="#style-parameter-blacklist" id="id9">Style parameter blacklist</a></li>
-<li><a class="reference internal" href="#change-in-default-font" id="id10">Change in default font</a></li>
-<li><a class="reference internal" href="#faster-text-rendering" id="id11">Faster text rendering</a></li>
-<li><a class="reference internal" href="#improvements-for-the-qt-figure-options-editor" id="id12">Improvements for the Qt figure options editor</a></li>
-<li><a class="reference internal" href="#improved-image-support" id="id13">Improved image support</a></li>
-<li><a class="reference internal" href="#support-for-hidpi-retina-displays-in-the-nbagg-and-webagg-backends" id="id14">Support for HiDPI (Retina) displays in the NbAgg and WebAgg backends</a></li>
-<li><a class="reference internal" href="#change-in-the-default-animation-codec" id="id15">Change in the default animation codec</a></li>
-<li><a class="reference internal" href="#deprecated-support-for-mencoder-in-animation" id="id16">Deprecated support for mencoder in animation</a></li>
-<li><a class="reference internal" href="#boxplot-zorder-keyword-argument" id="id17">Boxplot Zorder Keyword Argument</a></li>
-<li><a class="reference internal" href="#filled-and-x-markers" id="id18">Filled <code class="docutils literal"><span class="pre">+</span></code> and <code class="docutils literal"><span class="pre">x</span></code> markers</a></li>
-<li><a class="reference internal" href="#rcount-and-ccount-for-plot-surface" id="id19"><code class="xref py py-obj docutils literal"><span class="pre">rcount</span></code> and <code class="xref py py-obj docutils literal"><span class="pre">ccount</span></code> for <code class="xref py py-obj docutils literal"><span class="pre">plot_surface()</span></code></a></li>
-<li><a class="reference internal" href="#streamplot-zorder-keyword-argument-changes" id="id20">Streamplot Zorder Keyword Argument Changes</a></li>
-<li><a class="reference internal" href="#extension-to-matplotlib-backend-bases-graphicscontextbase" id="id21">Extension to <a class="reference internal" href="../api/backend_bases_api.html#matplotlib.backend_bases.GraphicsContextBase" title="matplotlib.backend_bases.GraphicsContextBase"><code class="xref py py-obj docutils literal"><span class="pre">matplotlib.backend_bases.GraphicsContextBase</span></code></a></a></li>
+<li><a class="reference internal" href="#what-s-new-in-unreleased-matplotlib" id="id2">What’s new in unreleased Matplotlib?</a></li>
+<li><a class="reference internal" href="#new-in-matplotlib-2-0" id="id3">New in matplotlib 2.0</a><ul>
+<li><a class="reference internal" href="#default-style-changes" id="id4">Default style changes</a></li>
+<li><a class="reference internal" href="#improved-color-conversion-api-and-rgba-support" id="id5">Improved color conversion API and RGBA support</a></li>
+<li><a class="reference internal" href="#new-configuration-rcparams" id="id6">New Configuration (rcParams)</a></li>
+<li><a class="reference internal" href="#qualitative-colormaps" id="id7">Qualitative colormaps</a></li>
+<li><a class="reference internal" href="#axis-offset-label-now-responds-to-labelcolor" id="id8">Axis offset label now responds to <code class="xref py py-obj docutils literal"><span class="pre">labelcolor</span></code></a></li>
+<li><a class="reference internal" href="#improved-offset-text-choice" id="id9">Improved offset text choice</a></li>
+<li><a class="reference internal" href="#style-parameter-blacklist" id="id10">Style parameter blacklist</a></li>
+<li><a class="reference internal" href="#change-in-default-font" id="id11">Change in default font</a></li>
+<li><a class="reference internal" href="#faster-text-rendering" id="id12">Faster text rendering</a></li>
+<li><a class="reference internal" href="#improvements-for-the-qt-figure-options-editor" id="id13">Improvements for the Qt figure options editor</a></li>
+<li><a class="reference internal" href="#improved-image-support" id="id14">Improved image support</a></li>
+<li><a class="reference internal" href="#support-for-hidpi-retina-displays-in-the-nbagg-and-webagg-backends" id="id15">Support for HiDPI (Retina) displays in the NbAgg and WebAgg backends</a></li>
+<li><a class="reference internal" href="#change-in-the-default-animation-codec" id="id16">Change in the default animation codec</a></li>
+<li><a class="reference internal" href="#deprecated-support-for-mencoder-in-animation" id="id17">Deprecated support for mencoder in animation</a></li>
+<li><a class="reference internal" href="#boxplot-zorder-keyword-argument" id="id18">Boxplot Zorder Keyword Argument</a></li>
+<li><a class="reference internal" href="#filled-and-x-markers" id="id19">Filled <code class="docutils literal"><span class="pre">+</span></code> and <code class="docutils literal"><span class="pre">x</span></code> markers</a></li>
+<li><a class="reference internal" href="#rcount-and-ccount-for-plot-surface" id="id20"><code class="xref py py-obj docutils literal"><span class="pre">rcount</span></code> and <code class="xref py py-obj docutils literal"><span class="pre">ccount</span></code> for <code class="xref py py-obj docutils literal"><span class="pre">plot_surface()</span></code></a></li>
+<li><a class="reference internal" href="#streamplot-zorder-keyword-argument-changes" id="id21">Streamplot Zorder Keyword Argument Changes</a></li>
+<li><a class="reference internal" href="#extension-to-matplotlib-backend-bases-graphicscontextbase" id="id22">Extension to <a class="reference internal" href="../api/backend_bases_api.html#matplotlib.backend_bases.GraphicsContextBase" title="matplotlib.backend_bases.GraphicsContextBase"><code class="xref py py-obj docutils literal"><span class="pre">matplotlib.backend_bases.GraphicsContextBase</span></code></a></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#previous-whats-new" id="id22">Previous Whats New</a></li>
+<li><a class="reference internal" href="#previous-whats-new" id="id23">Previous Whats New</a></li>
 </ul>
 </li>
 </ul>
 </div>
+<div class="section" id="what-s-new-in-unreleased-matplotlib">
+<h2><a class="toc-backref" href="#id2">What’s new in unreleased Matplotlib?</a><a class="headerlink" href="#what-s-new-in-unreleased-matplotlib" title="Permalink to this headline">¶</a></h2>
+<p>Please place new portions of <code class="xref py py-obj docutils literal"><span class="pre">whats_new.rst</span></code> in the <code class="xref py py-obj docutils literal"><span class="pre">next_whats_new</span></code> directory.</p>
+<p>When adding an entry please look at the currently existing files to
+see if you can extend any of them.  If you create a file, name it
+something like <code class="file docutils literal"><span class="pre">cool_new_feature.rst</span></code> if you have added a brand new
+feature or something like <code class="file docutils literal"><span class="pre">updated_feature.rst</span></code> for extensions of
+existing features.  Include contents of the form:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Section Title for Feature
+-------------------------
+
+A bunch of text about how awesome the new feature is and examples of how
+to use it.
+
+A sub-section
+`````````````
+</pre></div>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/2015-10-31_TransformedPatchPath.html">New TransformedPatchPath caching object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/CheckButtons_widget_get_status.html">CheckButtons widget get_status function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/README.html">What’s new in unreleased Matplotlib?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/abstract_movie_writer.html">Abstract base class for movie writers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/anchoredsizebar_fill_bar_argument.html">Add fill_bar argument to <code class="docutils literal"><span class="pre">AnchoredSizeBar</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/annotation-default-arrow.html">Annotation can use a default arrow style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/axes3d_orthographic_projection.html">Orthographic projection for mplot3d</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/default_hexbin_linecolor.html">Hexbin default line color</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/figure_legend_no_args.html">figure.legend() can be called without arguments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/figure_new_clear_keyword.html">New parameter <code class="docutils literal"><span class="pre">clear</span></code> for <code class="docutils literal"><span class="pre">figure()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/fix_avconv.html">AVConv writer is back</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/invalid_axes_limits_errors.html">Invalid (Non-finite) Axis Limit Error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/metadata_savefig_kwarg.html">Metadata savefig kwarg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/min_log_scale_exponent.html">Specify minimum value to format as scalar for <code class="docutils literal"><span class="pre">LogFormatterMathtext</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/multiple_legend_keys.html">Multiple legend keys for legend entries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/percent_formatter.html">Added <code class="docutils literal"><span class="pre">matplotlib.ticker.PercentFormatter</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/quiverkey_angle_kwarg.html">New quiverkey angle kwarg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/reproducible_ps_pdf.html">Reproducible PS, PDF and SVG output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/reversed_colormap.html">Colormap reversed method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/scatter_no_longer_flattens.html"><code class="docutils literal"><span class="pre">Collection</span></code> offsets are no longer implicitly flattened</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/setp_output.html"><code class="docutils literal"><span class="pre">Artist.setp</span></code> (and <code class="docutils literal"><span class="pre">pyplot.setp</span></code>) accept a <code class="docutils literal"><span class="pre">file</span></code> argument</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/streamplot_set_maximum_length.html">Maximum streamline length and integration direction can now be specified</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/tick_params_rotation.html"><code class="docutils literal"><span class="pre">Axis.set_tick_params</span></code> now responds to ‘rotation’</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/toggle_3d_bar_shading.html">Users can now toggle shading in 3D bar plots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/update_autofmt_xdate.html">New which Parameter for autofmt_xdate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/update_subplot2grid.html">New Figure Parameter for subplot2grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/updated_fill_betweenx.html">Interpolation in fill_betweenx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="next_whats_new/validation_of_linestyle_rcparams.html">Validation of line style rcParams</a></li>
+</ul>
+</div>
+</div>
 <div class="section" id="new-in-matplotlib-2-0">
-<h2><a class="toc-backref" href="#id2">New in matplotlib 2.0</a><a class="headerlink" href="#new-in-matplotlib-2-0" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">New in matplotlib 2.0</a><a class="headerlink" href="#new-in-matplotlib-2-0" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">matplotlib 2.0 supports Python 2.7, and 3.4+</p>
 </div>
 <div class="section" id="default-style-changes">
-<h3><a class="toc-backref" href="#id3">Default style changes</a><a class="headerlink" href="#default-style-changes" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">Default style changes</a><a class="headerlink" href="#default-style-changes" title="Permalink to this headline">¶</a></h3>
 <p>The major changes in v2.0 are related to overhauling the default styles.</p>
 <div class="toctree-wrapper compound">
 <ul>
@@ -235,7 +285,7 @@ revision, see the <a class="reference internal" href="github_stats.html#github-s
 </div>
 </div>
 <div class="section" id="improved-color-conversion-api-and-rgba-support">
-<h3><a class="toc-backref" href="#id4">Improved color conversion API and RGBA support</a><a class="headerlink" href="#improved-color-conversion-api-and-rgba-support" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">Improved color conversion API and RGBA support</a><a class="headerlink" href="#improved-color-conversion-api-and-rgba-support" title="Permalink to this headline">¶</a></h3>
 <p>The <a class="reference internal" href="../api/colors_api.html#module-matplotlib.colors" title="matplotlib.colors"><code class="xref py py-mod docutils literal"><span class="pre">colors</span></code></a> gained a new color conversion API with
 full support for the alpha channel.  The main public functions are
 <a class="reference internal" href="../api/_as_gen/matplotlib.colors.is_color_like.html#matplotlib.colors.is_color_like" title="matplotlib.colors.is_color_like"><code class="xref py py-func docutils literal"><span class="pre">is_color_like()</span></code></a>, <a class="reference internal" href="../api/_as_gen/matplotlib.colors.to_rgba.html#matplotlib.colors.to_rgba" title="matplotlib.colors.to_rgba"><code class="xref py py-func docutils literal"><span class="pre">matplotlib.colors.to_rgba()</span></code></a>,
@@ -245,7 +295,7 @@ RGBA quadruplets are encoded in hex format as <code class="xref py py-obj docuti
 channel of the artists as well.</p>
 </div>
 <div class="section" id="new-configuration-rcparams">
-<h3><a class="toc-backref" href="#id5">New Configuration (rcParams)</a><a class="headerlink" href="#new-configuration-rcparams" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">New Configuration (rcParams)</a><a class="headerlink" href="#new-configuration-rcparams" title="Permalink to this headline">¶</a></h3>
 <p>New rcparams added</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -332,7 +382,7 @@ rcParam.</p>
 </div>
 </div>
 <div class="section" id="qualitative-colormaps">
-<h3><a class="toc-backref" href="#id6">Qualitative colormaps</a><a class="headerlink" href="#qualitative-colormaps" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">Qualitative colormaps</a><a class="headerlink" href="#qualitative-colormaps" title="Permalink to this headline">¶</a></h3>
 <p>ColorBrewer’s “qualitative” colormaps (“Accent”, “Dark2”, “Paired”,
 “Pastel1”, “Pastel2”, “Set1”, “Set2”, “Set3”) were intended for discrete
 categorical data, with no implication of value, and therefore have been
@@ -341,18 +391,18 @@ the colors will no longer be interpolated and they can be used for
 choropleths, labeled image features, etc.</p>
 </div>
 <div class="section" id="axis-offset-label-now-responds-to-labelcolor">
-<h3><a class="toc-backref" href="#id7">Axis offset label now responds to <code class="xref py py-obj docutils literal"><span class="pre">labelcolor</span></code></a><a class="headerlink" href="#axis-offset-label-now-responds-to-labelcolor" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">Axis offset label now responds to <code class="xref py py-obj docutils literal"><span class="pre">labelcolor</span></code></a><a class="headerlink" href="#axis-offset-label-now-responds-to-labelcolor" title="Permalink to this headline">¶</a></h3>
 <p>Axis offset labels are now colored the same as axis tick markers when <code class="xref py py-obj docutils literal"><span class="pre">labelcolor</span></code> is altered.</p>
 </div>
 <div class="section" id="improved-offset-text-choice">
-<h3><a class="toc-backref" href="#id8">Improved offset text choice</a><a class="headerlink" href="#improved-offset-text-choice" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">Improved offset text choice</a><a class="headerlink" href="#improved-offset-text-choice" title="Permalink to this headline">¶</a></h3>
 <p>The default offset-text choice was changed to only use significant digits that
 are common to all ticks (e.g. 1231..1239 -&gt; 1230, instead of 1231), except when
 they straddle a relatively large multiple of a power of ten, in which case that
 multiple is chosen (e.g. 1999..2001-&gt;2000).</p>
 </div>
 <div class="section" id="style-parameter-blacklist">
-<h3><a class="toc-backref" href="#id9">Style parameter blacklist</a><a class="headerlink" href="#style-parameter-blacklist" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id10">Style parameter blacklist</a><a class="headerlink" href="#style-parameter-blacklist" title="Permalink to this headline">¶</a></h3>
 <p>In order to prevent unexpected consequences from using a style, style
 files are no longer able to set parameters that affect things
 unrelated to style.  These parameters include:</p>
@@ -364,7 +414,7 @@ unrelated to style.  These parameters include:</p>
 </div>
 </div>
 <div class="section" id="change-in-default-font">
-<h3><a class="toc-backref" href="#id10">Change in default font</a><a class="headerlink" href="#change-in-default-font" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id11">Change in default font</a><a class="headerlink" href="#change-in-default-font" title="Permalink to this headline">¶</a></h3>
 <p>The default font used by matplotlib in text has been changed to DejaVu Sans and
 DejaVu Serif for the sans-serif and serif families, respectively. The DejaVu
 font family is based on the previous matplotlib default –Bitstream Vera– but
@@ -377,12 +427,12 @@ possible and fall back to STIX symbols when a glyph is not found in DejaVu. To
 return to the previous behavior, set the rcParam <code class="docutils literal"><span class="pre">mathtext.fontset</span></code> to <code class="docutils literal"><span class="pre">cm</span></code>.</p>
 </div>
 <div class="section" id="faster-text-rendering">
-<h3><a class="toc-backref" href="#id11">Faster text rendering</a><a class="headerlink" href="#faster-text-rendering" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id12">Faster text rendering</a><a class="headerlink" href="#faster-text-rendering" title="Permalink to this headline">¶</a></h3>
 <p>Rendering text in the Agg backend is now less fuzzy and about 20%
 faster to draw.</p>
 </div>
 <div class="section" id="improvements-for-the-qt-figure-options-editor">
-<h3><a class="toc-backref" href="#id12">Improvements for the Qt figure options editor</a><a class="headerlink" href="#improvements-for-the-qt-figure-options-editor" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id13">Improvements for the Qt figure options editor</a><a class="headerlink" href="#improvements-for-the-qt-figure-options-editor" title="Permalink to this headline">¶</a></h3>
 <p>Various usability improvements were implemented for the Qt figure options
 editor, among which:</p>
 <ul class="simple">
@@ -398,7 +448,7 @@ sorted numerically even when there are more than 10 entries.</li>
 </ul>
 </div>
 <div class="section" id="improved-image-support">
-<h3><a class="toc-backref" href="#id13">Improved image support</a><a class="headerlink" href="#improved-image-support" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id14">Improved image support</a><a class="headerlink" href="#improved-image-support" title="Permalink to this headline">¶</a></h3>
 <p>Prior to version 2.0, matplotlib resampled images by first applying
 the color map and then resizing the result.  Since the resampling was
 performed on the colored image, this introduced colors in the output
@@ -429,23 +479,23 @@ with a logarithmic x-axis.  Equal sized bins will be displayed as wider for smal
 </div>
 </div>
 <div class="section" id="support-for-hidpi-retina-displays-in-the-nbagg-and-webagg-backends">
-<h3><a class="toc-backref" href="#id14">Support for HiDPI (Retina) displays in the NbAgg and WebAgg backends</a><a class="headerlink" href="#support-for-hidpi-retina-displays-in-the-nbagg-and-webagg-backends" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id15">Support for HiDPI (Retina) displays in the NbAgg and WebAgg backends</a><a class="headerlink" href="#support-for-hidpi-retina-displays-in-the-nbagg-and-webagg-backends" title="Permalink to this headline">¶</a></h3>
 <p>The NbAgg and WebAgg backends will now use the full resolution of your
 high-pixel-density display.</p>
 </div>
 <div class="section" id="change-in-the-default-animation-codec">
-<h3><a class="toc-backref" href="#id15">Change in the default animation codec</a><a class="headerlink" href="#change-in-the-default-animation-codec" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id16">Change in the default animation codec</a><a class="headerlink" href="#change-in-the-default-animation-codec" title="Permalink to this headline">¶</a></h3>
 <p>The default animation codec has been changed from <code class="docutils literal"><span class="pre">mpeg4</span></code> to <code class="docutils literal"><span class="pre">h264</span></code>,
 which is more efficient. It can be set via the <code class="docutils literal"><span class="pre">animation.codec</span></code> rcParam.</p>
 </div>
 <div class="section" id="deprecated-support-for-mencoder-in-animation">
-<h3><a class="toc-backref" href="#id16">Deprecated support for mencoder in animation</a><a class="headerlink" href="#deprecated-support-for-mencoder-in-animation" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id17">Deprecated support for mencoder in animation</a><a class="headerlink" href="#deprecated-support-for-mencoder-in-animation" title="Permalink to this headline">¶</a></h3>
 <p>The use of mencoder for writing video files with mpl is problematic;
 switching to ffmpeg is strongly advised.  All support for mencoder
 will be removed in version 2.2.</p>
 </div>
 <div class="section" id="boxplot-zorder-keyword-argument">
-<h3><a class="toc-backref" href="#id17">Boxplot Zorder Keyword Argument</a><a class="headerlink" href="#boxplot-zorder-keyword-argument" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id18">Boxplot Zorder Keyword Argument</a><a class="headerlink" href="#boxplot-zorder-keyword-argument" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal"><span class="pre">zorder</span></code> parameter now exists for <code class="xref py py-func docutils literal"><span class="pre">boxplot()</span></code>. This allows the zorder
 of a boxplot to be set in the plotting function call.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">boxplot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
@@ -453,14 +503,14 @@ of a boxplot to be set in the plotting function call.</p>
 </div>
 </div>
 <div class="section" id="filled-and-x-markers">
-<h3><a class="toc-backref" href="#id18">Filled <code class="docutils literal"><span class="pre">+</span></code> and <code class="docutils literal"><span class="pre">x</span></code> markers</a><a class="headerlink" href="#filled-and-x-markers" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id19">Filled <code class="docutils literal"><span class="pre">+</span></code> and <code class="docutils literal"><span class="pre">x</span></code> markers</a><a class="headerlink" href="#filled-and-x-markers" title="Permalink to this headline">¶</a></h3>
 <p>New fillable <em>plus</em> and <em>x</em> markers have been added. See
 the <a class="reference internal" href="../api/markers_api.html#module-matplotlib.markers" title="matplotlib.markers"><code class="xref py py-mod docutils literal"><span class="pre">markers</span></code></a> module and
 <a class="reference internal" href="../gallery/lines_bars_and_markers/marker_reference.html#sphx-glr-gallery-lines-bars-and-markers-marker-reference-py"><span class="std std-ref">marker reference</span></a>
 examples.</p>
 </div>
 <div class="section" id="rcount-and-ccount-for-plot-surface">
-<h3><a class="toc-backref" href="#id19"><code class="xref py py-obj docutils literal"><span class="pre">rcount</span></code> and <code class="xref py py-obj docutils literal"><span class="pre">ccount</span></code> for <code class="xref py py-obj docutils literal"><span class="pre">plot_surface()</span></code></a><a class="headerlink" href="#rcount-and-ccount-for-plot-surface" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id20"><code class="xref py py-obj docutils literal"><span class="pre">rcount</span></code> and <code class="xref py py-obj docutils literal"><span class="pre">ccount</span></code> for <code class="xref py py-obj docutils literal"><span class="pre">plot_surface()</span></code></a><a class="headerlink" href="#rcount-and-ccount-for-plot-surface" title="Permalink to this headline">¶</a></h3>
 <p>As of v2.0, mplot3d’s <code class="xref py py-func docutils literal"><span class="pre">plot_surface()</span></code> now
 accepts <code class="xref py py-obj docutils literal"><span class="pre">rcount</span></code> and <code class="xref py py-obj docutils literal"><span class="pre">ccount</span></code> arguments for controlling the sampling of the
 input data for plotting. These arguments specify the maximum number of
@@ -473,14 +523,14 @@ and are still available for use. There are no plans for deprecating these
 arguments.</p>
 </div>
 <div class="section" id="streamplot-zorder-keyword-argument-changes">
-<h3><a class="toc-backref" href="#id20">Streamplot Zorder Keyword Argument Changes</a><a class="headerlink" href="#streamplot-zorder-keyword-argument-changes" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id21">Streamplot Zorder Keyword Argument Changes</a><a class="headerlink" href="#streamplot-zorder-keyword-argument-changes" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal"><span class="pre">zorder</span></code> parameter for <code class="xref py py-func docutils literal"><span class="pre">streamplot()</span></code> now has default
 value of <code class="docutils literal"><span class="pre">None</span></code> instead of <code class="docutils literal"><span class="pre">2</span></code>. If <code class="docutils literal"><span class="pre">None</span></code> is given as <code class="docutils literal"><span class="pre">zorder</span></code>,
 <code class="xref py py-func docutils literal"><span class="pre">streamplot()</span></code> has a default <code class="docutils literal"><span class="pre">zorder</span></code> of
 <code class="docutils literal"><span class="pre">matplotlib.lines.Line2D.zorder</span></code>.</p>
 </div>
 <div class="section" id="extension-to-matplotlib-backend-bases-graphicscontextbase">
-<span id="gc-get-hatch-color-wn"></span><h3><a class="toc-backref" href="#id21">Extension to <a class="reference internal" href="../api/backend_bases_api.html#matplotlib.backend_bases.GraphicsContextBase" title="matplotlib.backend_bases.GraphicsContextBase"><code class="xref py py-obj docutils literal"><span class="pre">matplotlib.backend_bases.GraphicsContextBase</span></code></a></a><a class="headerlink" href="#extension-to-matplotlib-backend-bases-graphicscontextbase" title="Permalink to this headline">¶</a></h3>
+<span id="gc-get-hatch-color-wn"></span><h3><a class="toc-backref" href="#id22">Extension to <a class="reference internal" href="../api/backend_bases_api.html#matplotlib.backend_bases.GraphicsContextBase" title="matplotlib.backend_bases.GraphicsContextBase"><code class="xref py py-obj docutils literal"><span class="pre">matplotlib.backend_bases.GraphicsContextBase</span></code></a></a><a class="headerlink" href="#extension-to-matplotlib-backend-bases-graphicscontextbase" title="Permalink to this headline">¶</a></h3>
 <p>To support standardizing hatch behavior across the backends we ship
 the <a class="reference internal" href="../api/backend_bases_api.html#matplotlib.backend_bases.GraphicsContextBase.get_hatch_color" title="matplotlib.backend_bases.GraphicsContextBase.get_hatch_color"><code class="xref py py-obj docutils literal"><span class="pre">matplotlib.backend_bases.GraphicsContextBase.get_hatch_color</span></code></a>
 method as added to <a class="reference internal" href="../api/backend_bases_api.html#matplotlib.backend_bases.GraphicsContextBase" title="matplotlib.backend_bases.GraphicsContextBase"><code class="xref py py-obj docutils literal"><span class="pre">matplotlib.backend_bases.GraphicsContextBase</span></code></a>.
@@ -492,7 +542,7 @@ available to you and should be used to color hatch patterns.</p>
 </div>
 </div>
 <div class="section" id="previous-whats-new">
-<h2><a class="toc-backref" href="#id22">Previous Whats New</a><a class="headerlink" href="#previous-whats-new" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id23">Previous Whats New</a><a class="headerlink" href="#previous-whats-new" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="prev_whats_new/whats_new_0.98.4.html">New in matplotlib 0.98.4</a></li>
@@ -519,9 +569,9 @@ available to you and should be used to color hatch patterns.</p>
     </div>
     <div class="footer">
         &copy; Copyright 2002 - 2012 John Hunter, Darren Dale, Eric Firing, Michael Droettboom and the Matplotlib development team; 2012 - 2017 The Matplotlib development team.
-      Last updated on Jul 16, 2017.
+      Last updated on Aug 06, 2017.
       Created using <a
-href="http://sphinx-doc.org/">Sphinx</a> 1.6.2.
+href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
     </div>
 
 <script>

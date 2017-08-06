@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>matplotlib.artist.ArtistInspector &mdash; Matplotlib 2.0.2.post4416.dev0+g1df513f documentation</title>
+    <title>matplotlib.artist.ArtistInspector &mdash; Matplotlib 2.0.2.post4545+ga1937d4 documentation</title>
     
     <link rel="stylesheet" href="../../_static/mpl.css"
 type="text/css" />
@@ -17,7 +17,7 @@ type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.0.2.post4416.dev0+g1df513f',
+        VERSION:     '2.0.2.post4545+ga1937d4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -28,14 +28,14 @@ type="text/css" />
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Matplotlib 2.0.2.post4416.dev0+g1df513f documentation"
+          title="Search within Matplotlib 2.0.2.post4545+ga1937d4 documentation"
           href="../../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html"
 />
     <link rel="search" title="Search" href="../../search.html"
 />
-    <link rel="top" title="Matplotlib 2.0.2.post4416.dev0+g1df513f documentation" href="../../index.html" />
+    <link rel="top" title="Matplotlib 2.0.2.post4545+ga1937d4 documentation" href="../../index.html" />
     <link rel="up" title="artist Module" href="../artist_api.html" />
     <link rel="next" title="Axes class" href="../axes_api.html" />
     <link rel="prev" title="matplotlib.artist.kwdoc" href="matplotlib.artist.kwdoc.html" /> 
@@ -46,14 +46,11 @@ type="text/css" />
 
 
 
-<!-- The "Fork me on github" ribbon -->
-<img style="float: right; margin-bottom: -40px; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" usemap="#ribbonmap"/>
-<map name="ribbonmap">
-    <area shape="poly" coords="15,0,148,-1,148,135" href="https://github.com/matplotlib/matplotlib" title="Fork me on GitHub" />
-</map>
-
-<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px; position: relative;">
 <a href="../../index.html"><img src="../../_static/logo2.svg" width="540px" border="0" alt="matplotlib"/></a>
+
+<!-- The "Fork me on github" ribbon -->
+<div id="forkongithub"><a href="https://github.com/matplotlib/matplotlib">Fork me on GitHub</a></div>
 </div>
 
 
@@ -162,6 +159,48 @@ If an iterable is used, we assume it is a homogeneous sequence (all
 to make sure this is so.</p>
 </dd></dl>
 
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#matplotlib.artist.ArtistInspector.__init__" title="matplotlib.artist.ArtistInspector.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>(o)</td>
+<td>Initialize the artist inspector with an <a class="reference internal" href="../artist_api.html#matplotlib.artist.Artist" title="matplotlib.artist.Artist"><code class="xref py py-class docutils literal"><span class="pre">Artist</span></code></a> or iterable of <code class="xref py py-class docutils literal"><span class="pre">Artists</span></code>.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">aliased_name</span></code>(s)</td>
+<td>return ‘PROPNAME or alias’ if <em>s</em> has an alias, else return</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">aliased_name_rest</span></code>(s,&nbsp;target)</td>
+<td>return ‘PROPNAME or alias’ if <em>s</em> has an alias, else return</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">get_aliases</span></code>()</td>
+<td>Get a dict mapping <em>fullname</em> -&gt; <em>alias</em> for each <em>alias</em> in the <a class="reference internal" href="#matplotlib.artist.ArtistInspector" title="matplotlib.artist.ArtistInspector"><code class="xref py py-class docutils literal"><span class="pre">ArtistInspector</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">get_setters</span></code>()</td>
+<td>Get the attribute strings with setters for object.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">get_valid_values</span></code>(attr)</td>
+<td>Get the legal arguments for the setter associated with <em>attr</em>.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">is_alias</span></code>(o)</td>
+<td>Return <em>True</em> if method object <em>o</em> is an alias for another function.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">pprint_getters</span></code>()</td>
+<td>Return the getters and actual values as list of strings.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">pprint_setters</span></code>([prop,&nbsp;leadingspace])</td>
+<td>If <em>prop</em> is <em>None</em>, return a list of strings of all settable properies and their valid values.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">pprint_setters_rest</span></code>([prop,&nbsp;leadingspace])</td>
+<td>If <em>prop</em> is <em>None</em>, return a list of strings of all settable properies and their valid values.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">properties</span></code>()</td>
+<td>return a dictionary mapping property name -&gt; value</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </div>
@@ -175,9 +214,9 @@ to make sure this is so.</p>
     </div>
     <div class="footer">
         &copy; Copyright 2002 - 2012 John Hunter, Darren Dale, Eric Firing, Michael Droettboom and the Matplotlib development team; 2012 - 2017 The Matplotlib development team.
-      Last updated on Jul 16, 2017.
+      Last updated on Aug 06, 2017.
       Created using <a
-href="http://sphinx-doc.org/">Sphinx</a> 1.6.2.
+href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
     </div>
 
 <script>

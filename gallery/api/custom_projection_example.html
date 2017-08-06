@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Custom projection &mdash; Matplotlib 2.0.2.post4416.dev0+g1df513f documentation</title>
+    <title>Custom projection &mdash; Matplotlib 2.0.2.post4545+ga1937d4 documentation</title>
     
     <link rel="stylesheet" href="../../_static/mpl.css"
 type="text/css" />
@@ -17,7 +17,7 @@ type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.0.2.post4416.dev0+g1df513f',
+        VERSION:     '2.0.2.post4545+ga1937d4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -28,14 +28,14 @@ type="text/css" />
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Matplotlib 2.0.2.post4416.dev0+g1df513f documentation"
+          title="Search within Matplotlib 2.0.2.post4545+ga1937d4 documentation"
           href="../../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html"
 />
     <link rel="search" title="Search" href="../../search.html"
 />
-    <link rel="top" title="Matplotlib 2.0.2.post4416.dev0+g1df513f documentation" href="../../index.html" /> 
+    <link rel="top" title="Matplotlib 2.0.2.post4545+ga1937d4 documentation" href="../../index.html" /> 
 
 
   </head>
@@ -43,14 +43,11 @@ type="text/css" />
 
 
 
-<!-- The "Fork me on github" ribbon -->
-<img style="float: right; margin-bottom: -40px; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" usemap="#ribbonmap"/>
-<map name="ribbonmap">
-    <area shape="poly" coords="15,0,148,-1,148,135" href="https://github.com/matplotlib/matplotlib" title="Fork me on GitHub" />
-</map>
-
-<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px; position: relative;">
 <a href="../../index.html"><img src="../../_static/logo2.svg" width="540px" border="0" alt="matplotlib"/></a>
+
+<!-- The "Fork me on github" ribbon -->
+<div id="forkongithub"><a href="https://github.com/matplotlib/matplotlib">Fork me on GitHub</a></div>
 </div>
 
 
@@ -130,7 +127,7 @@ matplotlib.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">unicode_literals</span>
 
 <span class="kn">import</span> <span class="nn">matplotlib</span>
-<span class="kn">from</span> <span class="nn">matplotlib.axes</span> <span class="kn">import</span> <a href="../../api/_as_gen/matplotlib.axes.Axes.set_visible.html#matplotlib.axes.Axes" title="View documentation for matplotlib.axes.Axes"><span class="n">Axes</span></a>
+<span class="kn">from</span> <span class="nn">matplotlib.axes</span> <span class="kn">import</span> <a href="../../api/_as_gen/matplotlib.axes.Axes.stale.html#matplotlib.axes.Axes" title="View documentation for matplotlib.axes.Axes"><span class="n">Axes</span></a>
 <span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <a href="../../api/_as_gen/matplotlib.patches.Circle.html#matplotlib.patches.Circle" title="View documentation for matplotlib.patches.Circle"><span class="n">Circle</span></a>
 <span class="kn">from</span> <span class="nn">matplotlib.path</span> <span class="kn">import</span> <a href="../../api/path_api.html#matplotlib.path.Path" title="View documentation for matplotlib.path.Path"><span class="n">Path</span></a>
 <span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="kn">import</span> <a href="../../api/ticker_api.html#matplotlib.ticker.NullLocator" title="View documentation for matplotlib.ticker.NullLocator"><span class="n">NullLocator</span></a><span class="p">,</span> <a href="../../api/ticker_api.html#matplotlib.ticker.Formatter" title="View documentation for matplotlib.ticker.Formatter"><span class="n">Formatter</span></a><span class="p">,</span> <a href="../../api/ticker_api.html#matplotlib.ticker.FixedLocator" title="View documentation for matplotlib.ticker.FixedLocator"><span class="n">FixedLocator</span></a>
@@ -149,7 +146,7 @@ matplotlib.</p>
 <span class="c1"># (see geo.py).</span>
 
 
-<span class="k">class</span> <span class="nc">GeoAxes</span><span class="p">(</span><a href="../../api/_as_gen/matplotlib.axes.Axes.set_visible.html#matplotlib.axes.Axes" title="View documentation for matplotlib.axes.Axes"><span class="n">Axes</span></a><span class="p">):</span>
+<span class="k">class</span> <span class="nc">GeoAxes</span><span class="p">(</span><a href="../../api/_as_gen/matplotlib.axes.Axes.stale.html#matplotlib.axes.Axes" title="View documentation for matplotlib.axes.Axes"><span class="n">Axes</span></a><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    An abstract base class for geographic projections</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -158,21 +155,21 @@ matplotlib.</p>
 <span class="sd">        Used to format the theta tick labels.  Converts the native</span>
 <span class="sd">        unit of radians into degrees and adds a degree symbol.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">round_to</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">round_to</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_round_to</span> <span class="o">=</span> <span class="n">round_to</span>
 
-        <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-            <span class="n">degrees</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">_round_to</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_round_to</span>
+        <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+            <span class="n">degrees</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.rad2deg.html#numpy.rad2deg" title="View documentation for numpy.rad2deg"><span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span></a><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">_round_to</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_round_to</span>
             <span class="k">if</span> <span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;text.usetex&#39;</span><span class="p">]</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;text.latex.unicode&#39;</span><span class="p">]:</span>
-                <span class="k">return</span> <span class="s2">r&quot;$</span><span class="si">%0.0f</span><span class="s2">^\circ$&quot;</span> <span class="o">%</span> <span class="n">degrees</span>
+                <span class="k">return</span> <span class="sa">r</span><span class="s2">&quot;$</span><span class="si">%0.0f</span><span class="s2">^\circ$&quot;</span> <span class="o">%</span> <span class="n">degrees</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%0.0f</span><span class="se">\N{DEGREE SIGN}</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">degrees</span>
 
     <span class="n">RESOLUTION</span> <span class="o">=</span> <span class="mi">75</span>
 
     <span class="k">def</span> <span class="nf">_init_axis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">xaxis</span> <span class="o">=</span> <a href="../../api/_as_gen/matplotlib.axis.XAxis.set_transform.html#matplotlib.axis.XAxis" title="View documentation for matplotlib.axis.XAxis"><span class="n">maxis</span><span class="o">.</span><span class="n">XAxis</span></a><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">yaxis</span> <span class="o">=</span> <a href="../../api/_as_gen/matplotlib.axis.YAxis.set_transform.html#matplotlib.axis.YAxis" title="View documentation for matplotlib.axis.YAxis"><span class="n">maxis</span><span class="o">.</span><span class="n">YAxis</span></a><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xaxis</span> <span class="o">=</span> <a href="../../api/_as_gen/matplotlib.axis.XAxis.stale.html#matplotlib.axis.XAxis" title="View documentation for matplotlib.axis.XAxis"><span class="n">maxis</span><span class="o">.</span><span class="n">XAxis</span></a><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">yaxis</span> <span class="o">=</span> <a href="../../api/_as_gen/matplotlib.axis.YAxis.stale.html#matplotlib.axis.YAxis" title="View documentation for matplotlib.axis.YAxis"><span class="n">maxis</span><span class="o">.</span><span class="n">YAxis</span></a><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="c1"># Do not register xaxis or yaxis with spines -- as done in</span>
         <span class="c1"># Axes._init_axis() -- until GeoAxes.xaxis.cla() works.</span>
         <span class="c1"># self.spines[&#39;geo&#39;].register_axis(self.yaxis)</span>
@@ -396,7 +393,7 @@ matplotlib.</p>
 
 <span class="sd">        In this case, we want them to be displayed in degrees N/S/E/W.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">lon</span><span class="p">,</span> <span class="n">lat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">([</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">])</span>
+        <span class="n">lon</span><span class="p">,</span> <span class="n">lat</span> <span class="o">=</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.rad2deg.html#numpy.rad2deg" title="View documentation for numpy.rad2deg"><span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span></a><span class="p">([</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">])</span>
         <span class="k">if</span> <span class="n">lat</span> <span class="o">&gt;=</span> <span class="mf">0.0</span><span class="p">:</span>
             <span class="n">ns</span> <span class="o">=</span> <span class="s1">&#39;N&#39;</span>
         <span class="k">else</span><span class="p">:</span>
@@ -417,8 +414,8 @@ matplotlib.</p>
 <span class="sd">        ticking than set_xticks would.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="c1"># Skip -180 and 180, which are the fixed limits.</span>
-        <span class="n">grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">180</span> <span class="o">+</span> <span class="n">degrees</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="n">degrees</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><a href="../../api/ticker_api.html#matplotlib.ticker.FixedLocator" title="View documentation for matplotlib.ticker.FixedLocator"><span class="n">FixedLocator</span></a><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">grid</span><span class="p">)))</span>
+        <span class="n">grid</span> <span class="o">=</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.arange.html#numpy.arange" title="View documentation for numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="o">-</span><span class="mi">180</span> <span class="o">+</span> <span class="n">degrees</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="n">degrees</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><a href="../../api/ticker_api.html#matplotlib.ticker.FixedLocator" title="View documentation for matplotlib.ticker.FixedLocator"><span class="n">FixedLocator</span></a><span class="p">(</span><a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.deg2rad.html#numpy.deg2rad" title="View documentation for numpy.deg2rad"><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span></a><span class="p">(</span><span class="n">grid</span><span class="p">)))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ThetaFormatter</span><span class="p">(</span><span class="n">degrees</span><span class="p">))</span>
 
     <span class="k">def</span> <span class="nf">set_latitude_grid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">degrees</span><span class="p">):</span>
@@ -430,8 +427,8 @@ matplotlib.</p>
 <span class="sd">        set_yticks would.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="c1"># Skip -90 and 90, which are the fixed limits.</span>
-        <span class="n">grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span> <span class="o">+</span> <span class="n">degrees</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="n">degrees</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><a href="../../api/ticker_api.html#matplotlib.ticker.FixedLocator" title="View documentation for matplotlib.ticker.FixedLocator"><span class="n">FixedLocator</span></a><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">grid</span><span class="p">)))</span>
+        <span class="n">grid</span> <span class="o">=</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.arange.html#numpy.arange" title="View documentation for numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="o">-</span><span class="mi">90</span> <span class="o">+</span> <span class="n">degrees</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="n">degrees</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><a href="../../api/ticker_api.html#matplotlib.ticker.FixedLocator" title="View documentation for matplotlib.ticker.FixedLocator"><span class="n">FixedLocator</span></a><span class="p">(</span><a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.deg2rad.html#numpy.deg2rad" title="View documentation for numpy.deg2rad"><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span></a><span class="p">(</span><span class="n">grid</span><span class="p">)))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ThetaFormatter</span><span class="p">(</span><span class="n">degrees</span><span class="p">))</span>
 
     <span class="k">def</span> <span class="nf">set_longitude_grid_ends</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">degrees</span><span class="p">):</span>
@@ -446,7 +443,7 @@ matplotlib.</p>
 <span class="sd">        class -- it provides an interface to something that has no</span>
 <span class="sd">        analogy in the base Axes class.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_longitude_cap</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">degrees</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_longitude_cap</span> <span class="o">=</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.deg2rad.html#numpy.deg2rad" title="View documentation for numpy.deg2rad"><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span></a><span class="p">(</span><span class="n">degrees</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_xaxis_pretransform</span> \
             <span class="o">.</span><span class="n">clear</span><span class="p">()</span> \
             <span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_longitude_cap</span> <span class="o">*</span> <span class="mf">2.0</span><span class="p">)</span> \
@@ -508,13 +505,13 @@ matplotlib.</p>
         <span class="n">output_dims</span> <span class="o">=</span> <span class="mi">2</span>
         <span class="n">is_separable</span> <span class="o">=</span> <span class="bp">False</span>
 
-        <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resolution</span><span class="p">):</span>
+        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resolution</span><span class="p">):</span>
             <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Create a new Hammer transform.  Resolution is the number of steps</span>
 <span class="sd">            to interpolate between each input line segment to approximate its</span>
 <span class="sd">            path in curved Hammer space.</span>
 <span class="sd">            &quot;&quot;&quot;</span>
-            <a href="../../api/transformations.html#matplotlib.transforms.Transform" title="View documentation for matplotlib.transforms.Transform"><span class="n">Transform</span></a><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+            <a href="../../api/transformations.html#matplotlib.transforms.Transform" title="View documentation for matplotlib.transforms.Transform"><span class="n">Transform</span></a><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_resolution</span> <span class="o">=</span> <span class="n">resolution</span>
 
         <span class="k">def</span> <span class="nf">transform_non_affine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ll</span><span class="p">):</span>
@@ -523,33 +520,33 @@ matplotlib.</p>
 
             <span class="c1"># Pre-compute some values</span>
             <span class="n">half_long</span> <span class="o">=</span> <span class="n">longitude</span> <span class="o">/</span> <span class="mf">2.0</span>
-            <span class="n">cos_latitude</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">latitude</span><span class="p">)</span>
-            <span class="n">sqrt2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>
+            <span class="n">cos_latitude</span> <span class="o">=</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.cos.html#numpy.cos" title="View documentation for numpy.cos"><span class="n">np</span><span class="o">.</span><span class="n">cos</span></a><span class="p">(</span><span class="n">latitude</span><span class="p">)</span>
+            <span class="n">sqrt2</span> <span class="o">=</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.sqrt.html#numpy.sqrt" title="View documentation for numpy.sqrt"><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span></a><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>
 
-            <span class="n">alpha</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">+</span> <span class="n">cos_latitude</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">half_long</span><span class="p">))</span>
-            <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mf">2.0</span> <span class="o">*</span> <span class="n">sqrt2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">cos_latitude</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">half_long</span><span class="p">))</span> <span class="o">/</span> <span class="n">alpha</span>
-            <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="n">sqrt2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">latitude</span><span class="p">))</span> <span class="o">/</span> <span class="n">alpha</span>
-            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="n">transform_non_affine</span><span class="o">.</span><span class="n">__doc__</span> <span class="o">=</span> <a href="../../api/transformations.html#matplotlib.transforms.Transform" title="View documentation for matplotlib.transforms.Transform"><span class="n">Transform</span></a><span class="o">.</span><span class="n">transform_non_affine</span><span class="o">.</span><span class="n">__doc__</span>
+            <span class="n">alpha</span> <span class="o">=</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.sqrt.html#numpy.sqrt" title="View documentation for numpy.sqrt"><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span></a><span class="p">(</span><span class="mf">1.0</span> <span class="o">+</span> <span class="n">cos_latitude</span> <span class="o">*</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.cos.html#numpy.cos" title="View documentation for numpy.cos"><span class="n">np</span><span class="o">.</span><span class="n">cos</span></a><span class="p">(</span><span class="n">half_long</span><span class="p">))</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mf">2.0</span> <span class="o">*</span> <span class="n">sqrt2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">cos_latitude</span> <span class="o">*</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.sin.html#numpy.sin" title="View documentation for numpy.sin"><span class="n">np</span><span class="o">.</span><span class="n">sin</span></a><span class="p">(</span><span class="n">half_long</span><span class="p">))</span> <span class="o">/</span> <span class="n">alpha</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="n">sqrt2</span> <span class="o">*</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.sin.html#numpy.sin" title="View documentation for numpy.sin"><span class="n">np</span><span class="o">.</span><span class="n">sin</span></a><span class="p">(</span><span class="n">latitude</span><span class="p">))</span> <span class="o">/</span> <span class="n">alpha</span>
+            <span class="k">return</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.concatenate.html#numpy.concatenate" title="View documentation for numpy.concatenate"><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span></a><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">transform_non_affine</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <a href="../../api/transformations.html#matplotlib.transforms.Transform" title="View documentation for matplotlib.transforms.Transform"><span class="n">Transform</span></a><span class="o">.</span><span class="n">transform_non_affine</span><span class="o">.</span><span class="vm">__doc__</span>
 
         <span class="k">def</span> <span class="nf">transform_path_non_affine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
             <span class="c1"># vertices = path.vertices</span>
             <span class="n">ipath</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">interpolated</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_resolution</span><span class="p">)</span>
             <span class="k">return</span> <a href="../../api/path_api.html#matplotlib.path.Path" title="View documentation for matplotlib.path.Path"><span class="n">Path</span></a><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">ipath</span><span class="o">.</span><span class="n">vertices</span><span class="p">),</span> <span class="n">ipath</span><span class="o">.</span><span class="n">codes</span><span class="p">)</span>
-        <span class="n">transform_path_non_affine</span><span class="o">.</span><span class="n">__doc__</span> <span class="o">=</span> \
-            <a href="../../api/transformations.html#matplotlib.transforms.Transform" title="View documentation for matplotlib.transforms.Transform"><span class="n">Transform</span></a><span class="o">.</span><span class="n">transform_path_non_affine</span><span class="o">.</span><span class="n">__doc__</span>
+        <span class="n">transform_path_non_affine</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> \
+            <a href="../../api/transformations.html#matplotlib.transforms.Transform" title="View documentation for matplotlib.transforms.Transform"><span class="n">Transform</span></a><span class="o">.</span><span class="n">transform_path_non_affine</span><span class="o">.</span><span class="vm">__doc__</span>
 
         <span class="k">def</span> <span class="nf">inverted</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
             <span class="k">return</span> <span class="n">HammerAxes</span><span class="o">.</span><span class="n">InvertedHammerTransform</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_resolution</span><span class="p">)</span>
-        <span class="n">inverted</span><span class="o">.</span><span class="n">__doc__</span> <span class="o">=</span> <a href="../../api/transformations.html#matplotlib.transforms.Transform" title="View documentation for matplotlib.transforms.Transform"><span class="n">Transform</span></a><span class="o">.</span><span class="n">inverted</span><span class="o">.</span><span class="n">__doc__</span>
+        <span class="n">inverted</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <a href="../../api/transformations.html#matplotlib.transforms.Transform" title="View documentation for matplotlib.transforms.Transform"><span class="n">Transform</span></a><span class="o">.</span><span class="n">inverted</span><span class="o">.</span><span class="vm">__doc__</span>
 
     <span class="k">class</span> <span class="nc">InvertedHammerTransform</span><span class="p">(</span><a href="../../api/transformations.html#matplotlib.transforms.Transform" title="View documentation for matplotlib.transforms.Transform"><span class="n">Transform</span></a><span class="p">):</span>
         <span class="n">input_dims</span> <span class="o">=</span> <span class="mi">2</span>
         <span class="n">output_dims</span> <span class="o">=</span> <span class="mi">2</span>
         <span class="n">is_separable</span> <span class="o">=</span> <span class="bp">False</span>
 
-        <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resolution</span><span class="p">):</span>
-            <a href="../../api/transformations.html#matplotlib.transforms.Transform" title="View documentation for matplotlib.transforms.Transform"><span class="n">Transform</span></a><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resolution</span><span class="p">):</span>
+            <a href="../../api/transformations.html#matplotlib.transforms.Transform" title="View documentation for matplotlib.transforms.Transform"><span class="n">Transform</span></a><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_resolution</span> <span class="o">=</span> <span class="n">resolution</span>
 
         <span class="k">def</span> <span class="nf">transform_non_affine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xy</span><span class="p">):</span>
@@ -558,19 +555,19 @@ matplotlib.</p>
 
             <span class="n">quarter_x</span> <span class="o">=</span> <span class="mf">0.25</span> <span class="o">*</span> <span class="n">x</span>
             <span class="n">half_y</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">y</span>
-            <span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">quarter_x</span><span class="o">*</span><span class="n">quarter_x</span> <span class="o">-</span> <span class="n">half_y</span><span class="o">*</span><span class="n">half_y</span><span class="p">)</span>
-            <span class="n">longitude</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">((</span><span class="n">z</span><span class="o">*</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mf">2.0</span> <span class="o">*</span> <span class="p">(</span><span class="mf">2.0</span><span class="o">*</span><span class="n">z</span><span class="o">*</span><span class="n">z</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">)))</span>
-            <span class="n">latitude</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="n">y</span><span class="o">*</span><span class="n">z</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">longitude</span><span class="p">,</span> <span class="n">latitude</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="n">transform_non_affine</span><span class="o">.</span><span class="n">__doc__</span> <span class="o">=</span> <a href="../../api/transformations.html#matplotlib.transforms.Transform" title="View documentation for matplotlib.transforms.Transform"><span class="n">Transform</span></a><span class="o">.</span><span class="n">transform_non_affine</span><span class="o">.</span><span class="n">__doc__</span>
+            <span class="n">z</span> <span class="o">=</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.sqrt.html#numpy.sqrt" title="View documentation for numpy.sqrt"><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span></a><span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">quarter_x</span><span class="o">*</span><span class="n">quarter_x</span> <span class="o">-</span> <span class="n">half_y</span><span class="o">*</span><span class="n">half_y</span><span class="p">)</span>
+            <span class="n">longitude</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.arctan.html#numpy.arctan" title="View documentation for numpy.arctan"><span class="n">np</span><span class="o">.</span><span class="n">arctan</span></a><span class="p">((</span><span class="n">z</span><span class="o">*</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mf">2.0</span> <span class="o">*</span> <span class="p">(</span><span class="mf">2.0</span><span class="o">*</span><span class="n">z</span><span class="o">*</span><span class="n">z</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">)))</span>
+            <span class="n">latitude</span> <span class="o">=</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.arcsin.html#numpy.arcsin" title="View documentation for numpy.arcsin"><span class="n">np</span><span class="o">.</span><span class="n">arcsin</span></a><span class="p">(</span><span class="n">y</span><span class="o">*</span><span class="n">z</span><span class="p">)</span>
+            <span class="k">return</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.concatenate.html#numpy.concatenate" title="View documentation for numpy.concatenate"><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span></a><span class="p">((</span><span class="n">longitude</span><span class="p">,</span> <span class="n">latitude</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">transform_non_affine</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <a href="../../api/transformations.html#matplotlib.transforms.Transform" title="View documentation for matplotlib.transforms.Transform"><span class="n">Transform</span></a><span class="o">.</span><span class="n">transform_non_affine</span><span class="o">.</span><span class="vm">__doc__</span>
 
         <span class="k">def</span> <span class="nf">inverted</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
             <span class="k">return</span> <span class="n">HammerAxes</span><span class="o">.</span><span class="n">HammerTransform</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_resolution</span><span class="p">)</span>
-        <span class="n">inverted</span><span class="o">.</span><span class="n">__doc__</span> <span class="o">=</span> <a href="../../api/transformations.html#matplotlib.transforms.Transform" title="View documentation for matplotlib.transforms.Transform"><span class="n">Transform</span></a><span class="o">.</span><span class="n">inverted</span><span class="o">.</span><span class="n">__doc__</span>
+        <span class="n">inverted</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <a href="../../api/transformations.html#matplotlib.transforms.Transform" title="View documentation for matplotlib.transforms.Transform"><span class="n">Transform</span></a><span class="o">.</span><span class="n">inverted</span><span class="o">.</span><span class="vm">__doc__</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_longitude_cap</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mf">2.0</span>
-        <span class="n">GeoAxes</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">GeoAxes</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">adjustable</span><span class="o">=</span><span class="s1">&#39;box&#39;</span><span class="p">,</span> <span class="n">anchor</span><span class="o">=</span><span class="s1">&#39;C&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cla</span><span class="p">()</span>
 
@@ -583,7 +580,7 @@ matplotlib.</p>
 <span class="n">register_projection</span><span class="p">(</span><span class="n">HammerAxes</span><span class="p">)</span>
 
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
     <span class="c1"># Now make a simple example using the custom projection.</span>
     <a href="../../api/_as_gen/matplotlib.pyplot.subplot.html#matplotlib.pyplot.subplot" title="View documentation for matplotlib.pyplot.subplot"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span></a><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s2">&quot;custom_hammer&quot;</span><span class="p">)</span>
@@ -593,11 +590,11 @@ matplotlib.</p>
     <a href="../../api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="View documentation for matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the script:</strong> ( 0 minutes  0.017 seconds)</p>
-<div class="sphx-glr-footer container">
-<div class="sphx-glr-download container">
+<p><strong>Total running time of the script:</strong> ( 0 minutes  0.015 seconds)</p>
+<div class="sphx-glr-footer docutils container">
+<div class="sphx-glr-download docutils container">
 <a class="reference download internal" href="../../_downloads/custom_projection_example.py" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">custom_projection_example.py</span></code></a></div>
-<div class="sphx-glr-download container">
+<div class="sphx-glr-download docutils container">
 <a class="reference download internal" href="../../_downloads/custom_projection_example.ipynb" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">custom_projection_example.ipynb</span></code></a></div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Generated by Sphinx-Gallery</a></p>
@@ -612,9 +609,9 @@ matplotlib.</p>
     </div>
     <div class="footer">
         &copy; Copyright 2002 - 2012 John Hunter, Darren Dale, Eric Firing, Michael Droettboom and the Matplotlib development team; 2012 - 2017 The Matplotlib development team.
-      Last updated on Jul 16, 2017.
+      Last updated on Aug 06, 2017.
       Created using <a
-href="http://sphinx-doc.org/">Sphinx</a> 1.6.2.
+href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
     </div>
 
 <script>

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Changes to the default style &mdash; Matplotlib 2.0.2.post4416.dev0+g1df513f documentation</title>
+    <title>Changes to the default style &mdash; Matplotlib 2.0.2.post4545+ga1937d4 documentation</title>
     
     <link rel="stylesheet" href="../_static/mpl.css"
 type="text/css" />
@@ -17,7 +17,7 @@ type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.0.2.post4416.dev0+g1df513f',
+        VERSION:     '2.0.2.post4545+ga1937d4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -28,17 +28,17 @@ type="text/css" />
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Matplotlib 2.0.2.post4416.dev0+g1df513f documentation"
+          title="Search within Matplotlib 2.0.2.post4545+ga1937d4 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html"
 />
     <link rel="search" title="Search" href="../search.html"
 />
-    <link rel="top" title="Matplotlib 2.0.2.post4416.dev0+g1df513f documentation" href="../index.html" />
+    <link rel="top" title="Matplotlib 2.0.2.post4545+ga1937d4 documentation" href="../index.html" />
     <link rel="up" title="What’s new in matplotlib" href="whats_new.html" />
     <link rel="next" title="New in matplotlib 0.98.4" href="prev_whats_new/whats_new_0.98.4.html" />
-    <link rel="prev" title="What’s new in matplotlib" href="whats_new.html" /> 
+    <link rel="prev" title="Validation of line style rcParams" href="next_whats_new/validation_of_linestyle_rcparams.html" /> 
 
 
   </head>
@@ -46,14 +46,11 @@ type="text/css" />
 
 
 
-<!-- The "Fork me on github" ribbon -->
-<img style="float: right; margin-bottom: -40px; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" usemap="#ribbonmap"/>
-<map name="ribbonmap">
-    <area shape="poly" coords="15,0,148,-1,148,135" href="https://github.com/matplotlib/matplotlib" title="Fork me on GitHub" />
-</map>
-
-<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px; position: relative;">
 <a href="../index.html"><img src="../_static/logo2.svg" width="540px" border="0" alt="matplotlib"/></a>
+
+<!-- The "Fork me on github" ribbon -->
+<div id="forkongithub"><a href="https://github.com/matplotlib/matplotlib">Fork me on GitHub</a></div>
 </div>
 
 
@@ -72,7 +69,7 @@ type="text/css" />
           <a href="prev_whats_new/whats_new_0.98.4.html" title="New in matplotlib 0.98.4"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="whats_new.html" title="What’s new in matplotlib"
+          <a href="next_whats_new/validation_of_linestyle_rcparams.html" title="Validation of line style rcParams"
              accesskey="P">previous</a> |</li>
 
         <li><a href="../index.html">home</a>|&nbsp;</li>
@@ -164,7 +161,7 @@ Travis-CI: <a href="https://travis-ci.org/matplotlib/matplotlib">
   <li><a href="../contents.html">Documentation overview</a><ul>
   <li><a href="index.html">User’s Guide</a><ul>
   <li><a href="whats_new.html">What’s new in matplotlib</a><ul>
-      <li>Previous: <a href="whats_new.html" title="previous chapter">What’s new in matplotlib</a></li>
+      <li>Previous: <a href="next_whats_new/validation_of_linestyle_rcparams.html" title="previous chapter">Validation of line style rcParams</a></li>
       <li>Next: <a href="prev_whats_new/whats_new_0.98.4.html" title="next chapter">New in matplotlib 0.98.4</a></li>
   </ul></li>
   </ul></li>
@@ -206,7 +203,7 @@ values is a single line of python</p>
 <div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">mpl</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;classic&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>See <a class="reference internal" href="../tutorials/01_introductory/customizing.html#customizing-with-matplotlibrc-files"><span class="std std-ref">The matplotlibrc file</span></a> for details about how to
+<p>See <a class="reference internal" href="../tutorials/introductory/customizing.html#customizing-with-matplotlibrc-files"><span class="std std-ref">The matplotlibrc file</span></a> for details about how to
 persistently and selectively revert many of these changes.</p>
 <div class="contents local topic" id="table-of-contents">
 <p class="topic-title first">Table of Contents</p>
@@ -1003,9 +1000,9 @@ hard-coded defaults.  These include:<ul>
     </div>
     <div class="footer">
         &copy; Copyright 2002 - 2012 John Hunter, Darren Dale, Eric Firing, Michael Droettboom and the Matplotlib development team; 2012 - 2017 The Matplotlib development team.
-      Last updated on Jul 16, 2017.
+      Last updated on Aug 06, 2017.
       Created using <a
-href="http://sphinx-doc.org/">Sphinx</a> 1.6.2.
+href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
     </div>
 
 <script>

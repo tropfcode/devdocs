@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>font_manager &mdash; Matplotlib 2.0.2.post4416.dev0+g1df513f documentation</title>
+    <title>font_manager &mdash; Matplotlib 2.0.2.post4545+ga1937d4 documentation</title>
     
     <link rel="stylesheet" href="../_static/mpl.css"
 type="text/css" />
@@ -17,7 +17,7 @@ type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.0.2.post4416.dev0+g1df513f',
+        VERSION:     '2.0.2.post4545+ga1937d4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -28,14 +28,14 @@ type="text/css" />
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Matplotlib 2.0.2.post4416.dev0+g1df513f documentation"
+          title="Search within Matplotlib 2.0.2.post4545+ga1937d4 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html"
 />
     <link rel="search" title="Search" href="../search.html"
 />
-    <link rel="top" title="Matplotlib 2.0.2.post4416.dev0+g1df513f documentation" href="../index.html" />
+    <link rel="top" title="Matplotlib 2.0.2.post4545+ga1937d4 documentation" href="../index.html" />
     <link rel="up" title="The Matplotlib API" href="index.html" />
     <link rel="next" title="gridspec" href="gridspec_api.html" />
     <link rel="prev" title="finance" href="finance_api.html" /> 
@@ -46,14 +46,11 @@ type="text/css" />
 
 
 
-<!-- The "Fork me on github" ribbon -->
-<img style="float: right; margin-bottom: -40px; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" usemap="#ribbonmap"/>
-<map name="ribbonmap">
-    <area shape="poly" coords="15,0,148,-1,148,135" href="https://github.com/matplotlib/matplotlib" title="Fork me on GitHub" />
-</map>
-
-<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px; position: relative;">
 <a href="../index.html"><img src="../_static/logo2.svg" width="540px" border="0" alt="matplotlib"/></a>
+
+<!-- The "Fork me on github" ribbon -->
+<div id="forkongithub"><a href="https://github.com/matplotlib/matplotlib">Fork me on GitHub</a></div>
 </div>
 
 
@@ -167,7 +164,7 @@ platforms, so if a font is installed, it is much more likely to be
 found.</p>
 <dl class="class">
 <dt id="matplotlib.font_manager.FontEntry">
-<em class="property">class </em><code class="descclassname">matplotlib.font_manager.</code><code class="descname">FontEntry</code><span class="sig-paren">(</span><em>fname=”</em>, <em>name=”</em>, <em>style=’normal’</em>, <em>variant=’normal’</em>, <em>weight=’normal’</em>, <em>stretch=’normal’</em>, <em>size=’medium’</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.font_manager.FontEntry" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.font_manager.</code><code class="descname">FontEntry</code><span class="sig-paren">(</span><em>fname=''</em>, <em>name=''</em>, <em>style='normal'</em>, <em>variant='normal'</em>, <em>weight='normal'</em>, <em>stretch='normal'</em>, <em>size='medium'</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.font_manager.FontEntry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 <p>A class for storing Font properties.  It is used when populating
 the font lookup dictionary.</p>
@@ -175,7 +172,7 @@ the font lookup dictionary.</p>
 
 <dl class="class">
 <dt id="matplotlib.font_manager.FontManager">
-<em class="property">class </em><code class="descclassname">matplotlib.font_manager.</code><code class="descname">FontManager</code><span class="sig-paren">(</span><em>size=None</em>, <em>weight=’normal’</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.font_manager.FontManager" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.font_manager.</code><code class="descname">FontManager</code><span class="sig-paren">(</span><em>size=None</em>, <em>weight='normal'</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.font_manager.FontManager" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 <p>On import, the <a class="reference internal" href="#matplotlib.font_manager.FontManager" title="matplotlib.font_manager.FontManager"><code class="xref py py-class docutils literal"><span class="pre">FontManager</span></code></a> singleton instance creates a
 list of TrueType fonts based on the font properties: name, style,
@@ -185,7 +182,7 @@ matches the specification.  If no good enough match is found, a
 default font is returned.</p>
 <dl class="method">
 <dt id="matplotlib.font_manager.FontManager.findfont">
-<code class="descname">findfont</code><span class="sig-paren">(</span><em>prop</em>, <em>fontext=’ttf’</em>, <em>directory=None</em>, <em>fallback_to_default=True</em>, <em>rebuild_if_missing=True</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.font_manager.FontManager.findfont" title="Permalink to this definition">¶</a></dt>
+<code class="descname">findfont</code><span class="sig-paren">(</span><em>prop</em>, <em>fontext='ttf'</em>, <em>directory=None</em>, <em>fallback_to_default=True</em>, <em>rebuild_if_missing=True</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.font_manager.FontManager.findfont" title="Permalink to this definition">¶</a></dt>
 <dd><p>Search the font list for the font that most closely matches
 the <a class="reference internal" href="#matplotlib.font_manager.FontProperties" title="matplotlib.font_manager.FontProperties"><code class="xref py py-class docutils literal"><span class="pre">FontProperties</span></code></a> <em>prop</em>.</p>
 <p><a class="reference internal" href="#matplotlib.font_manager.findfont" title="matplotlib.font_manager.findfont"><code class="xref py py-meth docutils literal"><span class="pre">findfont()</span></code></a> performs a nearest neighbor search.  Each
@@ -549,7 +546,7 @@ version of the object or raise a <code class="docutils literal"><span class="pre
 
 <dl class="function">
 <dt id="matplotlib.font_manager.OSXInstalledFonts">
-<code class="descclassname">matplotlib.font_manager.</code><code class="descname">OSXInstalledFonts</code><span class="sig-paren">(</span><em>directories=None</em>, <em>fontext=’ttf’</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.font_manager.OSXInstalledFonts" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">matplotlib.font_manager.</code><code class="descname">OSXInstalledFonts</code><span class="sig-paren">(</span><em>directories=None</em>, <em>fontext='ttf'</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.font_manager.OSXInstalledFonts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get list of font files on OS X - ignores font suffix by default.</p>
 </dd></dl>
 
@@ -569,7 +566,7 @@ through all fonts every time a font is looked up.</p>
 
 <dl class="attribute">
 <dt id="matplotlib.font_manager.TempCache.invalidating_rcparams">
-<code class="descname">invalidating_rcparams</code><em class="property"> = (‘font.serif’, ‘font.sans-serif’, ‘font.cursive’, ‘font.fantasy’, ‘font.monospace’)</em><a class="headerlink" href="#matplotlib.font_manager.TempCache.invalidating_rcparams" title="Permalink to this definition">¶</a></dt>
+<code class="descname">invalidating_rcparams</code><em class="property"> = ('font.serif', 'font.sans-serif', 'font.cursive', 'font.fantasy', 'font.monospace')</em><a class="headerlink" href="#matplotlib.font_manager.TempCache.invalidating_rcparams" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -594,7 +591,7 @@ extracting information from the AFM font file.</p>
 
 <dl class="function">
 <dt id="matplotlib.font_manager.createFontList">
-<code class="descclassname">matplotlib.font_manager.</code><code class="descname">createFontList</code><span class="sig-paren">(</span><em>fontfiles</em>, <em>fontext=’ttf’</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.font_manager.createFontList" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">matplotlib.font_manager.</code><code class="descname">createFontList</code><span class="sig-paren">(</span><em>fontfiles</em>, <em>fontext='ttf'</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.font_manager.createFontList" title="Permalink to this definition">¶</a></dt>
 <dd><p>A function to create a font lookup list.  The default is to create
 a list of TrueType fonts.  An AFM font list can optionally be
 created.</p>
@@ -602,7 +599,7 @@ created.</p>
 
 <dl class="function">
 <dt id="matplotlib.font_manager.findSystemFonts">
-<code class="descclassname">matplotlib.font_manager.</code><code class="descname">findSystemFonts</code><span class="sig-paren">(</span><em>fontpaths=None</em>, <em>fontext=’ttf’</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.font_manager.findSystemFonts" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">matplotlib.font_manager.</code><code class="descname">findSystemFonts</code><span class="sig-paren">(</span><em>fontpaths=None</em>, <em>fontext='ttf'</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.font_manager.findSystemFonts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Search for fonts in the specified font paths.  If no paths are
 given, will use a standard set of system paths, as well as the
 list of fonts tracked by fontconfig if fontconfig is installed and
@@ -617,7 +614,7 @@ AFM fonts as an option.</p>
 
 <dl class="function">
 <dt id="matplotlib.font_manager.get_fontconfig_fonts">
-<code class="descclassname">matplotlib.font_manager.</code><code class="descname">get_fontconfig_fonts</code><span class="sig-paren">(</span><em>fontext=’ttf’</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.font_manager.get_fontconfig_fonts" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">matplotlib.font_manager.</code><code class="descname">get_fontconfig_fonts</code><span class="sig-paren">(</span><em>fontext='ttf'</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.font_manager.get_fontconfig_fonts" title="Permalink to this definition">¶</a></dt>
 <dd><p>List the font filenames known to <code class="xref py py-obj docutils literal"><span class="pre">fc-list</span></code> having the given extension.</p>
 </dd></dl>
 
@@ -697,7 +694,7 @@ looked up from the registry key:</p>
 
 <dl class="function">
 <dt id="matplotlib.font_manager.win32InstalledFonts">
-<code class="descclassname">matplotlib.font_manager.</code><code class="descname">win32InstalledFonts</code><span class="sig-paren">(</span><em>directory=None</em>, <em>fontext=’ttf’</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.font_manager.win32InstalledFonts" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">matplotlib.font_manager.</code><code class="descname">win32InstalledFonts</code><span class="sig-paren">(</span><em>directory=None</em>, <em>fontext='ttf'</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.font_manager.win32InstalledFonts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Search for fonts in the specified font directory, or use the
 system directories if none given.  A list of TrueType font
 filenames are returned by default, or AFM fonts if <em>fontext</em> ==
@@ -729,13 +726,13 @@ of key/value pairs useful for initializing a
 
 <dl class="function">
 <dt id="matplotlib.fontconfig_pattern.family_escape">
-<code class="descclassname">matplotlib.fontconfig_pattern.</code><code class="descname">family_escape</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.fontconfig_pattern.family_escape" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">matplotlib.fontconfig_pattern.</code><code class="descname">family_escape</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em>, <em>repl</em>, <em>string</em>, <em>count=0</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.fontconfig_pattern.family_escape" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the string obtained by replacing the leftmost non-overlapping occurrences of pattern in string by the replacement repl.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="matplotlib.fontconfig_pattern.family_unescape">
-<code class="descclassname">matplotlib.fontconfig_pattern.</code><code class="descname">family_unescape</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.fontconfig_pattern.family_unescape" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">matplotlib.fontconfig_pattern.</code><code class="descname">family_unescape</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em>, <em>repl</em>, <em>string</em>, <em>count=0</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.fontconfig_pattern.family_unescape" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the string obtained by replacing the leftmost non-overlapping occurrences of pattern in string by the replacement repl.</p>
 </dd></dl>
 
@@ -756,13 +753,13 @@ of key/value pairs useful for initializing a
 
 <dl class="function">
 <dt id="matplotlib.fontconfig_pattern.value_escape">
-<code class="descclassname">matplotlib.fontconfig_pattern.</code><code class="descname">value_escape</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.fontconfig_pattern.value_escape" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">matplotlib.fontconfig_pattern.</code><code class="descname">value_escape</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em>, <em>repl</em>, <em>string</em>, <em>count=0</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.fontconfig_pattern.value_escape" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the string obtained by replacing the leftmost non-overlapping occurrences of pattern in string by the replacement repl.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="matplotlib.fontconfig_pattern.value_unescape">
-<code class="descclassname">matplotlib.fontconfig_pattern.</code><code class="descname">value_unescape</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.fontconfig_pattern.value_unescape" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">matplotlib.fontconfig_pattern.</code><code class="descname">value_unescape</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em>, <em>repl</em>, <em>string</em>, <em>count=0</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.fontconfig_pattern.value_unescape" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the string obtained by replacing the leftmost non-overlapping occurrences of pattern in string by the replacement repl.</p>
 </dd></dl>
 
@@ -778,9 +775,9 @@ of key/value pairs useful for initializing a
     </div>
     <div class="footer">
         &copy; Copyright 2002 - 2012 John Hunter, Darren Dale, Eric Firing, Michael Droettboom and the Matplotlib development team; 2012 - 2017 The Matplotlib development team.
-      Last updated on Jul 16, 2017.
+      Last updated on Aug 06, 2017.
       Created using <a
-href="http://sphinx-doc.org/">Sphinx</a> 1.6.2.
+href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
     </div>
 
 <script>
